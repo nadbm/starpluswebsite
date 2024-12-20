@@ -9,10 +9,10 @@ export default function CTA() {
           Our medical professionals are available 24/7 to serve you.
         </p>
         <a
-          href="tel:+1234567890"
+          href="tel:+5157181691"
           className="bg-white text-sky-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-sky-50 transition duration-300"
         >
-          Call Now: (123) 456-7890
+          Call Now: 515-718-1691
         </a>
       </div>
     </section>
