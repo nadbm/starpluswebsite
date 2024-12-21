@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "book": "Book Now"
+  },
+  "hero": {
+    "title": "Your Health, Our Priority",
+    "description": "Professional medical services at your doorstep",
+    "cta": "Book an Appointment"
+  }
+}

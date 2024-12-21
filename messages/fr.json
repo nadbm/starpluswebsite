@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "hero": {
+    "title": "Votre Santé, Notre Priorité",
+    "description": "Services médicaux professionnels à votre porte",
+    "cta": "Prendre Rendez-vous"
+  }
+}
