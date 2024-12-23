@@ -1,16 +1,17 @@
-import Header from "../../components/Header";
-import Hero from "../../components/Hero";
-import Services from "../../components/Services";
-import CTA from "../../components/CTA";
 import Footer from "../../components/Footer";
+import VideoBanner from "@/components/VideoBanner";
+import About from "@/components/About";
+import HomeBookSection from "@/components/HomeBookSection";
+import Services2 from "@/components/Services2";
 
 export default function Home() {
     return (
         <div className="flex flex-col min-h-screen">
             <main>
-                <Hero/>
-                <Services/>
-                <CTA/>
+                <VideoBanner />
+                <About />
+                <Services2 />
+                <HomeBookSection />
             </main>
             <Footer/>
         </div>

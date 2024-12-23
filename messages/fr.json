@@ -2,13 +2,85 @@
   "nav": {
     "home": "Accueil",
     "services": "Services",
-    "about": "À propos",
+    "about": "À Propos",
     "contact": "Contact",
     "book": "Réserver"
   },
   "hero": {
-    "title": "Votre Santé, Notre Priorité",
-    "description": "Services médicaux professionnels à votre porte",
-    "cta": "Prendre Rendez-vous"
+    "title": "Votre Santé, Notre Mission",
+    "description": "Au Centre de Santé Starplus, nous offrons des soins médicaux complets et des services de bien-être, rendant les soins de santé de qualité accessibles",
+    "cta": {
+      "book": "Réserver",
+      "learn": "En Savoir Plus"
+    }
+  },
+  "about": {
+    "title": "Un Partenariat Unique pour de Meilleurs Soins de Santé",
+    "description1": "Le Centre de Santé Starplus est né du partenariat unique entre deux visionnaires - un spécialiste expérimenté en laboratoire clinique et un homme d'affaires prospère tourné vers l'avenir. Ensemble, ils ont uni leurs expertises pour donner vie à leur vision commune.",
+    "description2": "Leur collaboration a conduit à l'établissement du Centre de Santé Starplus, un lieu où les diagnostics cliniques et les soins compatissants se rencontrent. Notre mission reste simple mais percutante : fournir des soins de santé complets, accessibles et centrés sur le patient qui permettent à chaque individu de vivre une vie plus saine.",
+    "learnMore": "En Savoir Plus Sur Nous",
+    "imageAlt": "L'équipe du Centre de Santé Starplus"
+  },
+  "bookNowSection": {
+    "title": "Prêt à Prendre Soin de Votre Santé?",
+    "description": "Planifiez votre rendez-vous aujourd'hui et commencez votre parcours vers une meilleure santé avec notre équipe médicale professionnelle",
+    "button": "Réserver"
+  },
+  "services2": {
+    "sectionTitle": "Nos Services Professionnels",
+    "sectionSubtitle": "Des solutions de santé complètes adaptées à vos besoins",
+    "book": "Réserver",
+    "available": "Disponible",
+    "comingSoon": "Bientôt Disponible",
+
+    "physio": {
+      "title": "Physiothérapie",
+      "description": "Nos physiothérapeutes expérimentés se spécialisent dans la restauration du mouvement, le soulagement de la douleur et l'amélioration de votre fonction physique.",
+      "tag1": "Rééducation",
+      "tag2": "Gestion de la Douleur",
+      "tag3": "Entraînement Physique"
+    },
+    "gp": {
+      "title": "Services de Médecin Généraliste",
+      "description": "Nos médecins généralistes expérimentés fournissent des soins primaires aux individus et aux familles, des bilans de routine à la gestion des maladies chroniques.",
+      "tag1": "Soins Primaires",
+      "tag2": "Bilan de Santé",
+      "tag3": "Soins Chroniques"
+    },
+    "online": {
+      "title": "Consultation en Ligne",
+      "description": "Accédez à des soins de santé de qualité depuis le confort de votre domicile grâce à nos services de consultation en ligne.",
+      "tag1": "Soins à Distance",
+      "tag2": "Accès Pratique",
+      "tag3": "Santé Numérique"
+    },
+    "nursing": {
+      "title": "Services Infirmiers",
+      "description": "Notre personnel infirmier compatissant fournit des soins professionnels, y compris la gestion des plaies et les soins post-opératoires.",
+      "tag1": "Soins Professionnels",
+      "tag2": "Soins Post-opératoires",
+      "tag3": "Soins des Plaies"
+    },
+    "massage": {
+      "title": "Massothérapie",
+      "description": "Détendez-vous et ressourcez-vous avec nos massothérapeutes certifiés, conçu pour soulager le stress et améliorer la circulation.",
+      "tag1": "Relaxation",
+      "tag2": "Soins Thérapeutiques",
+      "tag3": "Soulagement de la Douleur"
+    },
+    "naturopathy": {
+      "title": "Naturopathie",
+      "description": "Atteignez l'équilibre et améliorez votre santé globale avec nos remèdes naturels et nos conseils en mode de vie.",
+      "tag1": "Guérison Naturelle",
+      "tag2": "Soins Holistiques",
+      "tag3": "Bien-être"
+    },
+    "blood": {
+      "title": "Analyse de Sang",
+      "description": "Bientôt disponible : Services de prélèvement sanguin pratiques assurant une collecte d'échantillons rapide et précise pour les tests de laboratoire.",
+      "tag1": "Tests de Laboratoire",
+      "tag2": "Diagnostics",
+      "tag3": "Suivi de Santé"
+    }
   }
 }

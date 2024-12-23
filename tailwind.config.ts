@@ -8,10 +8,23 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'xx': '295px',
+      'xs': '375px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      '3xl': '1920px',
+    },
     extend: {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
         brand: "#38B6FF",
         card: {
           DEFAULT: "hsl(var(--card))",
@@ -41,9 +54,6 @@ const config: Config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
         chart: {
           "1": "hsl(var(--chart-1))",
           "2": "hsl(var(--chart-2))",
@@ -57,8 +67,21 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      height: {
+        '110': '27.5rem',  /* 440px */
+        '128': '32rem',    /* 512px */
+        '144': '36rem',    /* 576px */
+        '160': '40rem',    /* 640px */
+        '176': '44rem',    /* 704px */
+        '192': '48rem',    /* 768px */
+        '208': '52rem',    /* 832px */
+        '224': '56rem',    /* 896px */
+        '240': '60rem',    /* 960px */
+        '256': '64rem',    /* 1024px */
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+} satisfies Config;
+
 export default config;

@@ -7,8 +7,80 @@
     "book": "Book Now"
   },
   "hero": {
-    "title": "Your Health, Our Priority",
-    "description": "Professional medical services at your doorstep",
-    "cta": "Book an Appointment"
+    "title": "Your Health, Our Mission",
+    "description": "At Starplus Health Center, we provide comprehensive medical care and wellness services, making quality healthcare accessible",
+    "cta": {
+      "book": "Book Now",
+      "learn": "Learn More"
+    }
+  },
+  "about": {
+    "title": "A Unique Partnership for Better Healthcare",
+    "description1": "Starplus Health Center was born from the unique partnership of two visionaries—an experienced clinical laboratory specialist, and a forward-thinking successful businessman. Together, they united their expertise to bring their shared vision to life.",
+    "description2": "Their collaboration led to the establishment of Starplus Health Center, a place where clinical diagnostics and compassionate care meet. Our mission remains simple yet impactful: to provide comprehensive, accessible, and patient-focused healthcare that empowers every individual to live healthier lives.",
+    "learnMore": "Learn More About Us",
+    "imageAlt": "Starplus Health Center Team"
+  },
+  "bookNowSection": {
+    "title": "Ready to Take Care of Your Health?",
+    "description": "Schedule your appointment today and start your journey to better health with our professional medical team",
+    "button": "Book Now"
+  },
+  "services2": {
+    "sectionTitle": "Our Professional Services",
+    "sectionSubtitle": "Comprehensive healthcare solutions tailored to your needs",
+    "book": "Book Now",
+    "available": "Available",
+    "comingSoon": "Coming Soon",
+
+    "physio": {
+      "title": "Physiotherapy",
+      "description": "Our experienced physiotherapists specialize in restoring movement, relieving pain, and enhancing your physical function.",
+      "tag1": "Rehabilitation",
+      "tag2": "Pain Management",
+      "tag3": "Physical Training"
+    },
+    "gp": {
+      "title": "General Practitioner Services",
+      "description": "Our experienced GPs provide primary care for individuals and families, from routine check-ups to managing chronic conditions.",
+      "tag1": "Primary Care",
+      "tag2": "Health Check",
+      "tag3": "Chronic Care"
+    },
+    "online": {
+      "title": "Online Consultation",
+      "description": "Access quality healthcare from the comfort of your home with our online consultation services.",
+      "tag1": "Remote Care",
+      "tag2": "Convenient Access",
+      "tag3": "Digital Health"
+    },
+    "nursing": {
+      "title": "Nursing Services",
+      "description": "Our compassionate nursing staff provides professional care including wound management and post-operative care.",
+      "tag1": "Professional Care",
+      "tag2": "Post-op Care",
+      "tag3": "Wound Care"
+    },
+    "massage": {
+      "title": "Massage Therapy",
+      "description": "Relax and rejuvenate with our certified massage therapists, designed to alleviate stress and improve circulation.",
+      "tag1": "Relaxation",
+      "tag2": "Therapeutic Care",
+      "tag3": "Pain Relief"
+    },
+    "naturopathy": {
+      "title": "Naturopathy",
+      "description": "Achieve balance and improve your overall health with our natural remedies and lifestyle counseling.",
+      "tag1": "Natural Healing",
+      "tag2": "Holistic Care",
+      "tag3": "Wellness"
+    },
+    "blood": {
+      "title": "Blood Draw Analysis",
+      "description": "Coming soon: Convenient blood draw services ensuring fast and accurate sample collection for lab testing.",
+      "tag1": "Lab Testing",
+      "tag2": "Diagnostics",
+      "tag3": "Health Monitoring"
+    }
   }
 }
