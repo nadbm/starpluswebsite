@@ -40,7 +40,7 @@ export default function Footer() {
               501, 998 boulevard de saint Laurent est, H2S 9Y9
             </p>
             <p className="text-gray-400">Email: info@starpluscentre.com</p>
-            <p className="text-gray-400">Phone: 515-718-1691</p>
+            <p className="text-gray-400">Phone: </p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
