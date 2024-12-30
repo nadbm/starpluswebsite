@@ -18,7 +18,7 @@
     "title": "A Unique Partnership for Better Healthcare",
     "description1": "Starplus Health Center was born from the unique partnership of two visionaries—an experienced clinical laboratory specialist, and a forward-thinking successful businessman. Together, they united their expertise to bring their shared vision to life.",
     "description2": "Their collaboration led to the establishment of Starplus Health Center, a place where clinical diagnostics and compassionate care meet. Our mission remains simple yet impactful: to provide comprehensive, accessible, and patient-focused healthcare that empowers every individual to live healthier lives.",
-    "learnMore": "Learn More About Us",
+    "learnMore": "Visit Our Center",
     "imageAlt": "Starplus Health Center Team"
   },
   "bookNowSection": {
@@ -32,7 +32,6 @@
     "book": "Book Now",
     "available": "Available",
     "comingSoon": "Coming Soon",
-
     "physio": {
       "title": "Physiotherapy",
       "description": "Our experienced physiotherapists specialize in restoring movement, relieving pain, and enhancing your physical function.",
@@ -81,6 +80,149 @@
       "tag1": "Lab Testing",
       "tag2": "Diagnostics",
       "tag3": "Health Monitoring"
+    }
+  },
+  "booking": {
+    "title": "Book an Appointment",
+    "subtitle": "Select your preferred service and time",
+    "selectService": "Select Service",
+    "serviceDescription": "Duration",
+    "minutesAbbr": "min",
+    "selectDate": "Select a Date",
+    "weekDays": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "selectTime": "Select Time",
+    "noTimesAvailable": "No available times for this date",
+    "form": {
+      "title": "Your Information",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "notes": "Additional Notes",
+      "submit": "Book Appointment",
+      "submitting": "Submitting..."
+    },
+    "status": {
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "selected": "Selected"
+    },
+    "errors": {
+      "serviceRequired": "Please select a service",
+      "dateRequired": "Please select a date",
+      "timeRequired": "Please select a time",
+      "formIncomplete": "Please complete all required fields",
+      "loadingError": "Error loading data. Please try again.",
+      "bookingError": "Error making booking. Please try again."
+    },
+    "success": {
+      "title": "Booking Successful",
+      "message": "Your appointment has been scheduled.",
+      "confirmation": "You will receive a confirmation email shortly."
+    }
+  },
+
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Have questions about our services? We're here to help and look forward to hearing from you.",
+    "success": "Thank you for reaching out! We'll get back to you soon.",
+    "errors": {
+      "submission": "Unable to send your message. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "emailTitle": "Email Us",
+      "phoneTitle": "Call Us",
+      "hoursTitle": "Opening Hours",
+      "timeline1": "Monday - Friday",
+      "timeline2": "Saturday",
+      "timeline3": "Sunday"
+    },
+    "form": {
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Your phone number",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    }
+  },
+
+  "location": {
+    "title": "Visit Our Center",
+    "description": "Strategically located in the heart of Montreal, our modern facility is designed for your comfort and convenience",
+    "address": {
+      "title": "Our Address",
+      "line1": "501, 998 boulevard de saint Laurent est,",
+      "line2": "Montreal, QC H2S 9Y9"
+    },
+    "advantages": {
+      "parking": {
+        "title": "Free Parking",
+        "description": "Spacious on-site parking lot available free of charge for all our patients"
+      },
+      "location": {
+        "title": "Prime Location",
+        "description": "Conveniently located on Saint Laurent Boulevard, easily accessible from all parts of Montreal"
+      },
+      "transit": {
+        "title": "Public Transit",
+        "description": "Close to major bus routes and metro stations for convenient public transportation access"
+      },
+      "hours": {
+        "title": "Extended Hours",
+        "description": "Open extended hours to accommodate your schedule"
+      }
+    }
+  },
+
+  "reviews": {
+    "title": "What Our Patients Say",
+    "description": "Read genuine experiences from our valued patients about our healthcare services.",
+    "shareButton": "Share Your Experience",
+    "errors": {
+      "submission": "Unable to submit your review. Please try again."
+    },
+    "modal": {
+      "title1": "Share Your Experience",
+      "rating": "Your Rating",
+      "name": "Your Name",
+      "title2": "Review Title",
+      "content": "Your Review",
+      "submit": "Submit Review",
+      "submitting": "Submitting...",
+      "cancel": "Cancel"
+    }
+  },
+
+  "footer": {
+    "logoAlt": "Starplus Logo",
+    "description": "At Starplus Health Center, we provide comprehensive medical care and wellness services, making quality healthcare accessible to everyone.",
+    "quickLinksTitle": "Quick Links",
+    "contactTitle": "Contact Information",
+    "copyright": "© {year} Starplus Health Center. All rights reserved.",
+    "quickLinks": {
+      "services": "Services",
+      "about": "About Us",
+      "booking": "Book Appointment",
+      "contact": "Contact"
+    },
+    "contact": {
+      "address": "501, 998 boulevard de saint Laurent est, Montreal, QC H2S 9Y9",
+      "phone": "(514) XXX-XXXX",
+      "email": "info@starpluscentre.com",
+      "hours": "Mon - Sun: 9:00 AM - 9:00 PM"
     }
   }
 }

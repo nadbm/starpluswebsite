@@ -15,10 +15,10 @@
     }
   },
   "about": {
-    "title": "独特的合作，更好的医疗保健",
+    "title": "独特合作，更好的医疗保健",
     "description1": "Starplus健康中心源于两位远见卓识者的独特合作——一位经验丰富的临床实验室专家和一位具有前瞻性思维的成功商人。他们携手合作，共同实现他们的愿景。",
     "description2": "他们的协作促成了Starplus健康中心的成立，这里是临床诊断与富有同理心的护理相结合的地方。我们的使命始终简单而有影响力：提供全面、易得、以患者为中心的医疗保健服务，使每个人都能过上更健康的生活。",
-    "learnMore": "了解更多关于我们",
+    "learnMore": "前往我们的医疗中心",
     "imageAlt": "Starplus健康中心团队"
   },
   "bookNowSection": {
@@ -81,6 +81,154 @@
       "tag1": "实验室检测",
       "tag2": "诊断服务",
       "tag3": "健康监测"
+    }
+  },
+  "booking": {
+    "title": "预约时间",
+    "subtitle": "选择您偏好的服务和时间",
+
+    "selectService": "选择服务",
+    "serviceDescription": "时长",
+    "minutesAbbr": "分钟",
+
+    "selectDate": "选择日期",
+    "weekDays": {
+      "mon": "周一",
+      "tue": "周二",
+      "wed": "周三",
+      "thu": "周四",
+      "fri": "周五",
+      "sat": "周六",
+      "sun": "周日"
+    },
+
+    "selectTime": "选择时间",
+    "noTimesAvailable": "此日期暂无可用时间",
+
+    "form": {
+      "title": "您的信息",
+      "name": "全名",
+      "email": "电子邮箱",
+      "phone": "电话号码",
+      "notes": "附加备注",
+      "submit": "确认预约"
+    },
+
+    "status": {
+      "available": "可用",
+      "unavailable": "不可用",
+      "selected": "已选择"
+    },
+
+    "errors": {
+      "serviceRequired": "请选择服务",
+      "dateRequired": "请选择日期",
+      "timeRequired": "请选择时间",
+      "loadingError": "加载数据时出错，请重试。",
+      "bookingError": "预约失败，请重试。"
+    },
+
+    "success": {
+      "title": "预约成功",
+      "message": "您的预约已成功安排。",
+      "confirmation": "您将很快收到确认电子邮件。"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "description": "对我们的服务有疑问？我们随时为您提供帮助，期待您的来信。",
+    "success": "感谢您的联系！我们会尽快回复您。",
+    "errors": {
+      "submission": "无法发送您的消息。请再试一次。"
+    },
+    "info": {
+      "title": "联系信息",
+      "emailTitle": "发送电子邮件",
+      "phoneTitle": "拨打电话",
+      "hoursTitle": "营业时间",
+      "timeline1": "周一至周五",
+      "timeline2": "周六",
+      "timeline3": "周日"
+    },
+    "form": {
+      "email": "电子邮箱",
+      "emailPlaceholder": "your@email.com",
+      "phone": "电话号码",
+      "phonePlaceholder": "您的电话号码",
+      "subject": "主题",
+      "subjectPlaceholder": "我们能帮您什么？",
+      "message": "留言",
+      "messagePlaceholder": "请告诉我们您的咨询详情...",
+      "submit": "发送消息",
+      "submitting": "发送中..."
+    }
+  },
+
+  "location": {
+    "title": "参观我们的中心",
+    "description": "我们位于蒙特利尔市中心的战略位置，现代化设施旨在为您提供舒适和便利",
+    "address": {
+      "title": "我们的地址",
+      "line1": "501, 998 boulevard de saint Laurent est,",
+      "line2": "Montréal, QC H2S 9Y9"
+    },
+    "advantages": {
+      "parking": {
+        "title": "免费停车",
+        "description": "宽敞的现场停车场为所有患者免费提供"
+      },
+      "location": {
+        "title": "黄金位置",
+        "description": "位于圣劳伦大道，方便从蒙特利尔各地抵达"
+      },
+      "transit": {
+        "title": "公共交通",
+        "description": "靠近主要公交线路和地铁站，方便公共交通出行"
+      },
+      "hours": {
+        "title": "延长营业时间",
+        "description": "营业时间延长以适应您的时间安排"
+      }
+    }
+  },
+
+
+  "reviews": {
+    "title": "我们的客户怎么说",
+    "description": "阅读我们的宝贵客户对我们医疗服务的真实体验。",
+    "shareButton": "分享您的体验",
+    "errors": {
+      "submission": "无法提交您的评论。请再试一次。"
+    },
+    "modal": {
+      "title1": "分享您的体验",
+      "rating": "您的评分",
+      "name": "您的名字",
+      "title2": "评论标题",
+      "content": "您的评论",
+      "submit": "提交评论",
+      "submitting": "提交中...",
+      "cancel": "取消"
+    }
+  },
+
+  "footer": {
+    "logoAlt": "Starplus标志",
+    "description": "在Starplus健康中心，我们提供全面的医疗护理和健康服务，让每个人都能享受到高质量的医疗服务",
+    "quickLinksTitle": "快速链接",
+    "contactTitle": "联系信息",
+    "copyright": "© {year} Starplus Health Center 版权所有",
+    "quickLinks": {
+      "services": "服务",
+      "about": "关于我们",
+      "booking": "预约",
+      "contact": "联系我们"
+    },
+    "contact": {
+      "address": "501, 998 boulevard de saint Laurent est, 蒙特利尔, QC H2S 9Y9",
+      "phone": "(514) XXX-XXXX",
+      "email": "info@starpluscentre.com",
+      "hours": "周一至周日：上午 9:00 - 晚上 9:00"
     }
   }
 }

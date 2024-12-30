@@ -1,10 +1,12 @@
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
+import Link from "next/link";
 
 export default function About() {
     const t = useTranslations('about');
+    const locale = useLocale();
     return (
         <>
-            <section className="bg-sky-50 dark:from-gray-900 dark:to-gray-800">
+            <section className="bg-sky-50 dark:from-gray-900 dark:to-gray-800" id="about">
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-center">
 
@@ -29,7 +31,7 @@ export default function About() {
                             </p>
 
                             <div className="mt-8">
-                                <a href="/about"
+                                <Link href={`/${locale}#location`}
                                    className="inline-flex items-center bg-brand text-white rounded-md
                         xx:px-4 xx:py-2 xx:text-sm
                         sm:px-6 sm:py-3 sm:text-base
@@ -40,7 +42,7 @@ export default function About() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                               d="M9 5l7 7-7 7"/>
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
                         </div>
 

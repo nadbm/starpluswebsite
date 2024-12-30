@@ -18,7 +18,7 @@
     "title": "Un Partenariat Unique pour de Meilleurs Soins de Santé",
     "description1": "Le Centre de Santé Starplus est né du partenariat unique entre deux visionnaires - un spécialiste expérimenté en laboratoire clinique et un homme d'affaires prospère tourné vers l'avenir. Ensemble, ils ont uni leurs expertises pour donner vie à leur vision commune.",
     "description2": "Leur collaboration a conduit à l'établissement du Centre de Santé Starplus, un lieu où les diagnostics cliniques et les soins compatissants se rencontrent. Notre mission reste simple mais percutante : fournir des soins de santé complets, accessibles et centrés sur le patient qui permettent à chaque individu de vivre une vie plus saine.",
-    "learnMore": "En Savoir Plus Sur Nous",
+    "learnMore": "Visitez notre centre",
     "imageAlt": "L'équipe du Centre de Santé Starplus"
   },
   "bookNowSection": {
@@ -81,6 +81,154 @@
       "tag1": "Tests de Laboratoire",
       "tag2": "Diagnostics",
       "tag3": "Suivi de Santé"
+    }
+  },
+  "booking": {
+    "title": "Prendre un rendez-vous",
+    "subtitle": "Sélectionnez le service et l'heure de votre choix",
+
+    "selectService": "Sélectionner un service",
+    "serviceDescription": "Durée",
+    "minutesAbbr": "min",
+
+    "selectDate": "Sélectionner une date",
+    "weekDays": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mer",
+      "thu": "Jeu",
+      "fri": "Ven",
+      "sat": "Sam",
+      "sun": "Dim"
+    },
+
+    "selectTime": "Sélectionner une heure",
+    "noTimesAvailable": "Aucune disponibilité pour cette date",
+
+    "form": {
+      "title": "Vos informations",
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "notes": "Notes supplémentaires",
+      "submit": "Confirmer le rendez-vous"
+    },
+
+    "status": {
+      "available": "Disponible",
+      "unavailable": "Indisponible",
+      "selected": "Sélectionné"
+    },
+
+    "errors": {
+      "serviceRequired": "Veuillez sélectionner un service",
+      "dateRequired": "Veuillez sélectionner une date",
+      "timeRequired": "Veuillez sélectionner une heure",
+      "loadingError": "Erreur lors du chargement des données. Veuillez réessayer.",
+      "bookingError": "Erreur lors de la prise de rendez-vous. Veuillez réessayer."
+    },
+
+    "success": {
+      "title": "Rendez-vous confirmé",
+      "message": "Votre rendez-vous a été planifié.",
+      "confirmation": "Vous recevrez un e-mail de confirmation sous peu."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Vous avez des questions sur nos services ? Nous sommes là pour vous aider et nous avons hâte de vous entendre.",
+    "success": "Merci de nous avoir contactés ! Nous vous répondrons bientôt.",
+    "errors": {
+      "submission": "Impossible d'envoyer votre message. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Informations de contact",
+      "emailTitle": "Envoyez-nous un email",
+      "phoneTitle": "Appelez-nous",
+      "hoursTitle": "Horaires d'ouverture",
+      "timeline1": "Lundi - Vendredi",
+      "timeline2": "Samedi",
+      "timeline3": "Dimanche"
+    },
+    "form": {
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "Numéro de téléphone",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Comment pouvons-nous vous aider ?",
+      "message": "Message",
+      "messagePlaceholder": "Dites-nous en plus sur votre demande...",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi..."
+    }
+  },
+
+  "location": {
+    "title": "Visitez notre centre",
+    "description": "Idéalement situé au cœur de Montréal, notre installation moderne est conçue pour votre confort et votre commodité",
+    "address": {
+      "title": "Notre adresse",
+      "line1": "501, 998 boulevard de saint Laurent est,",
+      "line2": "Montréal, QC H2S 9Y9"
+    },
+    "advantages": {
+      "parking": {
+        "title": "Parking gratuit",
+        "description": "Grand parking sur place disponible gratuitement pour tous nos patients"
+      },
+      "location": {
+        "title": "Emplacement de choix",
+        "description": "Situé sur le boulevard Saint Laurent, facilement accessible depuis toutes les parties de Montréal"
+      },
+      "transit": {
+        "title": "Transports en commun",
+        "description": "À proximité des principales lignes de bus et des stations de métro pour un accès pratique"
+      },
+      "hours": {
+        "title": "Horaires prolongés",
+        "description": "Ouvert tard pour s'adapter à votre emploi du temps"
+      }
+    }
+  },
+
+
+  "reviews": {
+    "title": "Ce que disent nos patients",
+    "description": "Lisez les expériences authentiques de nos précieux patients sur nos services de santé.",
+    "shareButton": "Partagez votre expérience",
+    "errors": {
+      "submission": "Impossible de soumettre votre avis. Veuillez réessayer."
+    },
+    "modal": {
+      "title1": "Partagez votre expérience",
+      "rating": "Votre note",
+      "name": "Votre nom",
+      "title2": "Titre de l'avis",
+      "content": "Votre avis",
+      "submit": "Soumettre l'avis",
+      "submitting": "Envoi...",
+      "cancel": "Annuler"
+    }
+  },
+
+  "footer": {
+    "logoAlt": "Logo Starplus",
+    "description": "Au centre de santé Starplus, nous offrons des soins médicaux complets et des services de bien-être, rendant les soins de santé de qualité accessibles à tous.",
+    "quickLinksTitle": "Liens rapides",
+    "contactTitle": "Informations de contact",
+    "copyright": "© {year} Centre de santé Starplus. Tous droits réservés.",
+    "quickLinks": {
+      "services": "Services",
+      "about": "À propos de nous",
+      "booking": "Prendre rendez-vous",
+      "contact": "Contactez-nous"
+    },
+    "contact": {
+      "address": "501, 998 boulevard de saint Laurent est, Montréal, QC H2S 9Y9",
+      "phone": "(514) XXX-XXXX",
+      "email": "info@starpluscentre.com",
+      "hours": "Lun - Dim : 9h00 - 21h00"
     }
   }
 }

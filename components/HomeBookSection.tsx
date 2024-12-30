@@ -1,8 +1,9 @@
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 import Link from "next/link";
 
 export default function HomeBookSection() {
     const t = useTranslations('bookNowSection');
+    const locale = useLocale();
     return (
         <>
             <div className="h-110 flex items-center justify-center bg-no-repeat bg-cover bg-center my-5"
@@ -16,12 +17,12 @@ export default function HomeBookSection() {
             xx:text-lg xs:text-xl sm:text-2xl lg:text-3xl">
                         {t('description')}
                     </p>
-                    <Link href="/booking"
+                    <Link href={`/${locale}/booking`}
                           className="bg-brand hover:bg-brand/90 text-white rounded-md transition-all duration-300
-                xx:text-sm xx:px-6 xx:py-3
-                sm:text-lg sm:px-8 sm:py-4
-                lg:text-xl lg:px-10 lg:py-5
-                font-semibold shadow-lg hover:shadow-xl">
+                            xx:text-sm xx:px-6 xx:py-3
+                            sm:text-lg sm:px-8 sm:py-4
+                            lg:text-xl lg:px-10 lg:py-5
+                            font-semibold shadow-lg hover:shadow-xl">
                         {t('button')}
                     </Link>
                 </div>

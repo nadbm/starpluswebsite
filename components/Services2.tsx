@@ -1,8 +1,9 @@
 import Link from "next/link";
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 
 export default function Services2() {
     const t = useTranslations('services2');
+    const locale = useLocale();
 
     interface ServiceCardProps {
         title: string;
@@ -21,7 +22,7 @@ export default function Services2() {
             image: "/home/h1.jpg",
             tags: [t('physio.tag1'), t('physio.tag2'), t('physio.tag3')],
             status: t('available'),
-            href: "/services/physiotherapy"
+            href: `/${locale}/booking`
         },
         {
             title: t('gp.title'),
@@ -29,7 +30,7 @@ export default function Services2() {
             image: "/home/h2.jpg",
             tags: [t('gp.tag1'), t('gp.tag2'), t('gp.tag3')],
             status: t('available'),
-            href: "/services/gp"
+            href: `/${locale}/booking`
         },
         {
             title: t('online.title'),
@@ -37,7 +38,7 @@ export default function Services2() {
             image: "/home/h3.jpg",
             tags: [t('online.tag1'), t('online.tag2')],
             status: t('available'),
-            href: "/services/online"
+            href: `/${locale}/booking`
         },
         {
             title: t('nursing.title'),
@@ -45,7 +46,7 @@ export default function Services2() {
             image: "/home/h4.jpg",
             tags: [t('nursing.tag1'), t('nursing.tag2'), t('nursing.tag3')],
             status: t('available'),
-            href: "/services/nursing"
+            href: `/${locale}/booking`
         },
         {
             title: t('massage.title'),
@@ -53,7 +54,7 @@ export default function Services2() {
             image: "/home/h5.jpg",
             tags: [t('massage.tag1'), t('massage.tag2')],
             status: t('available'),
-            href: "/services/massage"
+            href: `/${locale}/booking`
         },
         {
             title: t('naturopathy.title'),
@@ -61,7 +62,7 @@ export default function Services2() {
             image: "/home/h6.jpg",
             tags: [t('naturopathy.tag1'), t('naturopathy.tag2')],
             status: t('available'),
-            href: "/services/naturopathy"
+            href: `/${locale}/booking`
         },
         {
             title: t('blood.title'),
@@ -69,7 +70,7 @@ export default function Services2() {
             image: "/home/h7.jpg",
             tags: [t('blood.tag1'), t('blood.tag2')],
             status: t('comingSoon'),
-            href: "/services/blood"
+            href: `/${locale}/booking`
         }
     ];
 
@@ -130,7 +131,7 @@ export default function Services2() {
 
     return (
         <>
-            <section className="py-16 bg-gray-50 dark:bg-gray-900">
+            <section className="py-16 bg-gray-50 dark:bg-gray-900" id="services">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-white

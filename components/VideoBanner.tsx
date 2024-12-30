@@ -1,8 +1,10 @@
 'use client';
 
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
+import Link from "next/link";
 
 export default function VideoBanner() {
+    const locale = useLocale();
     const t = useTranslations('hero');
     return (
         <>
@@ -45,24 +47,25 @@ export default function VideoBanner() {
                     </div>
 
                     <div className="flex items-center justify-center space-x-4">
-                        <a href="" className="rounded-md text-white transition-all duration-300
-                xx:text-sm xx:px-4 xx:py-2
-                xs:text-base xs:px-5 xs:py-2.5
-                sm:text-lg sm:px-6 sm:py-3
-                md:text-xl md:px-7 md:py-3.5
-                lg:text-2xl lg:px-8 lg:py-4
-                bg-brand hover:bg-brand/90 shadow-lg hover:shadow-xl">
+                        <Link href={`/${locale}/booking`} className="rounded-md text-white transition-all duration-300
+                            xx:text-sm xx:px-4 xx:py-2
+                            xs:text-base xs:px-5 xs:py-2.5
+                            sm:text-lg sm:px-6 sm:py-3
+                            md:text-xl md:px-7 md:py-3.5
+                            lg:text-2xl lg:px-8 lg:py-4
+                            bg-brand hover:bg-brand/90 shadow-lg hover:shadow-xl">
                             {t('cta.book')}
-                        </a>
-                        <a href="" className="rounded-md text-white transition-all duration-300
-                xx:text-sm xx:px-4 xx:py-2
-                xs:text-base xs:px-5 xs:py-2.5
-                sm:text-lg sm:px-6 sm:py-3
-                md:text-xl md:px-7 md:py-3.5
-                lg:text-2xl lg:px-8 lg:py-4
-                bg-blue-800 hover:bg-blue-700 shadow-lg hover:shadow-xl">
+                        </Link>
+
+                        <Link href={`/${locale}#about`} className="rounded-md text-white transition-all duration-300
+                            xx:text-sm xx:px-4 xx:py-2
+                            xs:text-base xs:px-5 xs:py-2.5
+                            sm:text-lg sm:px-6 sm:py-3
+                            md:text-xl md:px-7 md:py-3.5
+                            lg:text-2xl lg:px-8 lg:py-4
+                            bg-blue-800 hover:bg-blue-700 shadow-lg hover:shadow-xl">
                             {t('cta.learn')}
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
