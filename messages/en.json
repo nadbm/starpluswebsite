@@ -106,9 +106,10 @@
       "email": "Email Address",
       "phone": "Phone Number",
       "notes": "Additional Notes",
-      "submit": "Book Appointment",
+      "submit": "Confirm Appointment",
       "submitting": "Submitting..."
     },
+
     "status": {
       "available": "Available",
       "unavailable": "Unavailable",
@@ -183,6 +184,9 @@
       "hours": {
         "title": "Extended Hours",
         "description": "Open extended hours to accommodate your schedule"
+      },
+      "contact": {
+        "title": "Contact"
       }
     }
   },
@@ -224,5 +228,12 @@
       "email": "info@starpluscentre.com",
       "hours": "Mon - Sun: 9:00 AM - 9:00 PM"
     }
+  },
+
+  "carousel": {
+    "title1": "Your Health, Our Mission",
+    "description1": "Professional healthcare services tailored to your needs",
+    "title2": "Expert Medical Care",
+    "description2": "Our team of professionals is here to help you achieve optimal health"
   }
 }

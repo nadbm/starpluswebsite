@@ -24,7 +24,7 @@ export default function Navbar() {
     return (
         <nav className="bg-brand border-gray-200 sticky top-0 z-50 shadow-sm">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
-                {/* Logo and Brand Name */}
+
                 <Link href={`/${locale}`} className="flex items-center">
                     <div className="relative h-20 w-64">
                         <Image
@@ -37,7 +37,7 @@ export default function Navbar() {
                     </div>
                 </Link>
 
-                {/* Mobile Menu Button */}
+
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     type="button"
@@ -51,7 +51,7 @@ export default function Navbar() {
                     </svg>
                 </button>
 
-                {/* Main Navigation */}
+
                 <div
                     className={`${
                         isMenuOpen ? 'block' : 'hidden'

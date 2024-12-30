@@ -106,13 +106,15 @@
     "noTimesAvailable": "Aucune disponibilité pour cette date",
 
     "form": {
-      "title": "Vos informations",
-      "name": "Nom complet",
-      "email": "Adresse e-mail",
-      "phone": "Numéro de téléphone",
-      "notes": "Notes supplémentaires",
-      "submit": "Confirmer le rendez-vous"
+      "title": "Vos Informations",
+      "name": "Nom Complet",
+      "email": "Adresse Électronique",
+      "phone": "Numéro de Téléphone",
+      "notes": "Notes Supplémentaires",
+      "submit": "Confirmer le Rendez-vous",
+      "submitting": "Envoi en cours..."
     },
+
 
     "status": {
       "available": "Disponible",
@@ -188,6 +190,9 @@
       "hours": {
         "title": "Horaires prolongés",
         "description": "Ouvert tard pour s'adapter à votre emploi du temps"
+      },
+      "contact": {
+        "title": "Contactez-nous"
       }
     }
   },
@@ -230,5 +235,12 @@
       "email": "info@starpluscentre.com",
       "hours": "Lun - Dim : 9h00 - 21h00"
     }
+  },
+
+  "carousel": {
+    "title1": "Votre santé, notre mission",
+    "description1": "Des services de santé professionnels adaptés à vos besoins",
+    "title2": "Soins médicaux d'experts",
+    "description2": "Notre équipe de professionnels est là pour vous aider à atteindre une santé optimale"
   }
 }

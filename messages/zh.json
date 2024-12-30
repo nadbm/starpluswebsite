@@ -86,7 +86,6 @@
   "booking": {
     "title": "预约时间",
     "subtitle": "选择您偏好的服务和时间",
-
     "selectService": "选择服务",
     "serviceDescription": "时长",
     "minutesAbbr": "分钟",
@@ -111,7 +110,8 @@
       "email": "电子邮箱",
       "phone": "电话号码",
       "notes": "附加备注",
-      "submit": "确认预约"
+      "submit": "确认预约",
+      "submitting": "提交中..."
     },
 
     "status": {
@@ -188,6 +188,9 @@
       "hours": {
         "title": "延长营业时间",
         "description": "营业时间延长以适应您的时间安排"
+      },
+      "contact": {
+        "title": "联系我们"
       }
     }
   },
@@ -230,5 +233,12 @@
       "email": "info@starpluscentre.com",
       "hours": "周一至周日：上午 9:00 - 晚上 9:00"
     }
+  },
+
+  "carousel": {
+    "title1": "您的健康，我们的使命",
+    "description1": "专业的医疗服务，为您量身定制",
+    "title2": "专业医疗护理",
+    "description2": "我们的专业团队致力于帮助您实现最佳健康状态"
   }
 }

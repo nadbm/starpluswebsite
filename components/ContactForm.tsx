@@ -71,7 +71,7 @@ export default function ContactForm() {
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                        {/* Contact Information */}
+
                         <div className="space-y-8">
                             <div className="bg-brand p-8 rounded-xl shadow-md text-white">
                                 <h3 className="text-2xl font-semibold mb-6">
@@ -120,7 +120,7 @@ export default function ContactForm() {
                             </div>
                         </div>
 
-                        {/* Contact Form */}
+
                         <div className="bg-white rounded-xl shadow-lg p-8">
                             {error && (
                                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-600">

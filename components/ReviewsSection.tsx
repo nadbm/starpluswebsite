@@ -13,7 +13,6 @@ interface Review {
     created_at?: string;
 }
 
-// Default test reviews
 const TEST_REVIEWS: Review[] = [
     {
         name: "Sarah Johnson",
@@ -78,7 +77,7 @@ export default function ReviewsSection() {
                 }
             } catch (error) {
                 console.error('Error fetching reviews:', error);
-                // Fall back to test data if API fails
+
                 setReviews(TEST_REVIEWS);
             }
         };
@@ -107,7 +106,6 @@ export default function ReviewsSection() {
                 throw new Error(t('errors.submission'));
             }
 
-            // Reset form
             setFormData({
                 name: '',
                 title: '',
@@ -118,7 +116,6 @@ export default function ReviewsSection() {
             setHoverRating(0);
             setIsModalOpen(false);
 
-            // Refresh reviews
             try {
                 const refreshResponse = await fetch('http://localhost:8000/api/reviews/reviews/');
                 const refreshData = await refreshResponse.json();
@@ -126,11 +123,10 @@ export default function ReviewsSection() {
                     setReviews(refreshData.results);
                 }
             } catch (error) {
-                // If refresh fails, add the new review to existing reviews
                 const newReview = {
                     ...formData,
                     rating,
-                    id: Math.random(), // temporary ID
+                    id: Math.random(),
                 };
                 setReviews(prev => [newReview, ...prev]);
             }
