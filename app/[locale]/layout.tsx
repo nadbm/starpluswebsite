@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import { locales, Locale } from '@/i18n/settings';
+import {Metadata} from "next";
 
 async function getMessages(locale: string) {
     try {
@@ -11,6 +12,12 @@ async function getMessages(locale: string) {
     } catch (error) {
         notFound();
     }
+}
+
+export const metadata: Metadata = {
+    title: 'Starplus Health Center',
+    description: 'Professional healthcare services including physiotherapy, GP services, and more',
+    keywords: 'healthcare, physiotherapy, medical services, Starplus, Starplus Health Center, Montreal, Healthcare services'
 }
 
 export function generateStaticParams() {

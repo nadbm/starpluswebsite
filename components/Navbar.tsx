@@ -62,7 +62,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 href={`/${locale}`}
-                                className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                             >
                                 {t('home')}
                             </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 href={`/${locale}#about`}
-                                className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                             >
                                 {t('about')}
                             </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 href={`/${locale}#services`}
-                                className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                             >
                                 {t('services')}
                             </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 href={`/${locale}#contact`}
-                                className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                             >
                                 {t('contact')}
                             </Link>
