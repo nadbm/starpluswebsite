@@ -26,22 +26,22 @@ export default function VideoBanner() {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-full max-w-7xl mx-auto px-4">
                     <div className="text-white text-center flex flex-col">
                         <h1 className="font-bold tracking-wide
-                xx:text-2xl xx:mb-3
-                xs:text-3xl xs:mb-4
-                sm:text-4xl sm:mb-5
-                md:text-5xl md:mb-6
-                lg:text-6xl lg:mb-8
-                xl:text-7xl xl:mb-10">
-                            {t('title')}
-                        </h1>
+                            xx:text-2xl xx:mb-3
+                            xs:text-3xl xs:mb-4
+                            sm:text-4xl sm:mb-5
+                            md:text-5xl md:mb-6
+                            lg:text-6xl lg:mb-8
+                            xl:text-7xl xl:mb-10">
+                                        {t('title')}
+                                    </h1>
 
-                        <p className="leading-relaxed max-w-4xl mx-auto
-                xx:text-sm xx:mb-4
-                xs:text-base xs:mb-5
-                sm:text-lg sm:mb-6
-                md:text-xl md:mb-8
-                lg:text-2xl lg:mb-10
-                xl:text-3xl xl:mb-12">
+                                    <p className="leading-relaxed max-w-4xl mx-auto
+                            xx:text-sm xx:mb-4
+                            xs:text-base xs:mb-5
+                            sm:text-lg sm:mb-6
+                            md:text-xl md:mb-8
+                            lg:text-2xl lg:mb-10
+                            xl:text-3xl xl:mb-12">
                             {t('description')}
                         </p>
                     </div>

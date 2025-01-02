@@ -70,7 +70,7 @@ export default function ReviewsSection() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/reviews/reviews/');
+                const response = await fetch('http://167.172.29.162/api/reviews/reviews/');
                 const data = await response.json();
                 if (data.results) {
                     setReviews(data.results);
@@ -91,7 +91,7 @@ export default function ReviewsSection() {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:8000/api/reviews/reviews/', {
+            const response = await fetch('http://167.172.29.162/api/reviews/reviews/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ export default function ReviewsSection() {
             setIsModalOpen(false);
 
             try {
-                const refreshResponse = await fetch('http://localhost:8000/api/reviews/reviews/');
+                const refreshResponse = await fetch('http://167.172.29.162/api/reviews/reviews/');
                 const refreshData = await refreshResponse.json();
                 if (refreshData.results) {
                     setReviews(refreshData.results);

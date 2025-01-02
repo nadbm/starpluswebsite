@@ -22,7 +22,7 @@ export default function ContactForm() {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:8000/api/contacts/contact/', {
+            const response = await fetch('http://167.172.29.162/api/contacts/contact/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

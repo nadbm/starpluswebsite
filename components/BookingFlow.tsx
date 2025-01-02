@@ -144,7 +144,7 @@ export default function BookingFlow() {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/appointments/all-services/');
+                const response = await fetch('http://167.172.29.162/api/appointments/all-services/');
                 const data: ServicesResponse = await response.json();
                 const availableServices = data.results.filter(service => service.status === 1);
                 setServices(availableServices);
@@ -165,7 +165,7 @@ export default function BookingFlow() {
                 setIsLoading(true);
                 try {
                     const response = await fetch(
-                        `http://localhost:8000/api/appointments/availability/available_days/?service_id=${selectedService.id}`
+                        `http://167.172.29.162/api/appointments/availability/available_days/?service_id=${selectedService.id}`
                     );
                     const data: AvailableDay[] = await response.json();
                     setAvailableDays(data);
@@ -235,7 +235,7 @@ export default function BookingFlow() {
 
         try {
             const response = await fetch(
-                `http://localhost:8000/api/appointments/availability/time_slots/?service_id=${selectedService.id}&date=${date}`
+                `http://167.172.29.162/api/appointments/availability/time_slots/?service_id=${selectedService.id}&date=${date}`
             );
             const data = await response.json();
             setTimeSlots(data);
@@ -265,7 +265,7 @@ export default function BookingFlow() {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:8000/api/appointments/appointments/', {
+            const response = await fetch('http://167.172.29.162/api/appointments/appointments/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
