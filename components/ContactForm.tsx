@@ -22,7 +22,7 @@ export default function ContactForm() {
         setError(null);
 
         try {
-            const response = await fetch('http://167.172.29.162/api/contacts/contact/', {
+            const response = await fetch('http://localhost:8000/api/contacts/contact/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ export default function ContactForm() {
                                         </div>
                                         <div>
                                             <h4 className="font-medium">{t('info.phoneTitle')}</h4>
-                                            <p className="mt-1">(514) XXX-XXXX</p>
+                                            <p className="mt-1">(514)-447-2175</p>
                                         </div>
                                     </div>
                                 </div>
