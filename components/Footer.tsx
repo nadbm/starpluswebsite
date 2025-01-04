@@ -31,8 +31,24 @@ export default function Footer() {
     {
       icon: Clock,
       text: t('contact.hours'),
+      isMultiLine: true,
     },
   ];
+
+  const renderText = (text: string, isMultiLine?: boolean) => {
+    if (isMultiLine) {
+      return (
+          <span className="text-gray-200 text-xs flex-1 whitespace-pre-line">
+            {text}
+          </span>
+      )
+    }
+    return (
+        <span className="text-gray-200 text-sm flex-1">
+          {text}
+        </span>
+    )
+  }
 
   return (
       <footer className="bg-gradient-to-br from-brand to-blue-700">
@@ -81,9 +97,10 @@ export default function Footer() {
                       <div className="w-8 flex-shrink-0">
                         <info.icon className="w-5 h-5 text-sky-200" />
                       </div>
-                      <span className="text-gray-200 text-sm flex-1">
-                    {info.text}
-                  </span>
+                  {/*    <span className="text-gray-200 text-sm flex-1">*/}
+                  {/*  {info.text}*/}
+                  {/*</span>*/}
+                      {renderText(info.text, info.isMultiLine)}
                     </div>
                 ))}
               </div>
