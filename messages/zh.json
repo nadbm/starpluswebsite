@@ -146,7 +146,7 @@
       "emailTitle": "发送电子邮件",
       "phoneTitle": "拨打电话",
       "hoursTitle": "营业时间",
-      "timeline1": "周一至周五",
+      "timeline1": "周三至周五",
       "timeline2": "周六",
       "timeline3": "周日"
     },
@@ -231,7 +231,7 @@
       "address": "501, 998 boulevard de saint Laurent est, Montreal, QC H2S 9Y9",
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
-      "hours": "周一至周日：上午 9:00 - 晚上 9:00"
+      "hours": "周三至周五：上午9:00 - 下午5:00\n周末：上午9:00 - 下午1：00"
     }
   },
 
