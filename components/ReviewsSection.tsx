@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Star } from 'lucide-react';
+import { ENDPOINTS } from '@/constants/api';
 
 interface Review {
     id?: number;
@@ -70,7 +71,7 @@ export default function ReviewsSection() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://167.172.29.162/api/reviews/reviews/');
+                const response = await fetch(ENDPOINTS.REVIEWS.LIST);
                 const data = await response.json();
                 if (data.results) {
                     setReviews(data.results);
@@ -91,7 +92,7 @@ export default function ReviewsSection() {
         setError(null);
 
         try {
-            const response = await fetch('http://167.172.29.162/api/reviews/reviews/', {
+            const response = await fetch(ENDPOINTS.REVIEWS.CREATE, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -117,7 +118,7 @@ export default function ReviewsSection() {
             setIsModalOpen(false);
 
             try {
-                const refreshResponse = await fetch('http://167.172.29.162/api/reviews/reviews/');
+                const refreshResponse = await fetch(ENDPOINTS.REVIEWS.LIST);
                 const refreshData = await refreshResponse.json();
                 if (refreshData.results) {
                     setReviews(refreshData.results);

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Mail, Phone, MessageSquare, Send } from 'lucide-react';
+import {ENDPOINTS} from "@/constants/api";
 
 export default function ContactForm() {
     const t = useTranslations('contact');
@@ -22,7 +23,7 @@ export default function ContactForm() {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:8000/api/contacts/contact/', {
+            const response = await fetch(ENDPOINTS.CONTACTS.CREATE, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
