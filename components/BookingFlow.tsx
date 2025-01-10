@@ -77,7 +77,7 @@ const SuccessMessage = ({t}: { t: any }) => {
                     <p className="text-gray-600 mb-2">{t('success.message')}</p>
                     <p className="text-gray-600 mb-4">{t('success.confirmation')}</p>
                     <p className="text-brand">
-                        Redirecting to homepage in {countdown} seconds...
+                        {countdown} {t('success.backToHomepage')}
                     </p>
                 </div>
             </div>

@@ -124,9 +124,10 @@
       "bookingError": "Error making booking. Please try again."
     },
     "success": {
-      "title": "Booking Successful",
-      "message": "Your appointment has been scheduled.",
-      "confirmation": "You will receive a confirmation email shortly."
+      "title": "Appointment Successful",
+      "message": "Your appointment has been submitted",
+      "confirmation": "Please wait for our customer service to contact you",
+      "backToHomepage": "seconds later, we will return to the homepage"
     }
   },
 
@@ -165,8 +166,8 @@
     "description": "Strategically located in the heart of Montreal, our modern facility is designed for your comfort and convenience",
     "address": {
       "title": "Our Address",
-      "line1": "501, 998 boulevard de saint Laurent est,",
-      "line2": "Montreal, QC H2S 9Y9"
+      "line1": "500, 998 boulevard de saint Laurent est,",
+      "line2": "Montréal, QC, H2Z 9Y9"
     },
     "advantages": {
       "parking": {
@@ -223,7 +224,7 @@
       "contact": "Contact"
     },
     "contact": {
-      "address": "501, 998 boulevard de saint Laurent est, Montreal, QC H2S 9Y9",
+      "address": "500, 998 boulevard de saint Laurent est, Montreal, QC, H2Z 9Y9",
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
       "hours": "Wednesday to Friday: 10:00 AM - 6:00 PM\nWeekend: 10:00 AM - 1:00 PM"

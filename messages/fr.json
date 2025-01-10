@@ -131,9 +131,10 @@
     },
 
     "success": {
-      "title": "Rendez-vous confirmé",
-      "message": "Votre rendez-vous a été planifié.",
-      "confirmation": "Vous recevrez un e-mail de confirmation sous peu."
+      "title": "Rendez-vous réussi",
+      "message": "Votre rendez-vous a été soumis",
+      "confirmation": "Veuillez attendre que notre service client vous contacte",
+      "backToHomepage": "secondes plus tard, nous retournerons à la page d'accueil"
     }
   },
   "contact": {
@@ -171,8 +172,8 @@
     "description": "Idéalement situé au cœur de Montréal, notre installation moderne est conçue pour votre confort et votre commodité",
     "address": {
       "title": "Notre adresse",
-      "line1": "501, 998 boulevard de saint Laurent est,",
-      "line2": "Montréal, QC H2S 9Y9"
+      "line1": "500, 998 boulevard de saint Laurent est,",
+      "line2": "Montréal, QC, H2Z 9Y9"
     },
     "advantages": {
       "parking": {
@@ -230,7 +231,7 @@
       "contact": "Contactez-nous"
     },
     "contact": {
-      "address": "501, 998 boulevard de saint Laurent est, Montréal, QC H2S 9Y9",
+      "address": "500, 998 boulevard de saint Laurent est, Montréal, QC, H2Z 9Y9",
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
       "hours": "Mercredi à Vendredi : 10h00 - 18h00\nWeek-end : 10h00 - 13h00"
