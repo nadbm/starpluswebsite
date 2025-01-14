@@ -81,6 +81,13 @@
       "tag1": "Tests de Laboratoire",
       "tag2": "Diagnostics",
       "tag3": "Suivi de Santé"
+    },
+    "social": {
+      "title": "Services de Travail Social",
+      "description": "Services professionnels de conseil et de soutien pour aider les individus et les familles à faire face aux défis de la vie, offrant orientation, défense des droits et accès aux ressources communautaires.",
+      "tag1": "Consultation",
+      "tag2": "Défense des Droits",
+      "tag3": "Soutien"
     }
   },
   "booking": {

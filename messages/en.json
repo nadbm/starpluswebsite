@@ -80,6 +80,13 @@
       "tag1": "Lab Testing",
       "tag2": "Diagnostics",
       "tag3": "Health Monitoring"
+    },
+    "social": {
+      "title": "Social Worker Services",
+      "description": "Professional counseling and support services to help individuals and families navigate life challenges, providing guidance, advocacy, and access to community resources.",
+      "tag1": "Counseling",
+      "tag2": "Advocacy",
+      "tag3": "Support"
     }
   },
   "booking": {

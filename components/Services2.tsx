@@ -20,7 +20,7 @@ export default function Services2() {
             title: t('physio.title'),
             description: t('physio.description'),
             image: "/home/h1.jpg",
-            tags: [t('physio.tag1'), t('physio.tag2'), t('physio.tag3')],
+            tags: [t('physio.tag1'), t('physio.tag3')],
             status: t('available'),
             href: `/${locale}/booking`
         },
@@ -28,7 +28,7 @@ export default function Services2() {
             title: t('gp.title'),
             description: t('gp.description'),
             image: "/home/h2.jpg",
-            tags: [t('gp.tag1'), t('gp.tag2'), t('gp.tag3')],
+            tags: [t('gp.tag1'), t('gp.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },
@@ -44,7 +44,7 @@ export default function Services2() {
             title: t('nursing.title'),
             description: t('nursing.description'),
             image: "/home/h4.jpg",
-            tags: [t('nursing.tag1'), t('nursing.tag2'), t('nursing.tag3')],
+            tags: [t('nursing.tag1'), t('nursing.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },
@@ -71,13 +71,19 @@ export default function Services2() {
             tags: [t('blood.tag1'), t('blood.tag2')],
             status: t('comingSoon'),
             href: `/${locale}/booking`
+        },
+        {
+            title: t('social.title'),
+            description: t('social.description'),
+            image: "/home/h8.jpg",
+            tags: [t('social.tag1'), t('social.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
         }
     ];
 
-
-    const firstRow = services.slice(0, 3);
-    const secondRow = services.slice(3);
-
+    const firstRow = services.slice(0, 4);
+    const secondRow = services.slice(4);
 
     const ServiceCard = ({title, description, image, tags, status, href, isLast}: ServiceCardProps) => (
         <div
@@ -99,8 +105,8 @@ export default function Services2() {
                             key={index}
                             className="inline-block bg-brand/10 text-brand rounded-full px-3 py-1 text-sm"
                         >
-            {tag}
-          </span>
+                            {tag}
+                        </span>
                     ))}
                 </div>
             </div>
@@ -111,14 +117,6 @@ export default function Services2() {
                 </p>
             </div>
 
-            {/*    {status && (*/}
-            {/*        <div className="px-6 pb-4">*/}
-            {/*<span className="inline-block bg-brand rounded-full px-4 py-1 text-white font-semibold">*/}
-            {/*  {status}*/}
-            {/*</span>*/}
-            {/*        </div>*/}
-            {/*    )}*/}
-
             <Link
                 href={href}
                 className="block bg-brand hover:bg-brand/90 p-4 text-center transition-colors duration-300 mt-auto"
@@ -128,40 +126,38 @@ export default function Services2() {
         </div>
     );
 
-
     return (
         <>
             <section className="py-16 bg-gray-50 dark:bg-gray-900" id="services">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-white
-            xx:text-2xl sm:text-3xl lg:text-4xl">
+                            xx:text-2xl sm:text-3xl lg:text-4xl">
                             {t('sectionTitle')}
                         </h2>
                         <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto
-            xx:text-sm sm:text-base lg:text-lg">
+                            xx:text-sm sm:text-base lg:text-lg">
                             {t('sectionSubtitle')}
                         </p>
                     </div>
 
-
-                    <div className="grid xx:grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto mb-6">
+                    <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto mb-6">
                         {firstRow.map((service, index) => (
                             <ServiceCard key={index} {...service} isLast={false} />
                         ))}
                     </div>
 
-
-                    <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto
-                      xx:max-w-md sm:max-w-2xl md:max-w-5xl lg:max-w-7xl">
+                    <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
                         {secondRow.map((service, index) => (
-                            <ServiceCard key={index}
-                                         {...service}
-                                         isLast={index === secondRow.length - 1}/>
+                            <ServiceCard
+                                key={index}
+                                {...service}
+                                isLast={index === secondRow.length - 2}
+                            />
                         ))}
                     </div>
                 </div>
             </section>
         </>
-    )
+    );
 }
