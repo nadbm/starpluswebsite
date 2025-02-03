@@ -118,7 +118,7 @@ export default function BookingFlow() {
         {
             icon: MapPin,
             title: l('advantages.location.title'),
-            description: l('address.line1') + ', ' + l('address.line2')
+            description: l('address.line1') + l('address.line2')
         },
         {
             icon: Clock,
