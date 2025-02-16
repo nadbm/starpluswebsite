@@ -6,6 +6,7 @@ import Services2 from "@/components/Services2";
 import Location from "@/components/Location";
 import ContactForm from "@/components/ContactForm";
 import ReviewsSection from "@/components/ReviewsSection";
+import Physio from "@/components/Physio";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
                 <Services2 />
                 <HomeBookSection />
                 <Location />
+                <Physio />
                 <ReviewsSection />
                 <ContactForm />
             </main>

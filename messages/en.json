@@ -21,6 +21,16 @@
     "learnMore": "Visit Our Center",
     "imageAlt": "Starplus Health Center Team"
   },
+
+  "physio": {
+    "t1": "15+ years of experience",
+    "t2": "RMQ Certified",
+    "t3": "Rehabilitation Specialist",
+    "t4": "With over 15 years of experience as a physical trainer and professional basketball player, Chen Hao specializes in massage therapy with a focus on myofascial release and sports rehabilitation.",
+    "t5": "Certified by the Regroupement des Massothérapeutes du Québec (RMQ), he combines his extensive athletic background with therapeutic expertise to help clients recover, relieve pain, and enhance performance.",
+    "t6": "Whether you're seeking overall relaxation or targeted treatment, Chen tailors each session to meet your unique needs."
+  },
+
   "bookNowSection": {
     "title": "Ready to Take Care of Your Health?",
     "description": "Schedule your appointment today and start your journey to better health with our professional medical team",

@@ -21,6 +21,16 @@
     "learnMore": "Visitez notre centre",
     "imageAlt": "L'équipe du Centre de Santé Starplus"
   },
+
+  "physio": {
+    "t1": "15+ ans d'expérience",
+    "t2": "Certifié RMQ",
+    "t3": "Spécialiste en Réhabilitation",
+    "t4": "Avec plus de 15 ans d'expérience en tant qu'entraineur physique et joueur professionnel de basketball, Chen Hao se spécialise dans la massothérapie, avec un accent particulier sur le relâchement myofascial et la rehabilitation sportive.",
+    "t5": "Certifié par le Regroupement des Massothérapeutes du Québec (RMQ), il combine son expertise athlétique et thérapeutique pour aider ses clients à récupérer, soulager la douleur et améliorer leurs performances.",
+    "t6": "Que vous recherchiez une relaxation globale ou un traitement ciblé, chaque séance est adaptée à vos besoins spécifiques."
+  },
+
   "bookNowSection": {
     "title": "Prêt à Prendre Soin de Votre Santé?",
     "description": "Planifiez votre rendez-vous aujourd'hui et commencez votre parcours vers une meilleure santé avec notre équipe médicale professionnelle",
