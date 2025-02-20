@@ -3,6 +3,7 @@
     "home": "Home",
     "services": "Services",
     "about": "About",
+    "expertise": "Expertise",
     "contact": "Contact",
     "book": "Book Now"
   },
@@ -22,13 +23,45 @@
     "imageAlt": "Starplus Health Center Team"
   },
 
+  "expertise": {
+    "sectionTitle": "Our Professional Team",
+    "sectionDescription": "Meet our specialists who are dedicated to providing exceptional care for your health needs",
+    "bookNow": "Book an Appointment",
+    "professionals": {
+      "qi": {
+        "name": "Qi Meng Sun",
+        "title": "Physiotherapist",
+        "description": "Experienced physiotherapist specializing in rehabilitation and pain management",
+        "expertise": [
+          "Sports Rehabilitation",
+          "Orthopedic Injury Treatment",
+          "Personalized Recovery Plans"
+        ],
+        "bio": "Qi Meng Sun is a dedicated physiotherapist with extensive experience in treating various conditions including sports injuries, post-surgical rehabilitation, and chronic pain. Using evidence-based techniques, she creates customized treatment plans that help patients regain mobility and improve their quality of life."
+      },
+      "chen": {
+        "name": "Chen Hao",
+        "title": "Massage Therapist & Naturopathic Professional",
+        "description": "Skilled massage therapist with expertise in natural healing methods",
+        "expertise": [
+          "Therapeutic Massage",
+          "Naturopathic Treatments",
+          "Holistic Wellness"
+        ],
+        "bio": "Chen Hao combines the healing power of massage therapy with naturopathic principles to provide comprehensive care. His approach focuses on promoting the body's natural healing processes, addressing both physical discomfort and overall wellness. With his dual expertise, Chen offers a unique therapeutic experience that balances modern techniques with traditional wisdom."
+      }
+    }
+  },
+
   "physio": {
-    "t1": "15+ years of experience",
-    "t2": "RMQ Certified",
-    "t3": "Rehabilitation Specialist",
-    "t4": "With over 15 years of experience as a physical trainer and professional basketball player, Chen Hao specializes in massage therapy with a focus on myofascial release and sports rehabilitation.",
-    "t5": "Certified by the Regroupement des Massothérapeutes du Québec (RMQ), he combines his extensive athletic background with therapeutic expertise to help clients recover, relieve pain, and enhance performance.",
-    "t6": "Whether you're seeking overall relaxation or targeted treatment, Chen tailors each session to meet your unique needs."
+    "title": "Professional Physical Therapy",
+    "description": "Our Physical Therapy Team",
+    "t1": "Professional Sports Rehabilitation",
+    "t2": "Orthopedic Injury Specialist",
+    "t3": "Evidence-based Treatment Methods",
+    "t4": "Compassionate and skilled physical therapist with a strong focus on orthopedic injuries and sports rehabilitation. Expertise in treating a wide range of conditions, including sprains, tendon and muscle tears, post-operative rehabilitation, and overuse injuries.",
+    "t5": "Adept at performing thorough physical assessments, creating personalized treatment plans, and utilizing evidence-based techniques such as manual therapy, therapeutic exercises, and home exercise programs to help patients achieve optimal recovery.",
+    "t6": "Proven ability to achieve positive client outcomes, with excellent feedback from patients for exceptional care and effective treatments."
   },
 
   "bookNowSection": {

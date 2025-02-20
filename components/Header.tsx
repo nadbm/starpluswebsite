@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Montserrat } from "next/font/google";
-import { useTranslations } from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const montser = Montserrat({
@@ -10,6 +10,7 @@ const montser = Montserrat({
 });
 
 export default function Header() {
+  const locale = useLocale();
   const t = useTranslations('nav');
 
   return (
@@ -38,6 +39,14 @@ export default function Header() {
                   className={`${montser.className} text-white hover:text-gray-200`}
               >
                 {t('services')}
+              </Link>
+            </li>
+            <li>
+              <Link
+                  href={`/${locale}/expertise`}
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+              >
+                {t('expertise')}
               </Link>
             </li>
             <li>
