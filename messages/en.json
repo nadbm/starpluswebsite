@@ -22,7 +22,6 @@
     "learnMore": "Visit Our Center",
     "imageAlt": "Starplus Health Center Team"
   },
-
   "expertise": {
     "sectionTitle": "Our Professional Team",
     "sectionDescription": "Meet our specialists who are dedicated to providing exceptional care for your health needs",
@@ -52,7 +51,6 @@
       }
     }
   },
-
   "physio": {
     "title": "Professional Physical Therapy",
     "description": "Our Physical Therapy Team",
@@ -63,7 +61,6 @@
     "t5": "Adept at performing thorough physical assessments, creating personalized treatment plans, and utilizing evidence-based techniques such as manual therapy, therapeutic exercises, and home exercise programs to help patients achieve optimal recovery.",
     "t6": "Proven ability to achieve positive client outcomes, with excellent feedback from patients for exceptional care and effective treatments."
   },
-
   "bookNowSection": {
     "title": "Ready to Take Care of Your Health?",
     "description": "Schedule your appointment today and start your journey to better health with our professional medical team",
@@ -130,6 +127,27 @@
       "tag1": "Counseling",
       "tag2": "Advocacy",
       "tag3": "Support"
+    },
+    "pharmacy": {
+      "title": "Pharmacy Consultation",
+      "description": "Professional medication guidance providing personalized advice on prescriptions, over-the-counter medications, and potential drug interactions.",
+      "tag1": "Medication Management",
+      "tag2": "Drug Interactions",
+      "tag3": "Health Advice"
+    },
+    "nutritionist": {
+      "title": "Nutritionist Services",
+      "description": "Expert dietary consultations offering customized nutrition plans to improve health, manage weight, and address specific dietary concerns.",
+      "tag1": "Dietary Planning",
+      "tag2": "Weight Management",
+      "tag3": "Health Optimization"
+    },
+    "botox": {
+      "title": "Botox Services",
+      "description": "Professional cosmetic treatments administered by certified specialists to reduce wrinkles and fine lines for natural-looking rejuvenation.",
+      "tag1": "Anti-aging",
+      "tag2": "Facial Rejuvenation",
+      "tag3": "Cosmetic Care"
     }
   },
   "booking": {
@@ -159,7 +177,6 @@
       "submit": "Confirm Appointment",
       "submitting": "Submitting..."
     },
-
     "status": {
       "available": "Available",
       "unavailable": "Unavailable",
@@ -180,7 +197,6 @@
       "backToHomepage": "seconds later, we will return to the homepage"
     }
   },
-
   "contact": {
     "title": "Get in Touch",
     "description": "Have questions about our services? We're here to help and look forward to hearing from you.",
@@ -210,7 +226,6 @@
       "submitting": "Sending..."
     }
   },
-
   "location": {
     "title": "Visit Our Center",
     "description": "Strategically located in the heart of Montreal, our modern facility is designed for your comfort and convenience",
@@ -241,7 +256,6 @@
       }
     }
   },
-
   "reviews": {
     "title": "What Our Patients Say",
     "description": "Read genuine experiences from our valued patients about our healthcare services.",
@@ -260,7 +274,6 @@
       "cancel": "Cancel"
     }
   },
-
   "footer": {
     "logoAlt": "Starplus Logo",
     "description": "At Starplus Health Center, we provide comprehensive medical care and wellness services, making quality healthcare accessible to everyone.",
@@ -280,7 +293,6 @@
       "hours": "Wednesday to Friday: 10:00 AM - 6:00 PM\nWeekend: 10:00 AM - 1:00 PM"
     }
   },
-
   "carousel": {
     "title1": "Your Health, Our Mission",
     "description1": "Professional healthcare services tailored to your needs",

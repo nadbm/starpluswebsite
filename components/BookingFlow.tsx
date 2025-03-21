@@ -140,7 +140,10 @@ export default function BookingFlow() {
         'Massage Therapy': 'massage',
         'Naturopathy': 'naturopathy',
         'Blood Draw Analysis': 'blood',
-        'Social Worker': 'social'
+        'Social Worker': 'social',
+        'Pharmacy Consultation': 'pharmacy',
+        'Nutritionist Services': 'nutritionist',
+        'Botox Services': 'botox'
     };
 
     useEffect(() => {

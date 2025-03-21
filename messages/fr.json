@@ -127,6 +127,27 @@
       "tag1": "Consultation",
       "tag2": "Défense des Droits",
       "tag3": "Soutien"
+    },
+    "pharmacy": {
+      "title": "Consultation Pharmaceutique",
+      "description": "Services professionnels de conseil en médicaments offrant des avis personnalisés sur les ordonnances, les médicaments en vente libre et les interactions possibles.",
+      "tag1": "Gestion Médicamenteuse",
+      "tag2": "Interactions Médicamenteuses",
+      "tag3": "Conseils Santé"
+    },
+    "nutritionist": {
+      "title": "Services de Nutrition",
+      "description": "Consultations diététiques expertes proposant des plans nutritionnels personnalisés pour améliorer la santé, gérer le poids et répondre aux besoins spécifiques.",
+      "tag1": "Planification Alimentaire",
+      "tag2": "Gestion du Poids",
+      "tag3": "Optimisation de la Santé"
+    },
+    "botox": {
+      "title": "Services de Botox",
+      "description": "Traitements cosmétiques professionnels administrés par des spécialistes certifiés pour réduire les rides et les ridules avec des résultats naturels.",
+      "tag1": "Anti-âge",
+      "tag2": "Rajeunissement Facial",
+      "tag3": "Soins Cosmétiques"
     }
   },
   "booking": {

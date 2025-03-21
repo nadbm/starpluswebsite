@@ -12,7 +12,6 @@ export default function Services2() {
         tags: string[];
         status: string;
         href: string;
-        isLast?: boolean;
     }
 
     const services = [
@@ -79,13 +78,37 @@ export default function Services2() {
             tags: [t('social.tag1'), t('social.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
+        },
+        {
+            title: t('pharmacy.title'),
+            description: t('pharmacy.description'),
+            image: "/home/h9.png",
+            tags: [t('pharmacy.tag1'), t('pharmacy.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
+        },
+        {
+            title: t('nutritionist.title'),
+            description: t('nutritionist.description'),
+            image: "/home/h10.png",
+            tags: [t('nutritionist.tag1'), t('nutritionist.tag2')],
+            status: t('comingSoon'),
+            href: `/${locale}/booking`
+        },
+        {
+            title: t('botox.title'),
+            description: t('botox.description'),
+            image: "/home/h11.png",
+            tags: [t('botox.tag1'), t('botox.tag2')],
+            status: t('comingSoon'),
+            href: `/${locale}/booking`
         }
     ];
 
     const firstRow = services.slice(0, 4);
     const secondRow = services.slice(4);
 
-    const ServiceCard = ({title, description, image, tags, status, href, isLast}: ServiceCardProps) => (
+    const ServiceCard = ({title, description, image, tags, status, href}: ServiceCardProps) => (
         <div
             className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl bg-white dark:bg-gray-800 flex flex-col">
             <img
@@ -119,9 +142,11 @@ export default function Services2() {
 
             <Link
                 href={href}
-                className="block bg-brand hover:bg-brand/90 p-4 text-center transition-colors duration-300 mt-auto"
+                className={`block ${status === t('comingSoon') ? 'bg-gray-400 hover:bg-gray-600' : 'bg-brand hover:bg-brand/90'} p-4 text-center transition-colors duration-300 mt-auto`}
             >
-                <span className="text-white font-semibold">{isLast ? t('comingSoon') : t('book')}</span>
+                <span className="text-white font-semibold">
+                    {status === t('comingSoon') ? t('comingSoon') : t('book')}
+                </span>
             </Link>
         </div>
     );
@@ -143,7 +168,7 @@ export default function Services2() {
 
                     <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto mb-6">
                         {firstRow.map((service, index) => (
-                            <ServiceCard key={index} {...service} isLast={false} />
+                            <ServiceCard key={index} {...service} />
                         ))}
                     </div>
 
@@ -152,7 +177,6 @@ export default function Services2() {
                             <ServiceCard
                                 key={index}
                                 {...service}
-                                isLast={index === secondRow.length - 2}
                             />
                         ))}
                     </div>
