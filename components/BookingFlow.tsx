@@ -143,7 +143,8 @@ export default function BookingFlow() {
         'Social Worker': 'social',
         'Pharmacy Consultation': 'pharmacy',
         'Nutritionist Services': 'nutritionist',
-        'Botox Services': 'botox'
+        'Botox Services': 'botox',
+        'Recovery Sleep Session': 'recovery'
     };
 
     useEffect(() => {

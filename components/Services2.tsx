@@ -102,6 +102,14 @@ export default function Services2() {
             tags: [t('botox.tag1'), t('botox.tag2')],
             status: t('comingSoon'),
             href: `/${locale}/booking`
+        },
+        {
+            title: t('recovery.title'),
+            description: t('recovery.description'),
+            image: "/home/h12.png",
+            tags: [t('recovery.tag1'), t('recovery.tag2')],
+            status: t('comingSoon'),
+            href: `/${locale}/booking`
         }
     ];
 

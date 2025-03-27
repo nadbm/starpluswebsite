@@ -148,6 +148,13 @@
       "tag1": "Anti-aging",
       "tag2": "Facial Rejuvenation",
       "tag3": "Cosmetic Care"
+    },
+    "recovery": {
+      "title": "Recovery Sleep Session",
+      "description": "Expert-guided sessions to enhance mental resilience, mood, and physical restoration through targeted recovery strategies.",
+      "tag1": "Mental Wellness",
+      "tag2": "Performance Recovery",
+      "tag3": "Holistic Health"
     }
   },
   "booking": {

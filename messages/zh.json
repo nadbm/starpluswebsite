@@ -22,7 +22,6 @@
     "learnMore": "前往我们的医疗中心",
     "imageAlt": "Starplus健康中心团队"
   },
-
   "expertise": {
     "sectionTitle": "我们的专业团队",
     "sectionDescription": "了解我们专注于为您的健康需求提供卓越护理的专家",
@@ -52,7 +51,6 @@
       }
     }
   },
-
   "physio": {
     "title": "专业物理治疗服务",
     "description": "我们的物理治疗团队",
@@ -63,7 +61,6 @@
     "t5": "精通全面的身体评估，制定个性化治疗计划，并运用循证技术如手法治疗、治疗性锻炼和家庭锻炼计划，帮助患者达到最佳恢复效果。",
     "t6": "凭借出色的客户反馈和有效治疗成果，他提供卓越的护理服务，确保每位患者获得最佳康复体验。"
   },
-
   "bookNowSection": {
     "title": "准备好关注您的健康了吗？",
     "description": "立即预约，与我们的专业医疗团队一起开启您的健康之旅",
@@ -75,7 +72,6 @@
     "book": "立即预约",
     "available": "可预约",
     "comingSoon": "即将推出",
-
     "physio": {
       "title": "物理治疗",
       "description": "我们经验丰富的物理治疗师专门致力于恢复运动功能、缓解疼痛和增强您的身体机能。",
@@ -152,6 +148,13 @@
       "tag1": "抗衰老",
       "tag2": "面部年轻化",
       "tag3": "美容护理"
+    },
+    "recovery": {
+      "title": "恢复睡眠",
+      "description": "通过专家指导的会话，提升心理韧性、情绪和身体恢复，采用针对性的恢复策略。",
+      "tag1": "心理健康",
+      "tag2": "性能恢复",
+      "tag3": "整体健康"
     }
   },
   "booking": {
@@ -160,7 +163,6 @@
     "selectService": "选择服务",
     "serviceDescription": "时长",
     "minutesAbbr": "分钟",
-
     "selectDate": "选择日期",
     "weekDays": {
       "mon": "周一",
@@ -171,10 +173,8 @@
       "sat": "周六",
       "sun": "周日"
     },
-
     "selectTime": "选择时间",
     "noTimesAvailable": "此日期暂无可用时间",
-
     "form": {
       "title": "您的信息",
       "name": "全名",
@@ -184,13 +184,11 @@
       "submit": "确认预约",
       "submitting": "提交中..."
     },
-
     "status": {
       "available": "可用",
       "unavailable": "不可用",
       "selected": "已选择"
     },
-
     "errors": {
       "serviceRequired": "请选择服务",
       "dateRequired": "请选择日期",
@@ -198,7 +196,6 @@
       "loadingError": "加载数据时出错，请重试。",
       "bookingError": "预约失败，请重试。"
     },
-
     "success": {
       "title": "预约成功",
       "message": "您的预约已提交",
@@ -235,7 +232,6 @@
       "submitting": "发送中..."
     }
   },
-
   "location": {
     "title": "参观我们的中心",
     "description": "我们位于蒙特利尔市中心的战略位置，现代化设施旨在为您提供舒适和便利",
@@ -266,8 +262,6 @@
       }
     }
   },
-
-
   "reviews": {
     "title": "我们的客户怎么说",
     "description": "阅读我们的宝贵客户对我们医疗服务的真实体验。",
@@ -286,7 +280,6 @@
       "cancel": "取消"
     }
   },
-
   "footer": {
     "logoAlt": "Starplus标志",
     "description": "在Starplus健康中心，我们提供全面的医疗护理和健康服务，让每个人都能享受到高质量的医疗服务",
@@ -306,7 +299,6 @@
       "hours": "周三至周五：上午10:00 - 下午6:00\n周末：上午10:00 - 下午1：00"
     }
   },
-
   "carousel": {
     "title1": "您的健康，我们的使命",
     "description1": "专业的医疗服务，为您量身定制",
