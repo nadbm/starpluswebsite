@@ -155,6 +155,13 @@
       "tag1": "Bien-être Mental",
       "tag2": "Récupération Performance",
       "tag3": "Santé Globale"
+    },
+    "mental": {
+      "title": "Services de Santé Mentale",
+      "description": "Soutien psychologique pour l'anxiété, le stress, les problèmes familiaux et l'intervention de crise avec des approches thérapeutiques personnalisées.",
+      "tag1": "Soutien Psychologique",
+      "tag2": "Conseil Familial",
+      "tag3": "Gestion de Crise"
     }
   },
   "booking": {

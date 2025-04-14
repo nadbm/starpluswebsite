@@ -155,6 +155,13 @@
       "tag1": "Mental Wellness",
       "tag2": "Performance Recovery",
       "tag3": "Holistic Health"
+    },
+    "mental": {
+      "title": "Mental Health Services",
+      "description": "Professional psychological support for anxiety, stress, family issues, and crisis intervention with personalized therapeutic approaches.",
+      "tag1": "Psychological Support",
+      "tag2": "Family Counseling",
+      "tag3": "Crisis Management"
     }
   },
   "booking": {

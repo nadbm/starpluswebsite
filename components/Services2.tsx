@@ -110,7 +110,15 @@ export default function Services2() {
             tags: [t('recovery.tag1'), t('recovery.tag2')],
             status: t('comingSoon'),
             href: `/${locale}/booking`
-        }
+        },
+        {
+            title: t('mental.title'),
+            description: t('mental.description'),
+            image: "/home/h9.jpg",
+            tags: [t('mental.tag1'), t('mental.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
+        },
     ];
 
     const firstRow = services.slice(0, 4);

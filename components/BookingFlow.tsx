@@ -144,7 +144,8 @@ export default function BookingFlow() {
         'Pharmacy Consultation': 'pharmacy',
         'Nutritionist Services': 'nutritionist',
         'Botox Services': 'botox',
-        'Recovery Sleep Session': 'recovery'
+        'Recovery Sleep Session': 'recovery',
+        'Mental Health Services': 'mental'
     };
 
     useEffect(() => {
