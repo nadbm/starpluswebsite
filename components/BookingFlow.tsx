@@ -145,7 +145,7 @@ export default function BookingFlow() {
         'Nutritionist Services': 'nutritionist',
         'Botox Services': 'botox',
         'Recovery Sleep Session': 'recovery',
-        'Mental Health Services': 'mental'
+        'Mental Health': 'mental'
     };
 
     useEffect(() => {
