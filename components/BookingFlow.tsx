@@ -139,7 +139,7 @@ export default function BookingFlow() {
         'Nursing Services': 'nursing',
         'Massage Therapy': 'massage',
         'Naturopathy': 'naturopathy',
-        'Blood Draw Analysis': 'blood',
+        'Blood Draw': 'blood',
         'Social Worker': 'social',
         'Pharmacy Consultation': 'pharmacy',
         'Nutritionist Services': 'nutritionist',
