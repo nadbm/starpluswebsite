@@ -7,6 +7,7 @@ import {MapPin, Car, Clock, Phone, Calendar, Users, Clock3} from 'lucide-react';
 import {useRouter} from 'next/navigation';
 import {useLocale} from 'next-intl';
 import {ENDPOINTS} from "@/constants/api";
+import {Upload} from 'lucide-react';
 
 interface Service {
     id: number;
@@ -109,6 +110,11 @@ export default function BookingFlow() {
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState(false);
 
+    const [selectedVaccineType, setSelectedVaccineType] = useState<string | null>(null);
+    const [showVaccineOptions, setShowVaccineOptions] = useState<boolean>(false);
+    const [showPrescriptionUpload, setShowPrescriptionUpload] = useState<boolean>(false);
+    const [prescriptionFile, setPrescriptionFile] = useState<File | null>(null);
+
     const infoCards = [
         {
             icon: Car,
@@ -145,7 +151,8 @@ export default function BookingFlow() {
         'Nutritionist Services': 'nutritionist',
         'Botox Services': 'botox',
         'Recovery Sleep Session': 'recovery',
-        'Mental Health': 'mental'
+        'Mental Health': 'mental',
+        'Vaccine': 'vaccine'
     };
 
     useEffect(() => {
@@ -263,30 +270,48 @@ export default function BookingFlow() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
         if (!selectedService || !selectedDate || !selectedTime) {
             setError(t('errors.formIncomplete'));
+            return;
+        }
+
+        if (showVaccineOptions && !selectedVaccineType) {
+            setError("Please select a vaccine type");
             return;
         }
 
         setIsSubmitting(true);
         setError(null);
 
+        let notesContent = bookingForm.notes;
+
+        if (showVaccineOptions && selectedVaccineType) {
+            notesContent = `Selected Vaccine: ${selectedVaccineType} (includes $25 nursing fee)\n\n${notesContent}`;
+        }
+
+        if (showPrescriptionUpload && prescriptionFile) {
+            notesContent = `Prescription File Uploaded: ${notesContent}\n\n${prescriptionFile.name}`;
+        }
+
         try {
+            const formData = new FormData();
+            formData.append('service', selectedService.id.toString());
+            formData.append('date', selectedDate);
+            formData.append('start_time', selectedTime.start);
+            formData.append('end_time', selectedTime.end);
+            formData.append('client_name', bookingForm.name);
+            formData.append('client_email', bookingForm.email);
+            formData.append('client_phone', bookingForm.phone);
+            formData.append('notes', notesContent);
+
+            if (prescriptionFile) {
+                formData.append('prescription_file', prescriptionFile);
+            }
+
             const response = await fetch(ENDPOINTS.APPOINTMENTS.BOOK, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    service: selectedService.id,
-                    date: selectedDate,
-                    start_time: selectedTime.start,
-                    end_time: selectedTime.end,
-                    client_name: bookingForm.name,
-                    client_email: bookingForm.email,
-                    client_phone: bookingForm.phone,
-                    notes: bookingForm.notes
-                })
+                body: formData,
             });
 
             if (!response.ok) {
@@ -300,6 +325,7 @@ export default function BookingFlow() {
                 phone: '',
                 notes: ''
             });
+
         } catch (error) {
             console.error('Error making booking:', error);
             setError(t('errors.bookingError'));
@@ -399,7 +425,14 @@ export default function BookingFlow() {
                             {services.map((service) => (
                                 <button
                                     key={service.id}
-                                    onClick={() => setSelectedService(service)}
+                                    onClick={() => {
+                                        setSelectedService(service);
+                                        setShowVaccineOptions(service.name === 'Vaccine');
+                                        setShowPrescriptionUpload(service.name === 'Blood Draw');
+                                        setSelectedVaccineType(null);
+                                        setPrescriptionFile(null);
+                                    }}
+
                                     className={`p-4 md:p-6 rounded-xl border-2 transition-all duration-200 text-left ${
                                         selectedService?.id === service.id
                                             ? 'border-brand bg-brand/5 shadow-lg'
@@ -463,6 +496,106 @@ export default function BookingFlow() {
                                             )}
                                         </div>
                                     ))}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {selectedService && showVaccineOptions && (
+                        <div className="bg-white rounded-xl shadow-lg mb-8">
+                            <div className="p-4 md:p-6 bg-brand rounded-t-xl">
+                                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                                    Select Vaccine Type
+                                </h3>
+                            </div>
+                            <div className="p-4 md:p-6">
+                                <div className="space-y-4">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <button
+                                            onClick={() => setSelectedVaccineType('Shingrix')}
+                                            className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                                                selectedVaccineType === 'Shingrix'
+                                                    ? 'border-brand bg-brand/5 shadow-lg'
+                                                    : 'border-gray-200 hover:border-brand/50 hover:shadow-md'
+                                            }`}
+                                        >
+                                            <h4 className="font-medium text-lg">Shingrix (Shingles)</h4>
+                                            <p className="text-gray-600 mt-2">$206.8</p>
+                                        </button>
+
+                                        <button
+                                            onClick={() => setSelectedVaccineType('Prevnar 20')}
+                                            className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                                                selectedVaccineType === 'Prevnar 20'
+                                                    ? 'border-brand bg-brand/5 shadow-lg'
+                                                    : 'border-gray-200 hover:border-brand/50 hover:shadow-md'
+                                            }`}
+                                        >
+                                            <h4 className="font-medium text-lg">Prevnar 20 (Pneumonia)</h4>
+                                            <p className="text-gray-600 mt-2">$149.5</p>
+                                        </button>
+                                    </div>
+
+                                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <p className="text-blue-800">
+                                            <span className="font-semibold">Note:</span> All vaccines include a $25
+                                            nursing fee.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {selectedService && showPrescriptionUpload && (
+                        <div className="bg-white rounded-xl shadow-lg mb-8">
+                            <div className="p-4 md:p-6 bg-brand rounded-t-xl">
+                                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                                    Upload Prescription (Optional)
+                                </h3>
+                            </div>
+                            <div className="p-4 md:p-6">
+                                <div className="space-y-4">
+                                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200 mb-4">
+                                        <p className="text-blue-800">
+                                            <span className="font-semibold">Note:</span> If you have a prescription for
+                                            your blood work, you can upload it here. This is optional but may help
+                                            expedite your service.
+                                        </p>
+                                    </div>
+
+                                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                                        <input
+                                            type="file"
+                                            id="prescription"
+                                            className="hidden"
+                                            accept=".pdf,.jpg,.jpeg,.png"
+                                            onChange={(e) => {
+                                                if (e.target.files && e.target.files[0]) {
+                                                    setPrescriptionFile(e.target.files[0]);
+                                                }
+                                            }}
+                                        />
+                                        <label htmlFor="prescription" className="cursor-pointer">
+                                            <div className="flex flex-col items-center justify-center">
+                                                <Upload className="w-12 h-12 text-gray-400 mb-3"/>
+                                                <p className="text-lg font-medium text-gray-700">
+                                                    {prescriptionFile ? prescriptionFile.name : 'Click to upload prescription (optional)'}
+                                                </p>
+                                                <p className="text-sm text-gray-500 mt-1">
+                                                    {prescriptionFile ? `${(prescriptionFile.size / 1024 / 1024).toFixed(2)} MB` : 'PDF, JPG, PNG (Max 10MB)'}
+                                                </p>
+                                            </div>
+                                        </label>
+                                        {prescriptionFile && (
+                                            <button
+                                                onClick={() => setPrescriptionFile(null)}
+                                                className="mt-4 text-red-600 hover:text-red-800"
+                                            >
+                                                Remove file
+                                            </button>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -553,6 +686,12 @@ export default function BookingFlow() {
                                             onChange={(e) => setBookingForm({...bookingForm, notes: e.target.value})}
                                         />
                                     </div>
+
+                                    {showVaccineOptions && !selectedVaccineType && (
+                                        <div className="md:col-span-2 text-red-600 text-sm">
+                                            * Please select a vaccine type
+                                        </div>
+                                    )}
 
                                     <div className="md:col-span-2">
                                         <button

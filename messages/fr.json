@@ -162,6 +162,13 @@
       "tag1": "Soutien Psychologique",
       "tag2": "Conseil Familial",
       "tag3": "Gestion de Crise"
+    },
+    "vaccine": {
+      "title": "Services de Vaccination",
+      "description": "Services professionnels d'administration de vaccins incluant Shingrix (zona) et Prevnar 20 (pneumonie).",
+      "tag1": "Soins Préventifs",
+      "tag2": "Immunisation",
+      "tag3": "Protection de la Santé"
     }
   },
   "booking": {

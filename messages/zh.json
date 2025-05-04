@@ -162,6 +162,13 @@
       "tag1": "心理支持",
       "tag2": "家庭咨询",
       "tag3": "危机管理"
+    },
+    "vaccine": {
+      "title": "疫苗服务",
+      "description": "专业疫苗接种服务，包括Shingrix（带状疱疹）和Prevnar 20（肺炎）。",
+      "tag1": "预防保健",
+      "tag2": "免疫接种",
+      "tag3": "健康保护"
     }
   },
   "booking": {

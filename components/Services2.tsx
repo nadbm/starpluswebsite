@@ -68,7 +68,7 @@ export default function Services2() {
             description: t('blood.description'),
             image: "/home/h7.jpg",
             tags: [t('blood.tag1'), t('blood.tag2')],
-            status: t('comingSoon'),
+            status: t('available'),
             href: `/${locale}/booking`
         },
         {
@@ -116,6 +116,14 @@ export default function Services2() {
             description: t('mental.description'),
             image: "/home/h9.jpg",
             tags: [t('mental.tag1'), t('mental.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
+        },
+        {
+            title: t('vaccine.title'),
+            description: t('vaccine.description'),
+            image: "/home/h15.jpg",
+            tags: [t('vaccine.tag1'), t('vaccine.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },

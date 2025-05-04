@@ -162,6 +162,13 @@
       "tag1": "Psychological Support",
       "tag2": "Family Counseling",
       "tag3": "Crisis Management"
+    },
+    "vaccine": {
+      "title": "Vaccine Services",
+      "description": "Professional vaccine administration services including Shingrix (Shingles) and Prevnar 20 (Pneumonia).",
+      "tag1": "Preventive Care",
+      "tag2": "Immunization",
+      "tag3": "Health Protection"
     }
   },
   "booking": {
