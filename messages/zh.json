@@ -318,5 +318,85 @@
     "description1": "专业的医疗服务，为您量身定制",
     "title2": "专业医疗护理",
     "description2": "我们的专业团队致力于帮助您实现最佳健康状态"
+  },
+  "medicalForm": {
+    "title": "保密病史表",
+    "subtitle": "请完成此保密病史表，以帮助我们为您提供最佳的医疗护理",
+    "submit": "提交病史表",
+    "submitting": "提交中...",
+    "success": {
+      "title": "表格提交成功",
+      "message": "感谢您完成病史表。我们的团队将审查您的信息。",
+      "backHome": "返回首页"
+    },
+    "sections": {
+      "patient": "病人信息",
+      "medical": "既往病史",
+      "surgical": "手术史",
+      "allergies": "过敏史",
+      "medications": "当前用药",
+      "family": "家族病史"
+    },
+    "patientInfo": {
+      "fullName": "姓名",
+      "dateOfBirth": "出生日期",
+      "gender": "性别",
+      "phone": "电话号码",
+      "email": "电子邮箱",
+      "address": "地址",
+      "emergencyName": "紧急联系人姓名",
+      "emergencyPhone": "紧急联系电话",
+      "genderOptions": {
+        "M": "男性",
+        "F": "女性",
+        "O": "其他",
+        "N": "不愿透露"
+      }
+    },
+    "medicalHistory": {
+      "diabetes": "糖尿病",
+      "hypertension": "高血压",
+      "heart_disease": "心脏病",
+      "asthma_copd": "哮喘 / 慢阻肺",
+      "cancer": "癌症",
+      "kidney_disease": "肾病",
+      "liver_disease": "肝病",
+      "mental_health": "精神疾病",
+      "other": "其他",
+      "yes": "是",
+      "no": "否",
+      "details": "详情"
+    },
+    "surgicalHistory": {
+      "surgery": "手术名称",
+      "year": "年份",
+      "hospitalSurgeon": "医院 / 医生",
+      "addSurgery": "添加手术",
+      "removeSurgery": "移除"
+    },
+    "allergies": {
+      "allergen": "过敏源",
+      "reaction": "反应",
+      "addAllergy": "添加过敏",
+      "removeAllergy": "移除"
+    },
+    "medications": {
+      "medication": "药物",
+      "dosage": "剂量",
+      "frequency": "频率",
+      "addMedication": "添加药物",
+      "removeMedication": "移除"
+    },
+    "familyHistory": {
+      "father": "父亲",
+      "mother": "母亲",
+      "siblings": "兄弟姐妹",
+      "conditions": "病史"
+    },
+    "validation": {
+      "required": "此字段为必填项",
+      "email": "请输入有效的电子邮箱地址",
+      "phone": "请输入有效的电话号码"
+    }
   }
 }

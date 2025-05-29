@@ -16,5 +16,8 @@ export const ENDPOINTS = {
     },
     CONTACTS: {
         CREATE: `${API_BASE_URL}/api/contacts/contact/`,
+    },
+    PATIENT_FORMS: {
+        SUBMIT: `${API_BASE_URL}/patient-forms/api/submit/`,
     }
 };

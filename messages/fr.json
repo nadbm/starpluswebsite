@@ -318,5 +318,85 @@
     "description1": "Des services de santé professionnels adaptés à vos besoins",
     "title2": "Soins médicaux d'experts",
     "description2": "Notre équipe de professionnels est là pour vous aider à atteindre une santé optimale"
+  },
+  "medicalForm": {
+    "title": "Formulaire d'Antécédents Médicaux",
+    "subtitle": "Veuillez compléter ce formulaire d'antécédents médicaux confidentiel pour nous aider à vous fournir les meilleurs soins possibles",
+    "submit": "Soumettre le Formulaire Médical",
+    "submitting": "Envoi en cours...",
+    "success": {
+      "title": "Formulaire Soumis avec Succès",
+      "message": "Merci d'avoir complété votre formulaire d'antécédents médicaux. Notre équipe examinera vos informations.",
+      "backHome": "Retour à l'Accueil"
+    },
+    "sections": {
+      "patient": "Informations du Patient",
+      "medical": "Antécédents Médicaux",
+      "surgical": "Antécédents Chirurgicaux",
+      "allergies": "Allergies",
+      "medications": "Médicaments Actuels",
+      "family": "Antécédents Médicaux Familiaux"
+    },
+    "patientInfo": {
+      "fullName": "Nom Complet",
+      "dateOfBirth": "Date de Naissance",
+      "gender": "Sexe",
+      "phone": "Numéro de Téléphone",
+      "email": "Adresse E-mail",
+      "address": "Adresse",
+      "emergencyName": "Nom du Contact d'Urgence",
+      "emergencyPhone": "Numéro du Contact d'Urgence",
+      "genderOptions": {
+        "M": "Masculin",
+        "F": "Féminin",
+        "O": "Autre",
+        "N": "Préfère ne pas dire"
+      }
+    },
+    "medicalHistory": {
+      "diabetes": "Diabète",
+      "hypertension": "Hypertension",
+      "heart_disease": "Maladie Cardiaque",
+      "asthma_copd": "Asthme / MPOC",
+      "cancer": "Cancer",
+      "kidney_disease": "Maladie Rénale",
+      "liver_disease": "Maladie Hépatique",
+      "mental_health": "Conditions de Santé Mentale",
+      "other": "Autre",
+      "yes": "Oui",
+      "no": "Non",
+      "details": "Détails"
+    },
+    "surgicalHistory": {
+      "surgery": "Chirurgie",
+      "year": "Année",
+      "hospitalSurgeon": "Hôpital / Chirurgien",
+      "addSurgery": "Ajouter une Chirurgie",
+      "removeSurgery": "Supprimer"
+    },
+    "allergies": {
+      "allergen": "Allergène",
+      "reaction": "Réaction",
+      "addAllergy": "Ajouter une Allergie",
+      "removeAllergy": "Supprimer"
+    },
+    "medications": {
+      "medication": "Médicament",
+      "dosage": "Dosage",
+      "frequency": "Fréquence",
+      "addMedication": "Ajouter un Médicament",
+      "removeMedication": "Supprimer"
+    },
+    "familyHistory": {
+      "father": "Père",
+      "mother": "Mère",
+      "siblings": "Frères et Sœurs",
+      "conditions": "Conditions Médicales"
+    },
+    "validation": {
+      "required": "Ce champ est requis",
+      "email": "Veuillez entrer une adresse e-mail valide",
+      "phone": "Veuillez entrer un numéro de téléphone valide"
+    }
   }
 }

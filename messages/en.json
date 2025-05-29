@@ -319,5 +319,85 @@
     "description1": "Professional healthcare services tailored to your needs",
     "title2": "Expert Medical Care",
     "description2": "Our team of professionals is here to help you achieve optimal health"
+  },
+  "medicalForm": {
+    "title": "Medical History Form",
+    "subtitle": "Please complete this confidential medical history form to help us provide you with the best possible care",
+    "submit": "Submit Medical Form",
+    "submitting": "Submitting...",
+    "success": {
+      "title": "Form Submitted Successfully",
+      "message": "Thank you for completing your medical history form. Our team will review your information.",
+      "backHome": "Back to Home"
+    },
+    "sections": {
+      "patient": "Patient Information",
+      "medical": "Medical History",
+      "surgical": "Surgical History",
+      "allergies": "Allergies",
+      "medications": "Current Medications",
+      "family": "Family Medical History"
+    },
+    "patientInfo": {
+      "fullName": "Full Name",
+      "dateOfBirth": "Date of Birth",
+      "gender": "Gender",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "address": "Address",
+      "emergencyName": "Emergency Contact Name",
+      "emergencyPhone": "Emergency Contact Number",
+      "genderOptions": {
+        "M": "Male",
+        "F": "Female",
+        "O": "Other",
+        "N": "Prefer not to say"
+      }
+    },
+    "medicalHistory": {
+      "diabetes": "Diabetes",
+      "hypertension": "Hypertension",
+      "heart_disease": "Heart Disease",
+      "asthma_copd": "Asthma / COPD",
+      "cancer": "Cancer",
+      "kidney_disease": "Kidney Disease",
+      "liver_disease": "Liver Disease",
+      "mental_health": "Mental Health Conditions",
+      "other": "Other",
+      "yes": "Yes",
+      "no": "No",
+      "details": "Details"
+    },
+    "surgicalHistory": {
+      "surgery": "Surgery",
+      "year": "Year",
+      "hospitalSurgeon": "Hospital / Surgeon",
+      "addSurgery": "Add Surgery",
+      "removeSurgery": "Remove"
+    },
+    "allergies": {
+      "allergen": "Allergen",
+      "reaction": "Reaction",
+      "addAllergy": "Add Allergy",
+      "removeAllergy": "Remove"
+    },
+    "medications": {
+      "medication": "Medication",
+      "dosage": "Dosage",
+      "frequency": "Frequency",
+      "addMedication": "Add Medication",
+      "removeMedication": "Remove"
+    },
+    "familyHistory": {
+      "father": "Father",
+      "mother": "Mother",
+      "siblings": "Siblings",
+      "conditions": "Medical Conditions"
+    },
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number"
+    }
   }
 }
