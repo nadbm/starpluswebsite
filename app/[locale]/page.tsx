@@ -7,6 +7,17 @@ import Location from "@/components/Location";
 import ContactForm from "@/components/ContactForm";
 import ReviewsSection from "@/components/ReviewsSection";
 import Physio from "@/components/Physio";
+import { Metadata } from "next";
+import { getSEOConfig, generatePageMetadata } from "@/lib/seo-utils";
+
+interface PageProps {
+    params: { locale: string }
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const seoConfig = getSEOConfig(params.locale, 'home')
+    return generatePageMetadata(seoConfig)
+}
 
 export default function Home() {
     return (
