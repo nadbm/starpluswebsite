@@ -11,21 +11,21 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
       case 'fr':
         return {
           name: "Centre de Santé Starplus",
-          alternateName: ["Starplus Health Center", "Centre Starplus"],
+          alternateName: ["Starplus Health Center", "Centre Starplus", "Starplus", "Starplus Montreal", "Starplus Québec"],
           description: "Services de soins de santé professionnels incluant physiothérapie, massothérapie, naturopathie, services de médecin généraliste, soutien en santé mentale, et soins médicaux complets à Montréal, Québec.",
           slogan: "Votre Santé, Notre Mission"
         }
       case 'zh':
         return {
           name: "Starplus健康中心",
-          alternateName: ["Starplus Health Center", "星加健康中心", "蒙特利尔星加健康中心"],
+          alternateName: ["Starplus Health Center", "星加健康中心", "蒙特利尔星加健康中心", "星加", "星加蒙特利尔", "Starplus"],
           description: "专业医疗保健服务，包括物理治疗、按摩治疗、自然疗法、全科医生服务、心理健康支持和魁北克蒙特利尔的综合医疗护理。",
           slogan: "您的健康，我们的使命"
         }
       default:
         return {
           name: "Starplus Health Center",
-          alternateName: ["Starplus Centre", "Starplus Medical Center"],
+          alternateName: ["Starplus Centre", "Starplus Medical Center", "Starplus", "Starplus Montreal", "Starplus Quebec", "Starplus Health"],
           description: "Professional healthcare services including physiotherapy, massage therapy, naturopathy, GP services, mental health support, and comprehensive medical care in Montreal, Quebec.",
           slogan: "Your Health, Our Mission"
         }
