@@ -52,14 +52,33 @@
     }
   },
   "physio": {
-    "title": "Physiothérapie Professionnelle",
-    "description": "Notre Équipe de Physiothérapie",
-    "t1": "Réhabilitation Sportive Professionnelle",
-    "t2": "Spécialiste des Blessures Orthopédiques",
-    "t3": "Méthodes de Traitement Fondées sur des Preuves",
-    "t4": "Physiothérapeute compatissant et qualifié, spécialisé dans les blessures orthopédiques et la réhabilitation sportive. Expertise dans le traitement d'un large éventail de conditions, incluant les entorses, les déchirures tendineuses et musculaires, la réhabilitation post-opératoire et les blessures dues au surmenage.",
-    "t5": "Compétent dans la réalisation d'évaluations physiques approfondies, la création de plans de traitement personnalisés, et l'utilisation de techniques fondées sur des preuves telles que la thérapie manuelle, les exercices thérapeutiques et les programmes d'exercices à domicile pour aider les patients à atteindre une récupération optimale.",
-    "t6": "Capacité prouvée à obtenir des résultats positifs pour les clients, avec d'excellents retours des patients pour des soins exceptionnels et des traitements efficaces."
+    "title": "Services d'Équipe Professionnelle",
+    "description": "Notre Équipe de Traitement Professionnelle",
+    "switchToPhysio": "Physiothérapie",
+    "switchToPsychology": "Psychologie",
+    "qualificationsTitle": "Qualifications",
+    "servicesTitle": "Services",
+    "credentialsTitle": "Certifications",
+    "physio": {
+      "name": "Qi Meng Sun",
+      "title": "Physiothérapeute",
+      "t1": "Réhabilitation Sportive Professionnelle",
+      "t2": "Spécialiste des Blessures Orthopédiques",
+      "t3": "Méthodes de Traitement Fondées sur des Preuves",
+      "t4": "Physiothérapeute compatissant et qualifié, spécialisé dans les blessures orthopédiques et la réhabilitation sportive. Expertise dans le traitement d'un large éventail de conditions, incluant les entorses, les déchirures tendineuses et musculaires, la réhabilitation post-opératoire et les blessures dues au surmenage.",
+      "t5": "Compétent dans la réalisation d'évaluations physiques approfondies, la création de plans de traitement personnalisés, et l'utilisation de techniques fondées sur des preuves telles que la thérapie manuelle, les exercices thérapeutiques et les programmes d'exercices à domicile pour aider les patients à atteindre une récupération optimale.",
+      "t6": "Capacité prouvée à obtenir des résultats positifs pour les clients, avec d'excellents retours des patients pour des soins exceptionnels et des traitements efficaces."
+    },
+    "psychology": {
+      "name": "Dr. Ai",
+      "title": "Conseillère Senior",
+      "t1": "Conseillère Senior",
+      "t2": "Spécialiste Familiale",
+      "t3": "Thérapeute Certifiée",
+      "t4": "Conseillère psychologique compatissante et compétente spécialisée en évaluation de santé mentale, conseil individuel et thérapie familiale. Expérience dans le traitement de l'anxiété, dépression et conflits relationnels.",
+      "t5": "Maîtrise diverses techniques thérapeutiques incluant PNL, hypnothérapie, thérapie Satir et aromathérapie. Crée des plans de traitement personnalisés pour un bien-être mental optimal.",
+      "t6": "Guidée par la philosophie 'reconnaître la vérité de la vie et embrasser le monde,' STARPLUS soutient la santé mentale de la communauté chinoise de Montréal avec excellence et expertise professionnelle."
+    }
   },
   "bookNowSection": {
     "title": "Prêt à Prendre Soin de Votre Santé?",

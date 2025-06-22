@@ -52,14 +52,33 @@
     }
   },
   "physio": {
-    "title": "Professional Physical Therapy",
-    "description": "Our Physical Therapy Team",
-    "t1": "Professional Sports Rehabilitation",
-    "t2": "Orthopedic Injury Specialist",
-    "t3": "Evidence-based Treatment Methods",
-    "t4": "Compassionate and skilled physical therapist with a strong focus on orthopedic injuries and sports rehabilitation. Expertise in treating a wide range of conditions, including sprains, tendon and muscle tears, post-operative rehabilitation, and overuse injuries.",
-    "t5": "Adept at performing thorough physical assessments, creating personalized treatment plans, and utilizing evidence-based techniques such as manual therapy, therapeutic exercises, and home exercise programs to help patients achieve optimal recovery.",
-    "t6": "Proven ability to achieve positive client outcomes, with excellent feedback from patients for exceptional care and effective treatments."
+    "title": "Professional Team Services",
+    "description": "Our Professional Treatment Team",
+    "switchToPhysio": "Physiotherapy",
+    "switchToPsychology": "Psychology",
+    "qualificationsTitle": "Qualifications",
+    "servicesTitle": "Services",
+    "credentialsTitle": "Credentials",
+    "physio": {
+      "name": "Qi Meng Sun",
+      "title": "Physiotherapist",
+      "t1": "Professional Sports Rehabilitation",
+      "t2": "Orthopedic Injury Specialist",
+      "t3": "Evidence-based Treatment Methods",
+      "t4": "Compassionate and skilled physical therapist with a strong focus on orthopedic injuries and sports rehabilitation. Expertise in treating a wide range of conditions, including sprains, tendon and muscle tears, post-operative rehabilitation, and overuse injuries.",
+      "t5": "Adept at performing thorough physical assessments, creating personalized treatment plans, and utilizing evidence-based techniques such as manual therapy, therapeutic exercises, and home exercise programs to help patients achieve optimal recovery.",
+      "t6": "Proven ability to achieve positive client outcomes, with excellent feedback from patients for exceptional care and effective treatments."
+    },
+    "psychology": {
+      "name": "Dr. Ai",
+      "title": "Senior Counselor",
+      "t1": "Senior Counselor",
+      "t2": "Family Specialist", 
+      "t3": "Certified Therapist",
+      "t4": "Compassionate and skilled psychological counselor specializing in mental health assessment, individual counseling, and family therapy. Experienced in treating anxiety, depression, relationship issues, and family conflicts.",
+      "t5": "Proficient in various therapeutic techniques including NLP, hypnotherapy, Satir therapy, and aromatherapy. Creates personalized treatment plans to help clients achieve optimal mental wellness.",
+      "t6": "Guided by the philosophy of 'recognizing life's truth and embracing the world,' STARPLUS supports Montreal's Chinese community mental health with excellent care and professional expertise."
+    }
   },
   "bookNowSection": {
     "title": "Ready to Take Care of Your Health?",

@@ -5,7 +5,6 @@ interface StructuredDataProps {
 }
 
 const StructuredData = ({ locale }: StructuredDataProps) => {
-  // 根据语言设置不同的名称和描述
   const getLocalizedContent = (locale: string) => {
     switch (locale) {
       case 'fr':
