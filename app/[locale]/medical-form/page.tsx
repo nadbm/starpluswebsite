@@ -1,9 +1,26 @@
+'use client';
+
+import React, { useState } from 'react';
 import {useTranslations} from "next-intl";
 import MedicalHistoryForm from "@/components/MedicalHistoryForm";
+import ConsentForm from "@/components/ConsentForm";
 import Footer from "@/components/Footer";
 
 export default function MedicalFormPage() {
     const t = useTranslations('medicalForm');
+    const [showConsentForm, setShowConsentForm] = useState(true);
+
+    const handleConsentGiven = () => {
+        setShowConsentForm(false);
+    };
+
+    const handleBackToConsent = () => {
+        setShowConsentForm(true);
+    };
+
+    if (showConsentForm) {
+        return <ConsentForm onConsent={handleConsentGiven} />;
+    }
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -24,7 +41,7 @@ export default function MedicalFormPage() {
             {/* Form Section */}
             <div className="py-16">
                 <div className="container mx-auto px-4">
-                    <MedicalHistoryForm/>
+                    <MedicalHistoryForm />
                 </div>
             </div>
 

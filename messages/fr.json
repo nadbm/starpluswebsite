@@ -416,6 +416,57 @@
       "required": "Ce champ est requis",
       "email": "Veuillez entrer une adresse e-mail valide",
       "phone": "Veuillez entrer un numéro de téléphone valide"
+    },
+    "consent": {
+      "title": "Formulaire de Consentement pour la Conservation des Informations Médicales",
+      "patientName": "Nom du patient :",
+      "dateOfBirth": "Date de naissance :",
+      "patientId": "Numéro d'identification du patient (le cas échéant) :",
+      "introduction": "Je, soussigné(e), donne par les présentes mon consentement à Starplus Health Center (ci-après dénommé « Fournisseur de soins de santé et fournisseur paramédical ») pour collecter, stocker et maintenir mes dossiers médicaux dans le but de fournir des soins médicaux, des traitements et des services. Je comprends que mes dossiers médicaux incluront des informations de santé personnelles, l'historique des traitements et d'autres documents connexes.",
+      "acknowledgment": "En signant ce formulaire, je reconnais et accepte ce qui suit :",
+      "terms": {
+        "1": {
+          "title": "Objectif de la conservation des dossiers :",
+          "content": "Le fournisseur de soins de santé utilisera mes dossiers médicaux aux fins de diagnostic, de traitement et de soins continus, y compris les consultations de suivi, les médicaments prescrits et tout traitement nécessaire."
+        },
+        "2": {
+          "title": "Accès aux informations :",
+          "content": "Je comprends que mes dossiers médicaux peuvent être partagés au sein du réseau de professionnels de la santé du fournisseur de soins impliqués dans mes soins, ainsi qu'avec des entités externes, telles que les compagnies d'assurance ou les spécialistes, lorsque cela est nécessaire pour mon traitement ou selon les exigences légales."
+        },
+        "3": {
+          "title": "Confidentialité et sécurité :",
+          "content": "Le fournisseur de soins de santé s'engage à assurer la confidentialité et la sécurité de mes dossiers médicaux, en conformité avec les lois applicables sur la confidentialité et toute autre réglementation pertinente de protection des données."
+        },
+        "4": {
+          "title": "Conservation des dossiers :",
+          "content": "Mes dossiers médicaux seront conservés par le fournisseur de soins de santé pendant la durée requise par la loi ou les politiques internes du fournisseur. Je comprends que j'ai le droit de demander l'accès et des copies de mes dossiers à tout moment, dans des limites raisonnables."
+        },
+        "5": {
+          "title": "Révocation du consentement :",
+          "content": "Je comprends que je peux révoquer mon consentement pour la conservation et l'utilisation de mes dossiers médicaux à tout moment, sous réserve de toute exigence légale concernant la conservation des dossiers. Si je révoque mon consentement, le fournisseur de soins de santé pourrait être incapable de fournir d'autres traitements ou services à moins qu'un arrangement alternatif ne soit pris."
+        },
+        "6": {
+          "title": "Transfert des dossiers :",
+          "content": "J'autorise le fournisseur de soins de santé à transférer mes dossiers médicaux à un autre fournisseur de soins de santé ou institution, si je choisis de chercher des soins ailleurs, ou selon les besoins pour des soins médicaux continus."
+        },
+        "7": {
+          "title": "Questions et clarifications :",
+          "content": "Si j'ai des questions ou des préoccupations concernant la collecte, l'utilisation ou la conservation de mes dossiers médicaux, je comprends que je peux contacter le bureau du fournisseur de soins de santé pour demander des clarifications."
+        }
+      },
+      "consentAcknowledgment": "Reconnaissance du consentement :",
+      "finalStatement": "Je donne par les présentes mon consentement éclairé pour la collecte, le stockage et l'utilisation de mes dossiers médicaux comme décrit dans ce document. Je reconnais avoir lu, compris et eu l'opportunité de poser des questions sur ce formulaire de consentement.",
+      "patientSignature": "Signature du patient :",
+      "date": "Date :",
+      "patientFullName": "Nom complet du patient :",
+      "representativeSignature": "Représentant de Starplus Health Center inc :",
+      "representativeFullName": "Nom complet du représentant de Starplus Health Center inc :",
+      "buttons": {
+        "agree": "J'accepte le formulaire de consentement",
+        "back": "Retour",
+        "continue": "Continuer vers le formulaire médical"
+      },
+      "checkbox": "J'ai lu, compris et accepte le Formulaire de Consentement pour la Conservation des Informations Médicales"
     }
   }
 }

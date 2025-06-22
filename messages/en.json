@@ -417,6 +417,57 @@
       "required": "This field is required",
       "email": "Please enter a valid email address",
       "phone": "Please enter a valid phone number"
+    },
+    "consent": {
+      "title": "Medical Information Consent Form for Record Keeping",
+      "patientName": "Patient Name:",
+      "dateOfBirth": "Date of Birth:",
+      "patientId": "Patient ID/Number (if applicable):",
+      "introduction": "I, the undersigned, hereby give my consent to Starplus Health Center (hereafter referred to as \"Healthcare Provider and paramedical provider\") to collect, store, and maintain my medical records for the purpose of providing medical care, treatment, and services. I understand that my medical records will include personal health information, treatment history, and other related documentation.",
+      "acknowledgment": "By signing this form, I acknowledge and agree to the following:",
+      "terms": {
+        "1": {
+          "title": "Purpose of Record Keeping:",
+          "content": "The Healthcare Provider will use my medical records for the purpose of diagnosis, treatment, and ongoing care, including follow-up consultations, prescribed medications, and any necessary treatments."
+        },
+        "2": {
+          "title": "Access to Information:",
+          "content": "I understand that my medical records may be shared within the Healthcare Provider's network of healthcare professionals involved in my care, as well as with external entities, such as insurance companies or specialists, when necessary for my treatment or as required by law."
+        },
+        "3": {
+          "title": "Confidentiality and Security:",
+          "content": "The Healthcare Provider is committed to ensuring the privacy and security of my medical records, in compliance with applicable privacy laws and any other relevant data protection regulations."
+        },
+        "4": {
+          "title": "Retention of Records:",
+          "content": "My medical records will be retained by the Healthcare Provider for the duration of time required by law or the provider's internal policies. I understand that I have the right to request access to and copies of my records at any time, within reasonable limits."
+        },
+        "5": {
+          "title": "Revocation of Consent:",
+          "content": "I understand that I may revoke my consent for the retention and use of my medical records at any time, subject to any legal requirements regarding record retention. If I revoke consent, the Healthcare Provider may be unable to provide further treatment or services unless an alternative arrangement is made."
+        },
+        "6": {
+          "title": "Transfer of Records:",
+          "content": "I authorize the Healthcare Provider to transfer my medical records to another healthcare provider or institution, should I choose to seek care elsewhere, or as necessary for continued medical care."
+        },
+        "7": {
+          "title": "Questions and Clarifications:",
+          "content": "If I have any questions or concerns regarding the collection, use, or retention of my medical records, I understand that I can contact the Healthcare Provider's office to request clarification."
+        }
+      },
+      "consentAcknowledgment": "Consent Acknowledgment:",
+      "finalStatement": "I hereby give my informed consent for the collection, storage, and use of my medical records as outlined in this document. I acknowledge that I have read, understood, and had the opportunity to ask questions about this consent form.",
+      "patientSignature": "Patient Signature:",
+      "date": "Date:",
+      "patientFullName": "Patient full name:",
+      "representativeSignature": "Starplus Health Center inc representative:",
+      "representativeFullName": "Starplus Health Center inc representative full name:",
+      "buttons": {
+        "agree": "I Agree to the Consent Form",
+        "back": "Back",
+        "continue": "Continue to Medical Form"
+      },
+      "checkbox": "I have read, understood, and agree to the Medical Information Consent Form for Record Keeping"
     }
   }
 }
