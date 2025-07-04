@@ -40,7 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pharmacy-consultation',
     'nutritionist-services',
     'botox-services',
-    'vaccine-services'
+    'vaccine-services',
+    'urinalysis-analysis'
   ]
   
   languages.forEach(lang => {

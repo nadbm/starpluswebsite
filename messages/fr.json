@@ -188,6 +188,13 @@
       "tag1": "Soins Préventifs",
       "tag2": "Immunisation",
       "tag3": "Protection de la Santé"
+    },
+    "urinalysis": {
+      "title": "Analyse d'Urine-Test à Bandelettes",
+      "description": "Services professionnels d'analyse d'urine utilisant la technologie de test à bandelettes pour un dépistage rapide et précis.",
+      "tag1": "Dépistage de Santé",
+      "tag2": "Test Rapide",
+      "tag3": "Soins Préventifs"
     }
   },
   "booking": {

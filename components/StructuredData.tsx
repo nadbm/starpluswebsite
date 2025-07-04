@@ -77,7 +77,8 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
       "Pharmaceutical Consultation",
       "Nutritional Counseling",
       "Botox Services",
-      "Vaccine Services"
+      "Vaccine Services",
+      "Urinalysis Analysis"
     ],
     "hasMap": "https://maps.google.com/?q=500,+998+Boul.+Saint-Laurent,+Montréal,+QC,+H2Z+9Y9",
     "areaServed": [
@@ -140,6 +141,14 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
           "@type": "MedicalProcedure",
           "name": "Mental Health Services", 
           "description": "Professional psychological support and counseling services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "Urinalysis Analysis-Strip Test",
+          "description": "Professional urinalysis services using strip test technology for rapid and accurate health screening"
         }
       }
     ],

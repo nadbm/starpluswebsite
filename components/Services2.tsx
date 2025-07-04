@@ -127,6 +127,14 @@ export default function Services2() {
             status: t('available'),
             href: `/${locale}/booking`
         },
+        {
+            title: t('urinalysis.title'),
+            description: t('urinalysis.description'),
+            image: "/home/h16.jpg",
+            tags: [t('urinalysis.tag1'), t('urinalysis.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
+        },
     ];
 
     const firstRow = services.slice(0, 4);

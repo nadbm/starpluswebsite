@@ -152,7 +152,8 @@ export default function BookingFlow() {
         'Botox Services': 'botox',
         'Recovery Sleep Session': 'recovery',
         'Mental Health': 'mental',
-        'Vaccine': 'vaccine'
+        'Vaccine': 'vaccine',
+        'Urinalysis Analysis-Strip Test': 'urinalysis'
     };
 
     useEffect(() => {

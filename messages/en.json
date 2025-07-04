@@ -188,6 +188,13 @@
       "tag1": "Preventive Care",
       "tag2": "Immunization",
       "tag3": "Health Protection"
+    },
+    "urinalysis": {
+      "title": "Urinalysis Analysis-Strip Test",
+      "description": "Professional urinalysis services using strip test technology for rapid and accurate health screening.",
+      "tag1": "Health Screening",
+      "tag2": "Rapid Testing",
+      "tag3": "Preventive Care"
     }
   },
   "booking": {
