@@ -256,9 +256,8 @@
       "emailTitle": "发送电子邮件",
       "phoneTitle": "拨打电话",
       "hoursTitle": "营业时间",
-      "timeline1": "周三至周五",
-      "timeline2": "周六",
-      "timeline3": "周日"
+      "timeline1": "周一、周三至周五、周日",
+      "timeline2": "周六"
     },
     "form": {
       "email": "电子邮箱",
@@ -337,7 +336,7 @@
       "address": "500, 998 Boul. Saint-Laurent, Montreal, QC, H2Z 9Y9",
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
-      "hours": "周三至周五：上午10:00 - 下午6:00\n周末：上午10:00 - 下午1：00"
+      "hours": "周一、周三至周五、周日：上午10:00 - 下午4:00\n周六：上午10:00 - 下午1:00"
     }
   },
   "carousel": {

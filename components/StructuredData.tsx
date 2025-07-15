@@ -58,11 +58,12 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
       "longitude": "-73.6137"
     },
     "openingHours": [
-      "We 10:00-18:00",
-      "Th 10:00-18:00", 
-      "Fr 10:00-18:00",
+      "Mo 10:00-16:00",
+      "We 10:00-16:00",
+      "Th 10:00-16:00", 
+      "Fr 10:00-16:00",
       "Sa 10:00-13:00",
-      "Su 10:00-13:00"
+      "Su 10:00-16:00"
     ],
     "priceRange": "$$",
     "currenciesAccepted": "CAD",

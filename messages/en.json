@@ -256,9 +256,8 @@
       "emailTitle": "Email Us",
       "phoneTitle": "Call Us",
       "hoursTitle": "Opening Hours",
-      "timeline1": "Wednesday to Friday",
-      "timeline2": "Saturday",
-      "timeline3": "Sunday"
+      "timeline1": "Monday, Wednesday to Friday, Sunday",
+      "timeline2": "Saturday"
     },
     "form": {
       "email": "Email Address",
@@ -337,7 +336,7 @@
       "address": "500, 998 Boul. Saint-Laurent, Montreal, QC, H2Z 9Y9",
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
-      "hours": "Wednesday to Friday: 10:00 AM - 6:00 PM\nWeekend: 10:00 AM - 1:00 PM"
+      "hours": "Monday, Wednesday to Friday, Sunday: 10:00 AM - 4:00 PM\nSaturday: 10:00 AM - 1:00 PM"
     }
   },
   "carousel": {

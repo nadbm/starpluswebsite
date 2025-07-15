@@ -107,14 +107,10 @@ export default function ContactForm() {
                                 <div className="space-y-2">
                                     <p className="flex justify-between text-gray-600">
                                         <span>{t('info.timeline1')}</span>
-                                        <span>10:00 AM - 6:00 PM</span>
+                                        <span>10:00 AM - 4:00 PM</span>
                                     </p>
                                     <p className="flex justify-between text-gray-600">
                                         <span>{t('info.timeline2')}</span>
-                                        <span>10:00 AM - 1:00 PM</span>
-                                    </p>
-                                    <p className="flex justify-between text-gray-600">
-                                        <span>{t('info.timeline3')}</span>
                                         <span>10:00 AM - 1:00 PM</span>
                                     </p>
                                 </div>

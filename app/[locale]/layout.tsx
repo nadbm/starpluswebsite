@@ -192,7 +192,7 @@ export default async function LocaleLayout({
             <meta name="business:contact_data:country_name" content="Canada" />
             <meta name="business:contact_data:phone_number" content="(514) 447-2175" />
             <meta name="business:contact_data:email" content="info@starpluscentre.com" />
-            <meta name="business:hours" content="We-Fr 10:00-18:00, Sa-Su 10:00-13:00" />
+            <meta name="business:hours" content="Mo,We-Fr,Su 10:00-16:00, Sa 10:00-13:00" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link rel="dns-prefetch" href="//www.google-analytics.com" />
