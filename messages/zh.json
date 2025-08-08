@@ -218,7 +218,8 @@
     "noTimesAvailable": "此日期暂无可用时间",
     "form": {
       "title": "您的信息",
-      "name": "全名",
+      "firstName": "名字",
+      "lastName": "姓氏",
       "email": "电子邮箱",
       "phone": "电话号码",
       "notes": "附加备注",

@@ -217,7 +217,8 @@
     "noTimesAvailable": "No available times for this date",
     "form": {
       "title": "Your Information",
-      "name": "Full Name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "email": "Email Address",
       "phone": "Phone Number",
       "notes": "Additional Notes",

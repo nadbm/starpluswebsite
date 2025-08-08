@@ -217,7 +217,8 @@
     "noTimesAvailable": "Aucune disponibilité pour cette date",
     "form": {
       "title": "Vos Informations",
-      "name": "Nom Complet",
+      "firstName": "Prénom",
+      "lastName": "Nom de Famille",
       "email": "Adresse Électronique",
       "phone": "Numéro de Téléphone",
       "notes": "Notes Supplémentaires",

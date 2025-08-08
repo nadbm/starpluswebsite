@@ -43,7 +43,8 @@ interface CalendarDay {
 }
 
 interface BookingForm {
-    name: string;
+    firstName: string;
+    lastName: string;
     email: string;
     phone: string;
     notes: string;
@@ -101,7 +102,8 @@ export default function BookingFlow() {
     const [calendarDays, setCalendarDays] = useState<CalendarDay[]>([]);
     const [currentMonth, setCurrentMonth] = useState<string>('');
     const [bookingForm, setBookingForm] = useState<BookingForm>({
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
         phone: '',
         notes: ''
@@ -296,23 +298,24 @@ export default function BookingFlow() {
         }
 
         try {
-            const formData = new FormData();
-            formData.append('service', selectedService.id.toString());
-            formData.append('date', selectedDate);
-            formData.append('start_time', selectedTime.start);
-            formData.append('end_time', selectedTime.end);
-            formData.append('client_name', bookingForm.name);
-            formData.append('client_email', bookingForm.email);
-            formData.append('client_phone', bookingForm.phone);
-            formData.append('notes', notesContent);
-
-            if (prescriptionFile) {
-                formData.append('prescription_file', prescriptionFile);
-            }
+            const requestData = {
+                service: selectedService.id,
+                date: selectedDate,
+                start_time: selectedTime.start,
+                end_time: selectedTime.end,
+                client_first_name: bookingForm.firstName,
+                client_last_name: bookingForm.lastName,
+                client_email: bookingForm.email,
+                client_phone: bookingForm.phone,
+                notes: notesContent
+            };
 
             const response = await fetch(ENDPOINTS.APPOINTMENTS.BOOK, {
                 method: 'POST',
-                body: formData,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestData),
             });
 
             if (!response.ok) {
@@ -321,7 +324,8 @@ export default function BookingFlow() {
 
             setSuccess(true);
             setBookingForm({
-                name: '',
+                firstName: '',
+                lastName: '',
                 email: '',
                 phone: '',
                 notes: ''
@@ -637,16 +641,29 @@ export default function BookingFlow() {
                             <div className="p-4 md:p-6">
                                 <form onSubmit={handleSubmit}
                                       className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                                    <div className="md:col-span-2">
+                                    <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                                            {t('form.name')}
+                                            {t('form.firstName')}
                                         </label>
                                         <input
                                             type="text"
                                             required
                                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
-                                            value={bookingForm.name}
-                                            onChange={(e) => setBookingForm({...bookingForm, name: e.target.value})}
+                                            value={bookingForm.firstName}
+                                            onChange={(e) => setBookingForm({...bookingForm, firstName: e.target.value})}
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            {t('form.lastName')}
+                                        </label>
+                                        <input
+                                            type="text"
+                                            required
+                                            className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
+                                            value={bookingForm.lastName}
+                                            onChange={(e) => setBookingForm({...bookingForm, lastName: e.target.value})}
                                         />
                                     </div>
 
