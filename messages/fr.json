@@ -112,6 +112,13 @@
       "tag2": "Accès Pratique",
       "tag3": "Santé Numérique"
     },
+    "onlineFollowUp": {
+      "title": "Suivi de Consultation en Ligne",
+      "description": "Soins de suivi complets et surveillance continue via notre service de consultation en ligne, assurant la continuité des soins et un soutien continu.",
+      "tag1": "Soins de Suivi",
+      "tag2": "Surveillance Continue",
+      "tag3": "Soutien Continu"
+    },
     "nursing": {
       "title": "Services Infirmiers",
       "description": "Notre personnel infirmier compatissant fournit des soins professionnels, y compris la gestion des plaies et les soins post-opératoires.",

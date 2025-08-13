@@ -112,6 +112,13 @@
       "tag2": "Convenient Access",
       "tag3": "Digital Health"
     },
+    "onlineFollowUp": {
+      "title": "Online Consultation Follow-up",
+      "description": "Comprehensive follow-up care and monitoring through our online consultation service, ensuring continuity of care and ongoing support.",
+      "tag1": "Follow-up Care",
+      "tag2": "Continuous Monitoring",
+      "tag3": "Ongoing Support"
+    },
     "nursing": {
       "title": "Nursing Services",
       "description": "Our compassionate nursing staff provides professional care including wound management and post-operative care.",

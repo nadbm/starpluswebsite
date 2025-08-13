@@ -144,6 +144,7 @@ export default function BookingFlow() {
         'Physiotherapy': 'physio',
         'General Practitioner': 'gp',
         'Online Consultation': 'online',
+        'Online Consultation Follow-up': 'onlineFollowUp',
         'Nursing Services': 'nursing',
         'Massage Therapy': 'massage',
         'Naturopathy': 'naturopathy',
