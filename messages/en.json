@@ -207,6 +207,10 @@
   "booking": {
     "title": "Book an Appointment",
     "subtitle": "Select your preferred service and time",
+    "followUpInfo": {
+      "title": "Follow-up Consultation Information",
+      "pricing": "Pricing: Members receive free follow-up consultations. Non-members are charged $100 CAD per session."
+    },
     "selectService": "Select Service",
     "serviceDescription": "Duration",
     "minutesAbbr": "min",

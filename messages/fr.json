@@ -207,6 +207,10 @@
   "booking": {
     "title": "Prendre un rendez-vous",
     "subtitle": "Sélectionnez le service et l'heure de votre choix",
+    "followUpInfo": {
+      "title": "Informations sur la Consultation de Suivi",
+      "pricing": "Tarification : Les membres reçoivent des consultations de suivi gratuites. Les non-membres sont facturés 100 CAD par session."
+    },
     "selectService": "Sélectionner un service",
     "serviceDescription": "Durée",
     "minutesAbbr": "min",

@@ -115,6 +115,7 @@ export default function BookingFlow() {
     const [selectedVaccineType, setSelectedVaccineType] = useState<string | null>(null);
     const [showVaccineOptions, setShowVaccineOptions] = useState<boolean>(false);
     const [showPrescriptionUpload, setShowPrescriptionUpload] = useState<boolean>(false);
+    const [showFollowUpInfo, setShowFollowUpInfo] = useState<boolean>(false);
     const [prescriptionFile, setPrescriptionFile] = useState<File | null>(null);
 
     const infoCards = [
@@ -435,6 +436,7 @@ export default function BookingFlow() {
                                         setSelectedService(service);
                                         setShowVaccineOptions(service.name === 'Vaccine');
                                         setShowPrescriptionUpload(service.name === 'Blood Draw');
+                                        setShowFollowUpInfo(service.name === 'Online Consultation Follow-up');
                                         setSelectedVaccineType(null);
                                         setPrescriptionFile(null);
                                     }}
@@ -546,6 +548,25 @@ export default function BookingFlow() {
                                         <p className="text-blue-800">
                                             <span className="font-semibold">Note:</span> All vaccines include a $25
                                             nursing fee.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {selectedService && showFollowUpInfo && (
+                        <div className="bg-white rounded-xl shadow-lg mb-8">
+                            <div className="p-4 md:p-6 bg-brand rounded-t-xl">
+                                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                                    {t('followUpInfo.title')}
+                                </h3>
+                            </div>
+                            <div className="p-4 md:p-6">
+                                <div className="space-y-4">
+                                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <p className="text-blue-800">
+                                            {t('followUpInfo.pricing')}
                                         </p>
                                     </div>
                                 </div>

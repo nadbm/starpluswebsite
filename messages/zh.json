@@ -208,6 +208,10 @@
   "booking": {
     "title": "预约时间",
     "subtitle": "选择您偏好的服务和时间",
+    "followUpInfo": {
+      "title": "随访咨询信息",
+      "pricing": "价格：会员免费获得随访咨询。非会员每次会话收费100加元。"
+    },
     "selectService": "选择服务",
     "serviceDescription": "时长",
     "minutesAbbr": "分钟",
