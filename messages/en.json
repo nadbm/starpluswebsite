@@ -4,6 +4,7 @@
     "services": "Services",
     "about": "About",
     "expertise": "Expertise",
+    "urineScreening": "Urine Screening",
     "contact": "Contact",
     "book": "Book Now"
   },
@@ -254,6 +255,14 @@
       "message": "Your appointment has been submitted",
       "confirmation": "Please wait for our customer service to contact you",
       "backToHomepage": "seconds later, we will return to the homepage"
+    },
+    "scheduling": {
+      "title": "Appointment Scheduling",
+      "appointmentDate": "Appointment Date",
+      "appointmentTime": "Appointment Time",
+      "selectDate": "Select Date",
+      "selectTime": "Select Time",
+      "loading": "Loading..."
     }
   },
   "contact": {
@@ -376,6 +385,8 @@
       "family": "Family Medical History"
     },
     "patientInfo": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "fullName": "Full Name",
       "dateOfBirth": "Date of Birth",
       "gender": "Gender",
@@ -384,6 +395,7 @@
       "address": "Address",
       "emergencyName": "Emergency Contact Name",
       "emergencyPhone": "Emergency Contact Number",
+      "selectGender": "Select Gender",
       "genderOptions": {
         "M": "Male",
         "F": "Female",
@@ -410,31 +422,39 @@
       "year": "Year",
       "hospitalSurgeon": "Hospital / Surgeon",
       "addSurgery": "Add Surgery",
-      "removeSurgery": "Remove"
+      "removeSurgery": "Remove",
+      "noSurgeries": "No surgeries added yet. Click \"Add Surgery\" to add one.",
+      "surgeryNumber": "Surgery #{index}"
     },
     "allergies": {
       "allergen": "Allergen",
       "reaction": "Reaction",
       "addAllergy": "Add Allergy",
-      "removeAllergy": "Remove"
+      "removeAllergy": "Remove",
+      "noAllergies": "No allergies added yet. Click \"Add Allergy\" to add one.",
+      "allergyNumber": "Allergy #{index}"
     },
     "medications": {
       "medication": "Medication",
       "dosage": "Dosage",
       "frequency": "Frequency",
       "addMedication": "Add Medication",
-      "removeMedication": "Remove"
+      "removeMedication": "Remove",
+      "noMedications": "No medications added yet. Click \"Add Medication\" to add one.",
+      "medicationNumber": "Medication #{index}"
     },
     "familyHistory": {
       "father": "Father",
       "mother": "Mother",
       "siblings": "Siblings",
-      "conditions": "Medical Conditions"
+      "conditions": "Medical Conditions",
+      "placeholder": "Enter medical conditions for {relation}..."
     },
     "validation": {
       "required": "This field is required",
       "email": "Please enter a valid email address",
-      "phone": "Please enter a valid phone number"
+      "phone": "Please enter a valid phone number",
+      "submitError": "Failed to submit form. Please try again."
     },
     "consent": {
       "title": "Medical Information Consent Form for Record Keeping",
@@ -486,6 +506,209 @@
         "continue": "Continue to Medical Form"
       },
       "checkbox": "I have read, understood, and agree to the Medical Information Consent Form for Record Keeping"
+    },
+    "scheduling": {
+      "title": "Appointment Scheduling",
+      "selectedAppointment": "Selected Appointment:",
+      "date": "Date:",
+      "time": "Time:",
+      "instructions": {
+        "title": "How to book your appointment:",
+        "step1": "First, select an available date from the calendar",
+        "step2": "Then, choose your preferred time slot",
+        "step3": "Complete the rest of the form and submit"
+      },
+      "apiError": {
+        "title": "Connection Issues Detected"
+      },
+      "retrying": "Retrying...",
+      "retry": "Retry",
+      "success": {
+        "title": "Available Dates Loaded",
+        "message": "Found {count} available working days"
+      },
+      "refresh": "Refresh data",
+      "appointmentDate": "Appointment Date",
+      "availableDaysNote": "Only available working days are shown",
+      "selectDate": "Select Date",
+      "loadingAvailableDays": "Loading available days...",
+      "noAvailableDays": "No available days",
+      "appointmentTime": "Appointment Time",
+      "timeSlotNote": "Time slots are 30 minutes apart. Please arrive 10 minutes before your appointment.",
+      "timeSlotCount": "{count} time slots available for this date",
+      "loading": "Loading...",
+      "selectTime": "Select Time",
+      "noTimeSlotsWarning": "No time slots available for this date. Please select a different date.",
+      "selectDifferentDate": "Select different date",
+      "confirmation": {
+        "title": "Appointment Confirmation",
+        "message": "Please review your appointment details before submitting:"
+      },
+      "submitInstructions": "After submitting, you will receive a confirmation email. Please keep this information for your records.",
+      "contact": {
+        "title": "Need Help?",
+        "message": "If you have any questions or need to reschedule, please contact us:",
+        "phone": "Phone:",
+        "email": "Email:"
+      },
+      "cancellationPolicy": "Cancellation Policy: Please cancel at least 24 hours before your appointment to avoid any cancellation fees.",
+      "preparation": "Preparation: Please bring a valid ID and arrive 10 minutes before your scheduled appointment time.",
+      "emergency": "Emergency: For urgent medical concerns, please call 911 or visit the nearest emergency room.",
+      "support": "Support: Our customer service team is available Monday-Friday, 8 AM - 6 PM EST.",
+      "feedback": "Feedback: We value your feedback. Please let us know how we can improve your experience.",
+      "hours": "Hours: Our clinic is open Monday-Friday, 8 AM - 6 PM, and Saturday, 9 AM - 2 PM.",
+      "location": "Location: We are located at 123 Main Street, Suite 100, City, State 12345.",
+      "parking": "Parking: Free parking is available in our lot. Street parking is also available.",
+      "accessibility": "Accessibility: Our facility is fully accessible. Please let us know if you need any accommodations.",
+      "insurance": "Insurance: We accept most major insurance plans. Please bring your insurance card to your appointment.",
+      "payment": "Payment: We accept cash, credit cards, and personal checks. Payment is due at the time of service.",
+      "confirmationPolicy": "Confirmation: You will receive a confirmation email and SMS reminder 24 hours before your appointment.",
+      "contactGeneral": "Contact: For general inquiries, please email info@starpluscentre.com or call our main line."
+    }
+  },
+  "urineScreening": {
+    "title": "Comprehensive Urine Screening for Disease Detection",
+    "subtitle": "Advanced urinalysis testing to identify potential health conditions and pathologies early",
+    "hero": {
+      "title": "Comprehensive Urine Health Screening",
+      "description": "Professional urinalysis testing to help you stay informed about your health status. We provide accurate and reliable health screening services you can trust.",
+      "cta": "Book Your Screening Now",
+      "badge": "Advanced Health Screening",
+      "diseases": "15+ Diseases",
+      "results": "24-72h Results"
+    },
+    "importance": {
+      "title": "Why Urine Screening is Essential for Your Health",
+      "subtitle": "Professional testing reveals hidden health issues. Our comprehensive urine analysis provides valuable insights for better health management.",
+      "benefits": [
+        {
+          "title": "Early Disease Detection",
+          "description": "Detect kidney disease, diabetes, urinary tract infections, and other health conditions at an early stage"
+        },
+        {
+          "title": "Comprehensive Health Monitoring",
+          "description": "Monitor protein levels, glucose, blood cells, bacteria, and other vital health indicators"
+        },
+        {
+          "title": "Preventive Healthcare",
+          "description": "Identify health issues early to secure the best treatment opportunities"
+        },
+        {
+          "title": "Cost-Effective Testing",
+          "description": "Economical health screening that helps you save on future medical costs"
+        }
+      ]
+    },
+    "diseases": {
+      "title": "Conditions We Can Detect",
+      "subtitle": "Our advanced urinalysis can screen for over 15 different health conditions and diseases",
+      "conditions": [
+        "Kidney Disease & Nephritis",
+        "Diabetes & Pre-diabetes",
+        "Urinary Tract Infections (UTI)",
+        "Bladder Infections",
+        "Liver Conditions",
+        "Cardiovascular Disease Indicators",
+        "Protein Disorders",
+        "Blood Disorders",
+        "Metabolic Syndrome",
+        "Dehydration & Electrolyte Imbalances",
+        "Kidney Stones",
+        "Prostate Problems",
+        "Pregnancy Complications",
+        "Drug Screening",
+        "And Many More..."
+      ]
+    },
+    "process": {
+      "title": "Simple 3-Step Process",
+      "subtitle": "Getting your urine screening is quick, convenient, and confidential",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Book Your Appointment",
+          "description": "Schedule a convenient time for sample collection. We recommend booking in advance to ensure availability."
+        },
+        {
+          "number": "2",
+          "title": "Sample Collection",
+          "description": "You can bring your sample in a clean container, or use our provided sterile collection cups at our facility."
+        },
+        {
+          "number": "3",
+          "title": "Get Your Results",
+          "description": "Receive detailed results and professional interpretation from our medical team within 24-72 hours."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Affordable Health Screening",
+      "price": "$350 CAD",
+      "description": "Comprehensive urinalysis testing with professional medical interpretation and detailed health reporting",
+      "includesTitle": "What's Included",
+      "button": "Book Your Screening Now",
+      "badge": "Complete Package",
+      "footer": "Professional service • Confidential results • Accurate testing",
+      "includes": [
+        "Complete urinalysis strip test",
+        "Professional medical interpretation",
+        "Detailed health report",
+        "Fast and accurate results",
+        "Confidential results delivery"
+      ]
+    },
+    "convenience": {
+      "title": "Convenient Sample Collection Options",
+      "subtitle": "We make it easy for you to get tested",
+      "options": [
+        {
+          "title": "Bring Your Own Sample",
+          "description": "Collect your sample at home using any clean, dry container and bring it to your scheduled appointment."
+        },
+        {
+          "title": "Use Our Sterile Containers",
+          "description": "We provide medical-grade sterile collection cups for optimal sample quality and accurate results."
+        },
+        {
+          "title": "On-Site Collection",
+          "description": "Collect your sample at our facility using our private, clean restroom facilities in a comfortable and discreet environment."
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Why Choose Starplus for Your Urine Screening?",
+      "reasons": [
+        {
+          "title": "Medical Expertise",
+          "description": "Our experienced medical professionals ensure accurate testing and interpretation"
+        },
+        {
+          "title": "State-of-the-Art Technology",
+          "description": "Advanced urinalysis equipment for precise and reliable results"
+        },
+        {
+          "title": "Confidential Service",
+          "description": "Your privacy is protected with secure handling of all medical information"
+        },
+        {
+          "title": "Quick Results",
+          "description": "Fast turnaround time with results typically available within 24-72 hours"
+        },
+        {
+          "title": "Professional Reporting",
+          "description": "Detailed test reports with clear and understandable result explanations"
+        },
+        {
+          "title": "Affordable Pricing",
+          "description": "Competitive rates for comprehensive health screening services"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Take Control of Your Health Today",
+      "description": "Take charge of your health management today. Professional urine screening helps you stay informed about your body's condition and catch health issues early.",
+      "button": "Schedule Your Screening",
+      "urgent": "Book now and take the first step toward better health!"
     }
   }
 }

@@ -4,6 +4,7 @@
     "services": "Services",
     "about": "À Propos",
     "expertise": "Expertise",
+    "urineScreening": "Dépistage d'urine",
     "contact": "Contact",
     "book": "Réserver"
   },
@@ -253,6 +254,14 @@
       "message": "Votre rendez-vous a été soumis",
       "confirmation": "Veuillez attendre que notre service client vous contacte",
       "backToHomepage": "secondes plus tard, nous retournerons à la page d'accueil"
+    },
+    "scheduling": {
+      "title": "Planification de Rendez-vous",
+      "appointmentDate": "Date de Rendez-vous",
+      "appointmentTime": "Heure de Rendez-vous",
+      "selectDate": "Sélectionner une Date",
+      "selectTime": "Sélectionner une Heure",
+      "loading": "Chargement..."
     }
   },
   "contact": {
@@ -375,6 +384,8 @@
       "family": "Antécédents Médicaux Familiaux"
     },
     "patientInfo": {
+      "firstName": "Prénom",
+      "lastName": "Nom de Famille",
       "fullName": "Nom Complet",
       "dateOfBirth": "Date de Naissance",
       "gender": "Sexe",
@@ -383,6 +394,7 @@
       "address": "Adresse",
       "emergencyName": "Nom du Contact d'Urgence",
       "emergencyPhone": "Numéro du Contact d'Urgence",
+      "selectGender": "Sélectionner le Genre",
       "genderOptions": {
         "M": "Masculin",
         "F": "Féminin",
@@ -409,31 +421,39 @@
       "year": "Année",
       "hospitalSurgeon": "Hôpital / Chirurgien",
       "addSurgery": "Ajouter une Chirurgie",
-      "removeSurgery": "Supprimer"
+      "removeSurgery": "Supprimer",
+      "noSurgeries": "Aucune chirurgie ajoutée pour le moment. Cliquez sur \"Ajouter une Chirurgie\" pour en ajouter une.",
+      "surgeryNumber": "Chirurgie #{index}"
     },
     "allergies": {
       "allergen": "Allergène",
       "reaction": "Réaction",
       "addAllergy": "Ajouter une Allergie",
-      "removeAllergy": "Supprimer"
+      "removeAllergy": "Supprimer",
+      "noAllergies": "Aucune allergie ajoutée pour le moment. Cliquez sur \"Ajouter une Allergie\" pour en ajouter une.",
+      "allergyNumber": "Allergie #{index}"
     },
     "medications": {
       "medication": "Médicament",
       "dosage": "Dosage",
       "frequency": "Fréquence",
       "addMedication": "Ajouter un Médicament",
-      "removeMedication": "Supprimer"
+      "removeMedication": "Supprimer",
+      "noMedications": "Aucun médicament ajouté pour le moment. Cliquez sur \"Ajouter un Médicament\" pour en ajouter un.",
+      "medicationNumber": "Médicament #{index}"
     },
     "familyHistory": {
       "father": "Père",
       "mother": "Mère",
       "siblings": "Frères et Sœurs",
-      "conditions": "Conditions Médicales"
+      "conditions": "Conditions Médicales",
+      "placeholder": "Entrez les conditions médicales pour {relation}..."
     },
     "validation": {
       "required": "Ce champ est requis",
       "email": "Veuillez entrer une adresse e-mail valide",
-      "phone": "Veuillez entrer un numéro de téléphone valide"
+      "phone": "Veuillez entrer un numéro de téléphone valide",
+      "submitError": "Échec de la soumission du formulaire. Veuillez réessayer."
     },
     "consent": {
       "title": "Formulaire de Consentement pour la Conservation des Informations Médicales",
@@ -485,6 +505,209 @@
         "continue": "Continuer vers le formulaire médical"
       },
       "checkbox": "J'ai lu, compris et accepte le Formulaire de Consentement pour la Conservation des Informations Médicales"
+    },
+    "scheduling": {
+      "title": "Planification de Rendez-vous",
+      "selectedAppointment": "Rendez-vous Sélectionné :",
+      "date": "Date :",
+      "time": "Heure :",
+      "instructions": {
+        "title": "Comment réserver votre rendez-vous :",
+        "step1": "D'abord, sélectionnez une date disponible dans le calendrier",
+        "step2": "Ensuite, choisissez votre créneau horaire préféré",
+        "step3": "Complétez le reste du formulaire et soumettez"
+      },
+      "apiError": {
+        "title": "Problèmes de Connexion Détectés"
+      },
+      "retrying": "Nouvel essai...",
+      "retry": "Réessayer",
+      "success": {
+        "title": "Dates Disponibles Chargées",
+        "message": "Trouvé {count} jours ouvrables disponibles"
+      },
+      "refresh": "Actualiser les données",
+      "appointmentDate": "Date de Rendez-vous",
+      "availableDaysNote": "Seuls les jours ouvrables disponibles sont affichés",
+      "selectDate": "Sélectionner une Date",
+      "loadingAvailableDays": "Chargement des jours disponibles...",
+      "noAvailableDays": "Aucun jour disponible",
+      "appointmentTime": "Heure de Rendez-vous",
+      "timeSlotNote": "Les créneaux horaires sont espacés de 30 minutes. Veuillez arriver 10 minutes avant votre rendez-vous.",
+      "timeSlotCount": "{count} créneaux horaires disponibles pour cette date",
+      "loading": "Chargement...",
+      "selectTime": "Sélectionner une Heure",
+      "noTimeSlotsWarning": "Aucun créneau horaire disponible pour cette date. Veuillez sélectionner une date différente.",
+      "selectDifferentDate": "Sélectionner une date différente",
+      "confirmation": {
+        "title": "Confirmation de Rendez-vous",
+        "message": "Veuillez vérifier les détails de votre rendez-vous avant de soumettre :"
+      },
+      "submitInstructions": "Après soumission, vous recevrez un e-mail de confirmation. Veuillez conserver ces informations pour vos dossiers.",
+      "contact": {
+        "title": "Besoin d'Aide ?",
+        "message": "Si vous avez des questions ou devez reprogrammer, veuillez nous contacter :",
+        "phone": "Téléphone :",
+        "email": "E-mail :"
+      },
+      "cancellationPolicy": "Politique d'Annulation : Veuillez annuler au moins 24 heures avant votre rendez-vous pour éviter des frais d'annulation.",
+      "preparation": "Préparation : Veuillez apporter une pièce d'identité valide et arriver 10 minutes avant l'heure de votre rendez-vous.",
+      "emergency": "Urgence : Pour des préoccupations médicales urgentes, veuillez appeler le 911 ou visiter la salle d'urgence la plus proche.",
+      "support": "Support : Notre équipe de service client est disponible du lundi au vendredi de 8h à 18h HNE.",
+      "feedback": "Commentaires : Nous valorisons vos commentaires. Veuillez nous dire comment nous pouvons améliorer votre expérience.",
+      "hours": "Heures : Notre clinique est ouverte du lundi au vendredi de 8h à 18h, et le samedi de 9h à 14h.",
+      "location": "Emplacement : Nous sommes situés au 123 Main Street, Suite 100, City, State 12345.",
+      "parking": "Stationnement : Le stationnement gratuit est disponible dans notre lot. Le stationnement en bordure de rue est également disponible.",
+      "accessibility": "Accessibilité : Notre établissement est entièrement accessible. Veuillez nous faire savoir si vous avez besoin d'aménagements.",
+      "insurance": "Assurance : Nous acceptons la plupart des régimes d'assurance majeurs. Veuillez apporter votre carte d'assurance à votre rendez-vous.",
+      "payment": "Paiement : Nous acceptons l'argent comptant, les cartes de crédit et les chèques personnels. Le paiement est dû au moment du service.",
+      "confirmationPolicy": "Confirmation : Vous recevrez un e-mail de confirmation et un rappel SMS 24 heures avant votre rendez-vous.",
+      "contactGeneral": "Contact : Pour les demandes générales, veuillez envoyer un e-mail à info@starpluscentre.com ou appeler notre ligne principale."
+    }
+  },
+  "urineScreening": {
+    "title": "Dépistage Urinaire Complet pour la Détection de Maladies",
+    "subtitle": "Tests d'analyse d'urine avancés pour identifier précocement les conditions de santé et pathologies potentielles",
+    "hero": {
+      "title": "Dépistage de Santé Urinaire Complet",
+      "description": "Tests d'analyse d'urine professionnels pour vous aider à rester informé sur votre état de santé. Nous fournissons des services de dépistage fiables et précis.",
+      "cta": "Réservez Votre Dépistage Maintenant",
+      "badge": "Dépistage de Santé Avancé",
+      "diseases": "15+ Maladies",
+      "results": "Résultats 24-72h"
+    },
+    "importance": {
+      "title": "Pourquoi le Dépistage Urinaire est Essentiel pour Votre Santé",
+      "subtitle": "Des tests professionnels révèlent les problèmes de santé cachés. Notre analyse d'urine complète fournit des informations précieuses pour une meilleure gestion de la santé.",
+      "benefits": [
+        {
+          "title": "Détection Précoce des Maladies",
+          "description": "Détectez les maladies rénales, le diabète, les infections urinaires et d'autres conditions de santé à un stade précoce"
+        },
+        {
+          "title": "Surveillance de Santé Complète",
+          "description": "Surveillez les niveaux de protéines, glucose, cellules sanguines, bactéries et autres indicateurs de santé vitaux"
+        },
+        {
+          "title": "Soins de Santé Préventifs",
+          "description": "Identifiez les problèmes de santé tôt pour obtenir les meilleures opportunités de traitement"
+        },
+        {
+          "title": "Tests Économiques",
+          "description": "Dépistage de santé économique qui vous aide à économiser sur les coûts médicaux futurs"
+        }
+      ]
+    },
+    "diseases": {
+      "title": "Conditions Que Nous Pouvons Détecter",
+      "subtitle": "Notre analyse d'urine avancée peut dépister plus de 15 conditions de santé et maladies différentes",
+      "conditions": [
+        "Maladie Rénale & Néphrite",
+        "Diabète & Pré-diabète",
+        "Infections des Voies Urinaires (IVU)",
+        "Infections de la Vessie",
+        "Conditions Hépatiques",
+        "Indicateurs de Maladies Cardiovasculaires",
+        "Troubles des Protéines",
+        "Troubles Sanguins",
+        "Syndrome Métabolique",
+        "Déshydratation & Déséquilibres Électrolytiques",
+        "Calculs Rénaux",
+        "Problèmes de Prostate",
+        "Complications de Grossesse",
+        "Dépistage de Drogues",
+        "Et Bien Plus Encore..."
+      ]
+    },
+    "process": {
+      "title": "Processus Simple en 3 Étapes",
+      "subtitle": "Obtenir votre dépistage urinaire est rapide, pratique et confidentiel",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Réservez Votre Rendez-vous",
+          "description": "Planifiez un moment pratique pour la collecte d'échantillon. Nous recommandons de réserver à l'avance pour assurer la disponibilité."
+        },
+        {
+          "number": "2",
+          "title": "Collecte d'Échantillon",
+          "description": "Vous pouvez apporter votre échantillon dans un récipient propre, ou utiliser nos gobelets de collecte stérilisés dans notre établissement."
+        },
+        {
+          "number": "3",
+          "title": "Obtenez Vos Résultats",
+          "description": "Recevez des résultats détaillés et une interprétation professionnelle de notre équipe médicale dans les 24-72 heures."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Dépistage de Santé Abordable",
+      "price": "350 $ CAD",
+      "description": "Test d'analyse d'urine complet avec interprétation médicale professionnelle et rapport de santé détaillé",
+      "includesTitle": "Ce qui est inclus",
+      "button": "Réservez Votre Dépistage Maintenant",
+      "badge": "Forfait Complet",
+      "footer": "Service professionnel • Résultats confidentiels • Tests précis",
+      "includes": [
+        "Test d'analyse d'urine complet par bandelettes",
+        "Interprétation médicale professionnelle",
+        "Rapport de santé détaillé",
+        "Résultats rapides et précis",
+        "Livraison confidentielle des résultats"
+      ]
+    },
+    "convenience": {
+      "title": "Options de Collecte d'Échantillon Pratiques",
+      "subtitle": "Nous facilitons vos tests",
+      "options": [
+        {
+          "title": "Apportez Votre Propre Échantillon",
+          "description": "Collectez votre échantillon à la maison en utilisant tout récipient propre et sec et apportez-le à votre rendez-vous programmé."
+        },
+        {
+          "title": "Utilisez Nos Récipients Stérilisés",
+          "description": "Nous fournissons des gobelets de collecte stérilisés de qualité médicale pour une qualité d'échantillon optimale et des résultats précis."
+        },
+        {
+          "title": "Collecte Sur Place",
+          "description": "Collectez votre échantillon dans notre établissement en utilisant nos installations privées et propres dans un environnement confortable et discret."
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Pourquoi Choisir Starplus pour Votre Dépistage Urinaire?",
+      "reasons": [
+        {
+          "title": "Expertise Médicale",
+          "description": "Nos professionnels médicaux expérimentés assurent des tests et interprétations précis"
+        },
+        {
+          "title": "Technologie de Pointe",
+          "description": "Équipement d'analyse d'urine avancé pour des résultats précis et fiables"
+        },
+        {
+          "title": "Service Confidentiel",
+          "description": "Votre confidentialité est protégée avec une manipulation sécurisée de toutes les informations médicales"
+        },
+        {
+          "title": "Résultats Rapides",
+          "description": "Temps de traitement rapide avec des résultats généralement disponibles dans les 24-72 heures"
+        },
+        {
+          "title": "Rapports Professionnels",
+          "description": "Rapports de test détaillés avec des explications de résultats claires et compréhensibles"
+        },
+        {
+          "title": "Prix Abordable",
+          "description": "Tarifs compétitifs pour des services de dépistage de santé complets"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prenez le Contrôle de Votre Santé Aujourd'hui",
+      "description": "Prenez en charge votre gestion de santé dès aujourd'hui. Le dépistage urinaire professionnel vous aide à rester informé sur l'état de votre corps et à détecter les problèmes de santé tôt.",
+      "button": "Planifiez Votre Dépistage",
+      "urgent": "Réservez maintenant et faites le premier pas vers une meilleure santé!"
     }
   }
 }

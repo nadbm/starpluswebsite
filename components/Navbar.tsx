@@ -41,7 +41,7 @@ export default function Navbar() {
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     type="button"
-                    className="md:hidden inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    className="hidden max-[1140px]:inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="mobile-menu"
                     aria-expanded={isMenuOpen}
                 >
@@ -55,14 +55,14 @@ export default function Navbar() {
                 <div
                     className={`${
                         isMenuOpen ? 'block' : 'hidden'
-                    } w-full md:block md:w-auto`}
+                    } w-full max-[1140px]:w-full max-[1140px]:mt-4 max-[1140px]:border max-[1140px]:rounded-lg max-[1140px]:bg-gray-50 max-[1140px]:p-4 min-[1141px]:block min-[1141px]:w-auto min-[1141px]:mt-0 min-[1141px]:border-0 min-[1141px]:bg-transparent min-[1141px]:p-0`}
                     id="mobile-menu"
                 >
-                    <ul className="flex flex-col mt-4 md:mt-0 md:flex-row md:items-center md:space-x-8 p-4 md:p-0 font-medium border border-gray-100 rounded-lg bg-gray-50 md:border-0 md:bg-transparent">
+                    <ul className="flex flex-col max-[1140px]:mt-0 min-[1141px]:mt-0 min-[1141px]:flex-row min-[1141px]:items-center min-[1141px]:space-x-6 font-medium">
                         <li>
                             <Link
                                 href={`/${locale}`}
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 max-[1140px]:hover:bg-gray-100 min-[1141px]:hover:bg-transparent min-[1141px]:hover:text-blue-700 min-[1141px]:p-0"
                             >
                                 {t('home')}
                             </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 href={`/${locale}#about`}
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 max-[1140px]:hover:bg-gray-100 min-[1141px]:hover:bg-transparent min-[1141px]:hover:text-blue-700 min-[1141px]:p-0"
                             >
                                 {t('about')}
                             </Link>
@@ -78,15 +78,23 @@ export default function Navbar() {
                         <li>
                             <Link
                                 href={`/${locale}/expertise`}
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 max-[1140px]:hover:bg-gray-100 min-[1141px]:hover:bg-transparent min-[1141px]:hover:text-blue-700 min-[1141px]:p-0"
                             >
                                 {t('expertise')}
                             </Link>
                         </li>
                         <li>
                             <Link
+                                href={`/${locale}/urine-screening`}
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 max-[1140px]:hover:bg-gray-100 min-[1141px]:hover:bg-transparent min-[1141px]:hover:text-blue-700 min-[1141px]:p-0"
+                            >
+                                {t('urineScreening')}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
                                 href={`/${locale}#services`}
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 max-[1140px]:hover:bg-gray-100 min-[1141px]:hover:bg-transparent min-[1141px]:hover:text-blue-700 min-[1141px]:p-0"
                             >
                                 {t('services')}
                             </Link>
@@ -94,7 +102,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 href={`/${locale}#contact`}
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 max-[1140px]:hover:bg-gray-100 min-[1141px]:hover:bg-transparent min-[1141px]:hover:text-blue-700 min-[1141px]:p-0"
                             >
                                 {t('contact')}
                             </Link>

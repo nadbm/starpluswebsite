@@ -4,6 +4,7 @@
     "services": "服务项目",
     "about": "关于我们",
     "expertise": "专业团队",
+    "urineScreening": "尿液筛查",
     "contact": "联系方式",
     "book": "立即预约"
   },
@@ -254,6 +255,14 @@
       "message": "您的预约已提交",
       "confirmation": "请等待我们的客服联系",
       "backToHomepage": "秒后我们将回到主页"
+    },
+    "scheduling": {
+      "title": "预约安排",
+      "appointmentDate": "预约日期",
+      "appointmentTime": "预约时间",
+      "selectDate": "选择日期",
+      "selectTime": "选择时间",
+      "loading": "加载中..."
     }
   },
   "contact": {
@@ -376,6 +385,8 @@
       "family": "家族病史"
     },
     "patientInfo": {
+      "firstName": "名字",
+      "lastName": "姓氏",
       "fullName": "姓名",
       "dateOfBirth": "出生日期",
       "gender": "性别",
@@ -384,6 +395,7 @@
       "address": "地址",
       "emergencyName": "紧急联系人姓名",
       "emergencyPhone": "紧急联系电话",
+      "selectGender": "选择性别",
       "genderOptions": {
         "M": "男性",
         "F": "女性",
@@ -410,31 +422,39 @@
       "year": "年份",
       "hospitalSurgeon": "医院 / 医生",
       "addSurgery": "添加手术",
-      "removeSurgery": "移除"
+      "removeSurgery": "移除",
+      "noSurgeries": "尚未添加手术。点击\"添加手术\"添加一个。",
+      "surgeryNumber": "手术 #{index}"
     },
     "allergies": {
       "allergen": "过敏源",
       "reaction": "反应",
       "addAllergy": "添加过敏",
-      "removeAllergy": "移除"
+      "removeAllergy": "移除",
+      "noAllergies": "尚未添加过敏。点击\"添加过敏\"添加一个。",
+      "allergyNumber": "过敏 #{index}"
     },
     "medications": {
       "medication": "药物",
       "dosage": "剂量",
       "frequency": "频率",
       "addMedication": "添加药物",
-      "removeMedication": "移除"
+      "removeMedication": "移除",
+      "noMedications": "尚未添加药物。点击\"添加药物\"添加一个。",
+      "medicationNumber": "药物 #{index}"
     },
     "familyHistory": {
       "father": "父亲",
       "mother": "母亲",
       "siblings": "兄弟姐妹",
-      "conditions": "病史"
+      "conditions": "病史",
+      "placeholder": "输入{relation}的病史..."
     },
     "validation": {
       "required": "此字段为必填项",
       "email": "请输入有效的电子邮箱地址",
-      "phone": "请输入有效的电话号码"
+      "phone": "请输入有效的电话号码",
+      "submitError": "提交表单失败，请重试。"
     },
     "consent": {
       "title": "医疗信息记录保存同意书",
@@ -486,6 +506,209 @@
         "continue": "继续填写医疗表单"
       },
       "checkbox": "我已阅读、理解并同意《医疗信息记录保存同意书》"
+    },
+    "scheduling": {
+      "title": "预约安排",
+      "selectedAppointment": "已选预约：",
+      "date": "日期：",
+      "time": "时间：",
+      "instructions": {
+        "title": "如何预约：",
+        "step1": "首先，从日历中选择一个可用日期",
+        "step2": "然后，选择您偏好的时间段",
+        "step3": "填写表单的其余部分并提交"
+      },
+      "apiError": {
+        "title": "检测到连接问题"
+      },
+      "retrying": "正在重试...",
+      "retry": "重试",
+      "success": {
+        "title": "可用日期已加载",
+        "message": "找到 {count} 个可用工作日"
+      },
+      "refresh": "刷新数据",
+      "appointmentDate": "预约日期",
+      "availableDaysNote": "仅显示可用工作日",
+      "selectDate": "选择日期",
+      "loadingAvailableDays": "正在加载可用日期...",
+      "noAvailableDays": "没有可用日期",
+      "appointmentTime": "预约时间",
+      "timeSlotNote": "时间段间隔30分钟。请在预约时间前10分钟到达。",
+      "timeSlotCount": "此日期有 {count} 个时间段可用",
+      "loading": "正在加载...",
+      "selectTime": "选择时间",
+      "noTimeSlotsWarning": "此日期没有可用时间段。请选择其他日期。",
+      "selectDifferentDate": "选择其他日期",
+      "confirmation": {
+        "title": "预约确认",
+        "message": "提交前请检查您的预约详情："
+      },
+      "submitInstructions": "提交后，您将收到一封确认邮件。请妥善保管此信息。",
+      "contact": {
+        "title": "需要帮助？",
+        "message": "如果您有任何疑问或需要重新安排，请联系我们：",
+        "phone": "电话：",
+        "email": "邮箱："
+      },
+      "cancellationPolicy": "取消政策：请在预约前至少24小时取消，以避免任何取消费用。",
+      "preparation": "准备：请携带有效身份证件，并在预约时间前10分钟到达。",
+      "emergency": "紧急情况：如遇紧急医疗问题，请拨打911或前往最近的急诊室。",
+      "support": "支持：我们的客户服务团队周一至周五上午8点至下午6点（美国东部时间）提供服务。",
+      "feedback": "反馈：我们重视您的反馈。请告诉我们如何改进您的体验。",
+      "hours": "营业时间：我们的诊所周一至周五上午8点至下午6点，周六上午9点至下午2点开放。",
+      "location": "地点：我们位于123 Main Street, Suite 100, City, State 12345。",
+      "parking": "停车：我们的停车场提供免费停车位。路边停车位也可用。",
+      "accessibility": "无障碍：我们的设施完全无障碍。如果您需要任何便利设施，请告知我们。",
+      "insurance": "保险：我们接受大多数主要保险计划。请在预约时间携带您的保险卡。",
+      "payment": "付款：我们接受现金、信用卡和个人支票。服务费用在服务时支付。",
+      "confirmationPolicy": "确认：您将在预约前24小时收到确认邮件和短信提醒。",
+      "contactGeneral": "联系：如有一般咨询，请发送邮件至 info@starpluscentre.com 或拨打我们的主线电话。"
+    }
+  },
+  "urineScreening": {
+    "title": "全面尿液筛查疾病检测",
+    "subtitle": "先进的尿液分析检测，早期识别潜在健康状况和病理",
+    "hero": {
+      "title": "全面尿液健康筛查",
+      "description": "专业尿液分析检测，助您及时了解身体健康状况。我们致力于为您提供准确可靠的健康筛查服务。",
+      "cta": "立即预约筛查",
+      "badge": "先进健康筛查",
+      "diseases": "15+种疾病",
+      "results": "24-72小时结果"
+    },
+    "importance": {
+      "title": "为什么尿液筛查对您的健康至关重要",
+      "subtitle": "专业检测让健康问题无处遁形。全面的尿液分析为您的健康管理提供重要参考。",
+      "benefits": [
+        {
+          "title": "早期疾病检测",
+          "description": "及时发现肾脏疾病、糖尿病、尿路感染等多种健康问题"
+        },
+        {
+          "title": "全面健康监测",
+          "description": "监测蛋白质水平、葡萄糖、血细胞、细菌和其他重要健康指标"
+        },
+        {
+          "title": "预防性健康护理",
+          "description": "及时发现健康问题，为后续治疗争取最佳时机"
+        },
+        {
+          "title": "经济高效的检测",
+          "description": "经济实惠的健康筛查，助您节省未来医疗成本"
+        }
+      ]
+    },
+    "diseases": {
+      "title": "我们可以检测的疾病",
+      "subtitle": "我们的先进尿液分析可以筛查超过15种不同的健康状况和疾病",
+      "conditions": [
+        "肾脏疾病和肾炎",
+        "糖尿病和糖尿病前期",
+        "尿路感染（UTI）",
+        "膀胱感染",
+        "肝脏疾病",
+        "心血管疾病指标",
+        "蛋白质紊乱",
+        "血液疾病",
+        "代谢综合征",
+        "脱水和电解质失衡",
+        "肾结石",
+        "前列腺问题",
+        "妊娠并发症",
+        "药物筛查",
+        "还有更多..."
+      ]
+    },
+    "process": {
+      "title": "简单3步流程",
+      "subtitle": "获得尿液筛查快速、便捷且保密",
+      "steps": [
+        {
+          "number": "1",
+          "title": "预约您的检查",
+          "description": "安排方便的样本收集时间。我们建议提前预约以确保可用性。"
+        },
+        {
+          "number": "2",
+          "title": "样本收集",
+          "description": "您可以用干净的容器带来您的样本，或者在我们的设施使用我们提供的无菌收集杯。"
+        },
+        {
+          "number": "3",
+          "title": "获得结果",
+          "description": "在24-72小时内从我们的医疗团队获得详细结果和专业解释。"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "负担得起的健康筛查",
+      "price": "350加元",
+      "description": "全面尿液分析检测，包含专业医疗解释和详细健康报告",
+      "includesTitle": "包含内容",
+      "button": "立即预约筛查",
+      "badge": "完整套餐",
+      "footer": "专业服务 • 保密结果 • 精准检测",
+      "includes": [
+        "完整尿液分析试纸测试",
+        "专业医疗解释",
+        "详细健康报告",
+        "快速准确的结果",
+        "保密结果传送"
+      ]
+    },
+    "convenience": {
+      "title": "便捷的样本收集选项",
+      "subtitle": "我们让您的检测变得简单",
+      "options": [
+        {
+          "title": "带来您自己的样本",
+          "description": "使用任何干净、干燥的容器在家收集样本，并在预约时间带来。"
+        },
+        {
+          "title": "使用我们的无菌容器",
+          "description": "我们提供医疗级无菌收集杯，确保最佳样本质量和准确结果。"
+        },
+        {
+          "title": "现场收集",
+          "description": "使用我们设施的私人、清洁洗手间收集样本，环境舒适私密。"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "为什么选择星加进行尿液筛查？",
+      "reasons": [
+        {
+          "title": "医疗专业知识",
+          "description": "我们经验丰富的医疗专业人员确保准确的检测和解释"
+        },
+        {
+          "title": "先进技术",
+          "description": "先进的尿液分析设备，提供精确可靠的结果"
+        },
+        {
+          "title": "保密服务",
+          "description": "您的隐私受到保护，所有医疗信息都安全处理"
+        },
+        {
+          "title": "快速结果",
+          "description": "快速周转时间，结果通常在24-72小时内可用"
+        },
+        {
+          "title": "专业报告",
+          "description": "详细的检测报告和清晰易懂的结果解释"
+        },
+        {
+          "title": "实惠价格",
+          "description": "全面健康筛查服务的竞争性价格"
+        }
+      ]
+    },
+    "cta": {
+      "title": "今天就掌控您的健康",
+      "description": "健康管理从现在开始。专业的尿液筛查帮助您及时了解身体状况，让健康问题无处藏身。",
+      "button": "安排您的筛查",
+      "urgent": "立即预约，迈出更健康生活的第一步！"
     }
   }
 }

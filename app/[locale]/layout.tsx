@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import { locales, Locale } from '@/i18n/settings';
-import {Metadata} from "next";
+import {Metadata, Viewport} from "next";
 import StructuredData from "@/components/StructuredData";
 
 async function getMessages(locale: string) {
@@ -16,6 +16,7 @@ async function getMessages(locale: string) {
 }
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://starpluscentre.com'),
     title: 'Starplus Health Center Montreal | Professional Healthcare Services Quebec',
     description: 'Starplus Health Center in Montreal offers comprehensive healthcare services. Visit Starplus for physiotherapy, massage therapy, naturopathy, GP services, mental health support, and more professional medical care in Montreal, QC.',
     keywords: [
@@ -148,16 +149,17 @@ export const metadata: Metadata = {
     applicationName: 'Starplus Health Center',
     generator: 'Starplus',
     referrer: 'origin-when-cross-origin',
-    themeColor: '#2563eb',
-    viewport: {
-        width: 'device-width',
-        initialScale: 1,
-        maximumScale: 1,
-    },
     icons: {
         icon: '/logo/logo.png',
         apple: '/logo/logo.png',
     },
+}
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    themeColor: '#2563eb',
 }
 
 export function generateStaticParams() {

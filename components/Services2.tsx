@@ -16,6 +16,14 @@ export default function Services2() {
 
     const services = [
         {
+            title: t('urinalysis.title'),
+            description: t('urinalysis.description'),
+            image: "/home/h16.jpg",
+            tags: [t('urinalysis.tag1'), t('urinalysis.tag2')],
+            status: t('available'),
+            href: `/${locale}/urine-screening`
+        },
+        {
             title: t('physio.title'),
             description: t('physio.description'),
             image: "/home/h1.jpg",
@@ -124,14 +132,6 @@ export default function Services2() {
             description: t('vaccine.description'),
             image: "/home/h15.jpg",
             tags: [t('vaccine.tag1'), t('vaccine.tag2')],
-            status: t('available'),
-            href: `/${locale}/booking`
-        },
-        {
-            title: t('urinalysis.title'),
-            description: t('urinalysis.description'),
-            image: "/home/h16.jpg",
-            tags: [t('urinalysis.tag1'), t('urinalysis.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },

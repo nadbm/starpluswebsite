@@ -19,5 +19,10 @@ export const ENDPOINTS = {
     },
     PATIENT_FORMS: {
         SUBMIT: `${API_BASE_URL}/patient-forms/api/submit/`,
+    },
+    URINE_SCREENING: {
+        AVAILABLE_DAYS: `${API_BASE_URL}/api/urine-screening/availability/available_days/`,
+        TIME_SLOTS: `${API_BASE_URL}/api/urine-screening/availability/time_slots/`,
+        SUBMIT: `${API_BASE_URL}/api/urine-screening/api/submit/`,
     }
 };
