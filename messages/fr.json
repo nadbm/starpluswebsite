@@ -198,8 +198,8 @@
       "tag3": "Protection de la Santé"
     },
     "urinalysis": {
-      "title": "Analyse d'Urine-Test à Bandelettes",
-      "description": "Services professionnels d'analyse d'urine utilisant la technologie de test à bandelettes pour un dépistage rapide et précis.",
+      "title": "Test de Dépistage d'Urine",
+      "description": "Services professionnels d'analyse d'urine pour un dépistage rapide et précis.",
       "tag1": "Dépistage de Santé",
       "tag2": "Test Rapide",
       "tag3": "Soins Préventifs"
@@ -208,6 +208,11 @@
   "booking": {
     "title": "Prendre un rendez-vous",
     "subtitle": "Sélectionnez le service et l'heure de votre choix",
+    "urinalysisRedirect": {
+      "title": "Test de Dépistage d'Urine",
+      "description": "Service professionnel de dépistage d'urine pour une évaluation complète de la santé. Pour des informations détaillées et des réservations, veuillez visiter notre page dédiée au dépistage d'urine.",
+      "button": "Aller à la Page de Dépistage d'Urine"
+    },
     "followUpInfo": {
       "title": "Informations sur la Consultation de Suivi",
       "pricing": "Tarification : Les membres reçoivent des consultations de suivi gratuites. Les non-membres sont facturés 100 CAD par session."
@@ -567,10 +572,10 @@
   },
   "urineScreening": {
     "title": "Dépistage Urinaire Complet pour la Détection de Maladies",
-    "subtitle": "Tests d'analyse d'urine avancés pour identifier précocement les conditions de santé et pathologies potentielles",
+    "subtitle": "Tests d'analyse d'urine avancés pour identifier précocement les conditions de santé et pathologies potentielles, incluant des services professionnels de dépistage de drogues",
     "hero": {
       "title": "Dépistage de Santé Urinaire Complet",
-      "description": "Tests d'analyse d'urine professionnels pour vous aider à rester informé sur votre état de santé. Nous fournissons des services de dépistage fiables et précis.",
+      "description": "Tests d'analyse d'urine professionnels pour vous aider à rester informé sur votre état de santé. Nous fournissons des services complets de dépistage de santé et de détection de drogues avec des résultats fiables et précis.",
       "cta": "Réservez Votre Dépistage Maintenant",
       "badge": "Dépistage de Santé Avancé",
       "diseases": "15+ Maladies",
@@ -586,7 +591,7 @@
         },
         {
           "title": "Surveillance de Santé Complète",
-          "description": "Surveillez les niveaux de protéines, glucose, cellules sanguines, bactéries et autres indicateurs de santé vitaux"
+          "description": "Surveillez les niveaux de protéines, glucose, cellules sanguines, bactéries et métabolites de drogues parmi d'autres indicateurs de santé vitaux"
         },
         {
           "title": "Soins de Santé Préventifs",
@@ -599,8 +604,8 @@
       ]
     },
     "diseases": {
-      "title": "Conditions Que Nous Pouvons Détecter",
-      "subtitle": "Notre analyse d'urine avancée peut dépister plus de 15 conditions de santé et maladies différentes",
+      "title": "Conditions et Substances Que Nous Pouvons Détecter",
+      "subtitle": "Notre analyse d'urine avancée peut dépister plus de 15 conditions de santé, maladies et divers métabolites de drogues",
       "conditions": [
         "Maladie Rénale & Néphrite",
         "Diabète & Pré-diabète",
@@ -615,7 +620,7 @@
         "Calculs Rénaux",
         "Problèmes de Prostate",
         "Complications de Grossesse",
-        "Dépistage de Drogues",
+        "Dépistage de Drogues & Détection de Métabolites",
         "Et Bien Plus Encore..."
       ]
     },
@@ -679,11 +684,11 @@
       "reasons": [
         {
           "title": "Expertise Médicale",
-          "description": "Nos professionnels médicaux expérimentés assurent des tests et interprétations précis"
+          "description": "Nos professionnels médicaux expérimentés assurent des tests précis de maladies et drogues avec interprétation professionnelle"
         },
         {
           "title": "Technologie de Pointe",
-          "description": "Équipement d'analyse d'urine avancé pour des résultats précis et fiables"
+          "description": "Équipement d'analyse d'urine avancé pour des résultats précis et fiables de dépistage de maladies et de drogues"
         },
         {
           "title": "Service Confidentiel",
@@ -705,7 +710,7 @@
     },
     "cta": {
       "title": "Prenez le Contrôle de Votre Santé Aujourd'hui",
-      "description": "Prenez en charge votre gestion de santé dès aujourd'hui. Le dépistage urinaire professionnel vous aide à rester informé sur l'état de votre corps et à détecter les problèmes de santé tôt.",
+      "description": "Prenez en charge votre gestion de santé dès aujourd'hui. Le dépistage urinaire professionnel et les tests de drogues vous aident à rester informé sur l'état de votre corps et à détecter les problèmes de santé et risques liés aux drogues tôt.",
       "button": "Planifiez Votre Dépistage",
       "urgent": "Réservez maintenant et faites le premier pas vers une meilleure santé!"
     }

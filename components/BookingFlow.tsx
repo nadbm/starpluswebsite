@@ -91,6 +91,7 @@ export default function BookingFlow() {
     const t = useTranslations('booking');
     const e = useTranslations('services2');
     const l = useTranslations('location');
+    const locale = useLocale();
 
     const [services, setServices] = useState<Service[]>([]);
     const [selectedService, setSelectedService] = useState<Service | null>(null);
@@ -116,6 +117,7 @@ export default function BookingFlow() {
     const [showVaccineOptions, setShowVaccineOptions] = useState<boolean>(false);
     const [showPrescriptionUpload, setShowPrescriptionUpload] = useState<boolean>(false);
     const [showFollowUpInfo, setShowFollowUpInfo] = useState<boolean>(false);
+    const [showUrinalysisRedirect, setShowUrinalysisRedirect] = useState<boolean>(false);
     const [prescriptionFile, setPrescriptionFile] = useState<File | null>(null);
 
     const infoCards = [
@@ -433,12 +435,23 @@ export default function BookingFlow() {
                                 <button
                                     key={service.id}
                                     onClick={() => {
-                                        setSelectedService(service);
-                                        setShowVaccineOptions(service.name === 'Vaccine');
-                                        setShowPrescriptionUpload(service.name === 'Blood Draw');
-                                        setShowFollowUpInfo(service.name === 'Online Consultation Follow-up');
-                                        setSelectedVaccineType(null);
-                                        setPrescriptionFile(null);
+                                        if (service.name === 'Urinalysis Analysis-Strip Test') {
+                                            setShowUrinalysisRedirect(true);
+                                            setSelectedService(null);
+                                            setShowVaccineOptions(false);
+                                            setShowPrescriptionUpload(false);
+                                            setShowFollowUpInfo(false);
+                                            setSelectedVaccineType(null);
+                                            setPrescriptionFile(null);
+                                        } else {
+                                            setSelectedService(service);
+                                            setShowVaccineOptions(service.name === 'Vaccine');
+                                            setShowPrescriptionUpload(service.name === 'Blood Draw');
+                                            setShowFollowUpInfo(service.name === 'Online Consultation Follow-up');
+                                            setShowUrinalysisRedirect(false);
+                                            setSelectedVaccineType(null);
+                                            setPrescriptionFile(null);
+                                        }
                                     }}
 
                                     className={`p-4 md:p-6 rounded-xl border-2 transition-all duration-200 text-left ${
@@ -448,7 +461,7 @@ export default function BookingFlow() {
                                     }`}
                                 >
                                     <h3 className="font-medium text-base md:text-lg text-gray-800">
-                                        {e(`${SERVICE_KEYS[service.name]}.title`)}
+                                        {service.name === 'Urinalysis Analysis-Strip Test' ? e('urinalysis.title') : e(`${SERVICE_KEYS[service.name]}.title`)}
                                     </h3>
                                     <p className="text-xs md:text-sm text-gray-600 mt-2">
                                         {e(`${SERVICE_KEYS[service.name]}.description`)}
@@ -504,6 +517,35 @@ export default function BookingFlow() {
                                             )}
                                         </div>
                                     ))}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {showUrinalysisRedirect && (
+                        <div className="bg-white rounded-xl shadow-lg mb-8">
+                            <div className="p-4 md:p-6 bg-brand rounded-t-xl">
+                                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                                    {t('urinalysisRedirect.title')}
+                                </h3>
+                            </div>
+                            <div className="p-4 md:p-6">
+                                <div className="space-y-4">
+                                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <p className="text-blue-800">
+                                            {t('urinalysisRedirect.description')}
+                                        </p>
+                                    </div>
+                                    <div className="flex justify-center">
+                                        <button
+                                            onClick={() => {
+                                                window.location.href = `/${locale}/urine-screening`;
+                                            }}
+                                            className="bg-brand hover:bg-brand/90 text-white px-6 py-3 rounded-xl transition-colors duration-200 font-medium"
+                                        >
+                                            {t('urinalysisRedirect.button')}
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

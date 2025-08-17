@@ -24,6 +24,14 @@ export default function Services2() {
             href: `/${locale}/urine-screening`
         },
         {
+            title: t('blood.title'),
+            description: t('blood.description'),
+            image: "/home/h7.jpg",
+            tags: [t('blood.tag1'), t('blood.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
+        },
+        {
             title: t('physio.title'),
             description: t('physio.description'),
             image: "/home/h1.jpg",
@@ -68,14 +76,6 @@ export default function Services2() {
             description: t('naturopathy.description'),
             image: "/home/h6.jpg",
             tags: [t('naturopathy.tag1'), t('naturopathy.tag2')],
-            status: t('available'),
-            href: `/${locale}/booking`
-        },
-        {
-            title: t('blood.title'),
-            description: t('blood.description'),
-            image: "/home/h7.jpg",
-            tags: [t('blood.tag1'), t('blood.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },

@@ -198,8 +198,8 @@
       "tag3": "Health Protection"
     },
     "urinalysis": {
-      "title": "Urinalysis Analysis-Strip Test",
-      "description": "Professional urinalysis services using strip test technology for rapid and accurate health screening.",
+      "title": "Urinalysis Screening Test",
+      "description": "Professional urinalysis services for rapid and accurate health screening.",
       "tag1": "Health Screening",
       "tag2": "Rapid Testing",
       "tag3": "Preventive Care"
@@ -208,6 +208,11 @@
   "booking": {
     "title": "Book an Appointment",
     "subtitle": "Select your preferred service and time",
+    "urinalysisRedirect": {
+      "title": "Urinalysis Screening",
+      "description": "Professional urinalysis screening for comprehensive health assessment. For detailed information and booking, please visit our dedicated Urinalysis Screening page.",
+      "button": "Go to Urinalysis Screening Page"
+    },
     "followUpInfo": {
       "title": "Follow-up Consultation Information",
       "pricing": "Pricing: Members receive free follow-up consultations. Non-members are charged $100 CAD per session."
@@ -568,10 +573,10 @@
   },
   "urineScreening": {
     "title": "Comprehensive Urine Screening for Disease Detection",
-    "subtitle": "Advanced urinalysis testing to identify potential health conditions and pathologies early",
+    "subtitle": "Advanced urinalysis testing to identify potential health conditions and pathologies early, including professional drug screening services",
     "hero": {
       "title": "Comprehensive Urine Health Screening",
-      "description": "Professional urinalysis testing to help you stay informed about your health status. We provide accurate and reliable health screening services you can trust.",
+      "description": "Professional urinalysis testing to help you stay informed about your health status. We provide comprehensive health screening and drug testing services with accurate and reliable results you can trust.",
       "cta": "Book Your Screening Now",
       "badge": "Advanced Health Screening",
       "diseases": "15+ Diseases",
@@ -587,7 +592,7 @@
         },
         {
           "title": "Comprehensive Health Monitoring",
-          "description": "Monitor protein levels, glucose, blood cells, bacteria, and other vital health indicators"
+          "description": "Monitor protein levels, glucose, blood cells, bacteria, and drug metabolites among other vital health indicators"
         },
         {
           "title": "Preventive Healthcare",
@@ -600,8 +605,8 @@
       ]
     },
     "diseases": {
-      "title": "Conditions We Can Detect",
-      "subtitle": "Our advanced urinalysis can screen for over 15 different health conditions and diseases",
+      "title": "Conditions & Substances We Can Detect",
+      "subtitle": "Our advanced urinalysis can screen for over 15 different health conditions, diseases, and various drug metabolites",
       "conditions": [
         "Kidney Disease & Nephritis",
         "Diabetes & Pre-diabetes",
@@ -616,7 +621,7 @@
         "Kidney Stones",
         "Prostate Problems",
         "Pregnancy Complications",
-        "Drug Screening",
+        "Drug Screening & Metabolite Detection",
         "And Many More..."
       ]
     },
@@ -680,11 +685,11 @@
       "reasons": [
         {
           "title": "Medical Expertise",
-          "description": "Our experienced medical professionals ensure accurate testing and interpretation"
+          "description": "Our experienced medical professionals ensure accurate disease and drug testing with professional interpretation"
         },
         {
           "title": "State-of-the-Art Technology",
-          "description": "Advanced urinalysis equipment for precise and reliable results"
+          "description": "Advanced urinalysis equipment for precise and reliable disease screening and drug testing results"
         },
         {
           "title": "Confidential Service",
@@ -706,7 +711,7 @@
     },
     "cta": {
       "title": "Take Control of Your Health Today",
-      "description": "Take charge of your health management today. Professional urine screening helps you stay informed about your body's condition and catch health issues early.",
+      "description": "Take charge of your health management today. Professional urine screening and drug testing help you stay informed about your body's condition and catch health issues and drug-related risks early.",
       "button": "Schedule Your Screening",
       "urgent": "Book now and take the first step toward better health!"
     }
