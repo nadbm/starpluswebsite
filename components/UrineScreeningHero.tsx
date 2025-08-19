@@ -40,7 +40,7 @@ export default function UrineScreeningHero() {
                             </Link>
                             <div className="flex items-center justify-center lg:justify-start text-gray-600">
                                 <div className="flex items-center">
-                                    <span className="text-2xl font-bold text-brand mr-2">$350</span>
+                                    <span className="text-2xl font-bold text-brand mr-2">$300</span>
                                     <span>CAD</span>
                                 </div>
                             </div>

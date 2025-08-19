@@ -81,7 +81,7 @@ export function getSEOConfig(locale: string, pageType: string): SEOConfig {
       },
       'urine-screening': {
         title: 'Comprehensive Urine Screening | Disease Detection at Starplus Health Center Montreal',
-        description: 'Advanced urinalysis testing for early disease detection. Screen for kidney disease, diabetes, UTI, and 15+ health conditions. Professional results in 24-72 hours. $350 CAD.',
+        description: 'Advanced urinalysis testing for early disease detection. Screen for kidney disease, diabetes, UTI, and 15+ health conditions. Professional results in 24-72 hours. $300 CAD.',
         keywords: [
           'urine screening Montreal',
           'urinalysis testing Montreal',
@@ -147,7 +147,7 @@ export function getSEOConfig(locale: string, pageType: string): SEOConfig {
       },
       'urine-screening': {
         title: 'Dépistage Urinaire Complet | Détection de Maladies au Centre Starplus Montréal',
-        description: 'Tests d\'analyse d\'urine avancés pour la détection précoce de maladies. Dépistage pour maladie rénale, diabète, IVU, et 15+ conditions. Résultats professionnels en 24-72h. 350$ CAD.',
+        description: 'Tests d\'analyse d\'urine avancés pour la détection précoce de maladies. Dépistage pour maladie rénale, diabète, IVU, et 15+ conditions. Résultats professionnels en 24-72h. 300$ CAD.',
         keywords: [
           'dépistage urinaire Montréal',
           'analyse d\'urine Montréal',
@@ -215,7 +215,7 @@ export function getSEOConfig(locale: string, pageType: string): SEOConfig {
       },
       'urine-screening': {
         title: '全面尿液筛查 | Starplus健康中心蒙特利尔疾病检测',
-        description: '先进尿液分析检测，早期疾病发现。筛查肾病、糖尿病、尿路感染等15+种疾病。24-72小时专业结果。350加元。',
+        description: '先进尿液分析检测，早期疾病发现。筛查肾病、糖尿病、尿路感染等15+种疾病。24-72小时专业结果。300加元。',
         keywords: [
           '蒙特利尔尿液筛查',
           '蒙特利尔尿液分析',
