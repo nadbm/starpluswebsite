@@ -462,10 +462,37 @@ export default function BookingFlow() {
                                     }`}
                                 >
                                     <h3 className="font-medium text-base md:text-lg text-gray-800">
-                                        {service.name === 'Urinalysis Analysis-Strip Test' ? e('urinalysis.title') : e(`${SERVICE_KEYS[service.name]}.title`)}
+                                        {(() => {
+                                            if (service.name === 'Urinalysis Analysis-Strip Test') {
+                                                return e('urinalysis.title');
+                                            }
+                                            const serviceKey = SERVICE_KEYS[service.name];
+                                            if (!serviceKey) {
+                                                console.warn(`Service name "${service.name}" not found in SERVICE_KEYS`);
+                                                return service.name;
+                                            }
+                                            try {
+                                                return e(`${serviceKey}.title`);
+                                            } catch (error) {
+                                                console.warn(`Translation not found for ${serviceKey}.title`);
+                                                return service.name; 
+                                            }
+                                        })()}
                                     </h3>
                                     <p className="text-xs md:text-sm text-gray-600 mt-2">
-                                        {e(`${SERVICE_KEYS[service.name]}.description`)}
+                                        {(() => {
+                                            const serviceKey = SERVICE_KEYS[service.name];
+                                            if (!serviceKey) {
+                                                console.warn(`Service name "${service.name}" not found in SERVICE_KEYS`);
+                                                return service.name; 
+                                            }
+                                            try {
+                                                return e(`${serviceKey}.description`);
+                                            } catch (error) {
+                                                console.warn(`Translation not found for ${serviceKey}.description`);
+                                                return service.name;
+                                            }
+                                        })()}
                                     </p>
                                 </button>
                             ))}
