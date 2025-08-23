@@ -104,6 +104,14 @@ export default function Services2() {
             href: `/${locale}/booking`
         },
         {
+            title: t('tcm.title'),
+            description: t('tcm.description'),
+            image: "/home/h17.png",
+            tags: [t('tcm.tag1'), t('tcm.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
+        },
+        {
             title: t('botox.title'),
             description: t('botox.description'),
             image: "/home/h11.png",

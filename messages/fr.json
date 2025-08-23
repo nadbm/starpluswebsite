@@ -164,10 +164,17 @@
     },
     "nutritionist": {
       "title": "Services de Nutrition",
-      "description": "Consultations diététiques expertes proposant des plans nutritionnels personnalisés pour améliorer la santé, gérer le poids et répondre aux besoins spécifiques.",
+      "description": "Consultations diététiques expertes offrant des plans de nutrition personnalisés pour améliorer la santé, gérer le poids et résoudre des préoccupations alimentaires spécifiques.",
       "tag1": "Planification Alimentaire",
       "tag2": "Gestion du Poids",
       "tag3": "Optimisation de la Santé"
+    },
+    "tcm": {
+      "title": "Consultation en Médecine Traditionnelle Chinoise",
+      "description": "Diagnostic et consultation professionnels en MTC utilisant les principes de la médecine traditionnelle chinoise pour évaluer votre état de santé et fournir des recommandations de bien-être personnalisées.",
+      "tag1": "Diagnostic MTC",
+      "tag2": "Évaluation de la Santé",
+      "tag3": "Consultation Bien-être"
     },
     "botox": {
       "title": "Services de Botox",

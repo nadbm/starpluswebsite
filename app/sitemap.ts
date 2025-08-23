@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'nursing-services',
     'pharmacy-consultation',
     'nutritionist-services',
+    'traditional-chinese-medicine',
     'botox-services',
     'vaccine-services',
     'urinalysis-analysis'

@@ -155,6 +155,7 @@ export default function BookingFlow() {
         'Social Worker': 'social',
         'Pharmacy Consultation': 'pharmacy',
         'Nutritionist Services': 'nutritionist',
+        'Traditional Chinese Medicine Consultation': 'tcm',
         'Botox Services': 'botox',
         'Recovery Sleep Session': 'recovery',
         'Mental Health': 'mental',

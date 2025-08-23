@@ -77,6 +77,7 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
       "Nursing Services",
       "Pharmaceutical Consultation",
       "Nutritional Counseling",
+      "Traditional Chinese Medicine",
       "Botox Services",
       "Vaccine Services",
       "Urinalysis Analysis"
@@ -142,6 +143,14 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
           "@type": "MedicalProcedure",
           "name": "Mental Health Services", 
           "description": "Professional psychological support and counseling services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "Traditional Chinese Medicine Consultation",
+          "description": "Professional TCM diagnosis and consultation using traditional Chinese medicine principles to assess health conditions and provide personalized wellness recommendations"
         }
       },
       {

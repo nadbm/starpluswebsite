@@ -169,6 +169,13 @@
       "tag2": "Weight Management",
       "tag3": "Health Optimization"
     },
+    "tcm": {
+      "title": "Traditional Chinese Medicine Consultation",
+      "description": "Professional TCM diagnosis and consultation using traditional Chinese medicine principles to assess your health condition and provide personalized wellness recommendations.",
+      "tag1": "TCM Diagnosis",
+      "tag2": "Health Assessment",
+      "tag3": "Wellness Consultation"
+    },
     "botox": {
       "title": "Botox Services",
       "description": "Professional cosmetic treatments administered by certified specialists to reduce wrinkles and fine lines for natural-looking rejuvenation.",
