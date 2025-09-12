@@ -287,6 +287,9 @@
       "title": "Informations de contact",
       "emailTitle": "Envoyez-nous un email",
       "phoneTitle": "Appelez-nous",
+      "customerSupportTitle": "Support client",
+      "customerSupportEmailTitle": "Email du support client",
+      "customerSupportPhoneTitle": "Téléphone du support client",
       "hoursTitle": "Horaires d'ouverture",
       "timeline1": "Lundi, Mercredi à Vendredi, Dimanche",
       "timeline2": "Samedi"
@@ -368,8 +371,11 @@
       "address": "500, 998 Boul. Saint-Laurent, Montréal, QC, H2Z 9Y9",
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
-      "hours": "Lundi, Mercredi à Vendredi, Dimanche : 10h00 - 16h00\nSamedi : 10h00 - 13h00"
-    }
+      "hours": "Lundi, Mercredi à Vendredi, Dimanche : 10h00 - 16h00\nSamedi : 10h00 - 13h00",
+      "customerSupportPhone": "(514)-623-9218",
+      "customerSupportEmail": "clinic@starpluscentre.com"
+    },
+    "customerSupportTitle": "Support client"
   },
   "carousel": {
     "title1": "Votre santé, notre mission",

@@ -35,6 +35,17 @@ export default function Footer() {
     },
   ];
 
+  const customerSupportInfo = [
+    {
+      icon: Phone,
+      text: t('contact.customerSupportPhone'),
+    },
+    {
+      icon: Mail,
+      text: t('contact.customerSupportEmail'),
+    },
+  ];
+
   const renderText = (text: string, isMultiLine?: boolean) => {
     if (isMultiLine) {
       return (
@@ -97,12 +108,23 @@ export default function Footer() {
                       <div className="w-8 flex-shrink-0">
                         <info.icon className="w-5 h-5 text-sky-200" />
                       </div>
-                  {/*    <span className="text-gray-200 text-sm flex-1">*/}
-                  {/*  {info.text}*/}
-                  {/*</span>*/}
                       {renderText(info.text, info.isMultiLine)}
                     </div>
                 ))}
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-white/20">
+                <h4 className="text-white font-semibold mb-6">{t('customerSupportTitle')}</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {customerSupportInfo.map((info, index) => (
+                      <div key={index} className="flex items-start">
+                        <div className="w-8 flex-shrink-0">
+                          <info.icon className="w-5 h-5 text-sky-200" />
+                        </div>
+                        {renderText(info.text)}
+                      </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

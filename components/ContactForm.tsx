@@ -98,6 +98,32 @@ export default function ContactForm() {
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div className="mt-8 pt-6 border-t border-white/20">
+                                    <h4 className="text-lg font-semibold mb-6">
+                                        {t('info.customerSupportTitle')}
+                                    </h4>
+                                    <div className="space-y-6">
+                                        <div className="flex items-start space-x-4">
+                                            <div className="mt-1">
+                                                <Mail className="w-6 h-6" />
+                                            </div>
+                                            <div>
+                                                <h5 className="font-medium">{t('info.customerSupportEmailTitle')}</h5>
+                                                <p className="mt-1">clinic@starpluscentre.com</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start space-x-4">
+                                            <div className="mt-1">
+                                                <Phone className="w-6 h-6" />
+                                            </div>
+                                            <div>
+                                                <h5 className="font-medium">{t('info.customerSupportPhoneTitle')}</h5>
+                                                <p className="mt-1">(514)-623-9218</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="bg-white p-8 rounded-xl shadow-md">
