@@ -36,14 +36,13 @@ export default function Expertise() {
 
     return (
         <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4">
-                <div className="max-w-7xl mx-auto">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-gray-900
                             xx:text-2xl sm:text-3xl lg:text-4xl">
                             {t('sectionTitle')}
                         </h2>
-                        <p className="mt-4 text-gray-600 max-w-3xl mx-auto
+                        <p className="mt-4 text-gray-600 max-w-2xl mx-auto
                             xx:text-sm sm:text-base lg:text-lg">
                             {t('sectionDescription')}
                         </p>
@@ -51,8 +50,8 @@ export default function Expertise() {
 
                     <div className="space-y-20">
                         {professionals.map((professional, index) => (
-                            <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-10 items-center`}>
-                                <div className="md:w-2/5">
+                            <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-10 items-center`}>
+                                <div className="lg:w-2/5">
                                     <div className="relative w-full aspect-square rounded-full overflow-hidden bg-gray-100 border-8 border-white shadow-xl">
                                         <img
                                             src={professional.image}
@@ -61,7 +60,7 @@ export default function Expertise() {
                                         />
                                     </div>
                                 </div>
-                                <div className="md:w-3/5 space-y-6">
+                                <div className="lg:w-3/5 space-y-6">
                                     <div>
                                         <h3 className="text-3xl font-bold text-gray-900">{professional.name}</h3>
                                         <p className="text-xl text-brand font-medium mt-1">{professional.title}</p>
@@ -87,7 +86,6 @@ export default function Expertise() {
                             </div>
                         ))}
                     </div>
-                </div>
             </div>
         </section>
     );

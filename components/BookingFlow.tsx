@@ -384,7 +384,7 @@ export default function BookingFlow() {
     return (
         <div className="min-h-[800px]">
             {success ? <SuccessMessage t={t}/> : (
-                <div className="max-w-7xl mx-auto p-4 md:p-6">
+                <div className="w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
                         {infoCards.map((card, index) => (
                             <div key={index}

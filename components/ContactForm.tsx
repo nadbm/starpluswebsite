@@ -58,8 +58,7 @@ export default function ContactForm() {
 
     return (
         <section className="bg-gray-50 py-16" id="contact">
-            <div className="container px-4 mx-auto">
-                <div className="max-w-7xl mx-auto">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900
               xx:text-2xl sm:text-3xl lg:text-4xl">
@@ -269,7 +268,6 @@ export default function ContactForm() {
                             </form>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     );

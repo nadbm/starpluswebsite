@@ -194,7 +194,7 @@ export default function Services2() {
     return (
         <>
             <section className="py-16 bg-gray-50 dark:bg-gray-900" id="services">
-                <div className="container mx-auto px-4">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-white
                             xx:text-2xl sm:text-3xl lg:text-4xl">
@@ -206,13 +206,13 @@ export default function Services2() {
                         </p>
                     </div>
 
-                    <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto mb-6">
+                    <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6 mb-6">
                         {firstRow.map((service, index) => (
                             <ServiceCard key={index} {...service} />
                         ))}
                     </div>
 
-                    <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div className="grid xx:grid-cols-1 md:grid-cols-4 gap-6">
                         {secondRow.map((service, index) => (
                             <ServiceCard
                                 key={index}
