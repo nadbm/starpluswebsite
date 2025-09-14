@@ -162,6 +162,13 @@
       "tag2": "Interactions Médicamenteuses",
       "tag3": "Conseils Santé"
     },
+    "allergy": {
+      "title": "Dépistage d'Allergies",
+      "description": "Services professionnels de dépistage et de test d'allergies pour identifier les allergènes, sensibilités alimentaires et déclencheurs environnementaux affectant votre santé.",
+      "tag1": "Test d'Allergies",
+      "tag2": "Sensibilités Alimentaires",
+      "tag3": "Dépistage de Santé"
+    },
     "nutritionist": {
       "title": "Services de Nutrition",
       "description": "Consultations diététiques expertes offrant des plans de nutrition personnalisés pour améliorer la santé, gérer le poids et résoudre des préoccupations alimentaires spécifiques.",

@@ -88,10 +88,10 @@ export default function Services2() {
             href: `/${locale}/booking`
         },
         {
-            title: t('pharmacy.title'),
-            description: t('pharmacy.description'),
-            image: "/home/h9.png",
-            tags: [t('pharmacy.tag1'), t('pharmacy.tag2')],
+            title: t('allergy.title'),
+            description: t('allergy.description'),
+            image: "/home/h18.jpg",
+            tags: [t('allergy.tag1'), t('allergy.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },

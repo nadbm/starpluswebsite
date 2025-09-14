@@ -162,6 +162,13 @@
       "tag2": "Drug Interactions",
       "tag3": "Health Advice"
     },
+    "allergy": {
+      "title": "Allergy Screening",
+      "description": "Professional allergy testing and screening services to identify allergens, food sensitivities, and environmental triggers affecting your health.",
+      "tag1": "Allergy Testing",
+      "tag2": "Food Sensitivities",
+      "tag3": "Health Screening"
+    },
     "nutritionist": {
       "title": "Nutritionist Services",
       "description": "Expert dietary consultations offering customized nutrition plans to improve health, manage weight, and address specific dietary concerns.",

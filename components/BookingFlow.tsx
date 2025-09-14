@@ -154,6 +154,7 @@ export default function BookingFlow() {
         'Blood Draw': 'blood',
         'Social Worker': 'social',
         'Pharmacy Consultation': 'pharmacy',
+        'Allergy Screening': 'allergy',
         'Nutritionist Services': 'nutritionist',
         'Traditional Chinese Medicine Consultation': 'tcm',
         'Traditional  Chinese Medicine Consultation': 'tcm',
