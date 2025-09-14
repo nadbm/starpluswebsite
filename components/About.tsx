@@ -1,9 +1,30 @@
+"use client"
+
 import {useLocale, useTranslations} from "next-intl";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function About() {
     const t = useTranslations('about');
     const locale = useLocale();
+    
+    const images = [
+        { src: '/home/p1.jpg', title: 'Blood Draw Analysis' },
+        { src: '/home/p2.jpg', title: 'Urinalysis Screening Test' },
+        { src: '/home/p3.jpg', title: 'Online Consultation' }
+    ];
+    
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => 
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 3000);
+        
+        return () => clearInterval(interval);
+    }, [images.length]);
     return (
         <>
             <section className="bg-sky-50 dark:from-gray-900 dark:to-gray-800" id="about">
@@ -49,14 +70,34 @@ export default function About() {
                         <div className="relative">
                             <div className="aspect-w-3 aspect-h-2 lg:aspect-h-3">
                                 <img
-                                    src="/patient.jpeg"
+                                    src={images[currentImageIndex].src}
                                     alt={t('imageAlt')}
                                     className="rounded-xl object-cover shadow-2xl
                         xx:rounded-lg sm:rounded-xl lg:rounded-2xl
-                        hover:shadow-3xl transition-shadow duration-300"
+                        hover:shadow-3xl transition-all duration-500"
                                 />
+                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-xl">
+                                    <div className="p-4 pb-6 text-center">
+                                        <h3 className="text-white text-lg font-semibold mb-1">
+                                            {images[currentImageIndex].title}
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
                             <div className="absolute -bottom-6 -right-6 -z-10 h-24 w-24 rounded-full bg-brand/20"></div>
+                            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                                {images.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                            index === currentImageIndex 
+                                                ? 'bg-brand' 
+                                                : 'bg-white/50 hover:bg-white/70'
+                                        }`}
+                                        onClick={() => setCurrentImageIndex(index)}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
