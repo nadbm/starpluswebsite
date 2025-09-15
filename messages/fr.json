@@ -57,6 +57,7 @@
     "description": "Notre Équipe de Traitement Professionnelle",
     "switchToPhysio": "Physiothérapie",
     "switchToPsychology": "Psychologie",
+    "switchToSocialWork": "Travail Social",
     "qualificationsTitle": "Qualifications",
     "servicesTitle": "Services",
     "credentialsTitle": "Certifications",
@@ -79,6 +80,16 @@
       "t4": "Conseillère psychologique compatissante et compétente spécialisée en évaluation de santé mentale, conseil individuel et thérapie familiale. Expérience dans le traitement de l'anxiété, dépression et conflits relationnels.",
       "t5": "Maîtrise diverses techniques thérapeutiques incluant PNL, hypnothérapie, thérapie Satir et aromathérapie. Crée des plans de traitement personnalisés pour un bien-être mental optimal.",
       "t6": "Guidée par la philosophie 'reconnaître la vérité de la vie et embrasser le monde,' STARPLUS soutient la santé mentale de la communauté chinoise de Montréal avec excellence et expertise professionnelle."
+    },
+    "socialWork": {
+      "name": "Li He",
+      "title": "Travailleuse Sociale",
+      "t1": "Travailleuse Sociale Agréée",
+      "t2": "Thérapeute Familiale et Conjugale",
+      "t3": "Certification Professionnelle",
+      "t4": "Travailleuse sociale expérimentée spécialisée dans le soutien familial, le conseil individuel et les ressources communautaires. Dédiée à aider les individus et familles à naviguer les défis de la vie et accéder aux services nécessaires.",
+      "t5": "Compétente dans la fourniture de soutien émotionnel, l'intervention de crise et la connexion des clients avec les ressources communautaires appropriées. Engagée à autonomiser les individus et familles pour atteindre leurs objectifs et améliorer leur qualité de vie.",
+      "t6": "Avec certification professionnelle et expérience étendue, Li He fournit des soins compatissants et des solutions pratiques pour aider les clients à surmonter les obstacles et construire des relations plus fortes et plus saines."
     }
   },
   "bookNowSection": {

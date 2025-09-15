@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Physio() {
     const t = useTranslations('physio');
     const locale = useLocale();
-    const [activeTab, setActiveTab] = useState<'physio' | 'psychology'>('physio');
+    const [activeTab, setActiveTab] = useState<'physio' | 'psychology' | 'socialWork'>('physio');
 
     return (
         <section className="py-16 bg-gray-50">
@@ -25,16 +25,17 @@ export default function Physio() {
                     <div className="flex justify-center mb-12">
                         <div className="relative bg-white rounded-xl p-1 shadow-lg border border-gray-200">
                             <div className="flex relative">
-                                {/* Active tab background */}
                                 <div 
                                     className={`absolute top-1 bottom-1 bg-brand rounded-lg transition-all duration-300 ease-out ${
-                                        activeTab === 'physio' ? 'left-1 w-1/2' : 'left-1/2 w-1/2'
+                                        activeTab === 'physio' ? 'left-1 w-1/3' : 
+                                        activeTab === 'psychology' ? 'left-1/3 w-1/3' : 
+                                        'left-2/3 w-1/3'
                                     }`}
                                 />
                                 
                                 <button
                                     onClick={() => setActiveTab('physio')}
-                                    className={`relative px-6 py-3 rounded-lg font-medium transition-all duration-300 z-10 ${
+                                    className={`relative px-4 py-3 rounded-lg font-medium transition-all duration-300 z-10 ${
                                         activeTab === 'physio'
                                             ? 'text-white'
                                             : 'text-gray-600 hover:text-brand'
@@ -44,13 +45,23 @@ export default function Physio() {
                                 </button>
                                 <button
                                     onClick={() => setActiveTab('psychology')}
-                                    className={`relative px-6 py-3 rounded-lg font-medium transition-all duration-300 z-10 ${
+                                    className={`relative px-4 py-3 rounded-lg font-medium transition-all duration-300 z-10 ${
                                         activeTab === 'psychology'
                                             ? 'text-white'
                                             : 'text-gray-600 hover:text-brand'
                                     }`}
                                 >
                                     {t('switchToPsychology')}
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab('socialWork')}
+                                    className={`relative px-4 py-3 rounded-lg font-medium transition-all duration-300 z-10 ${
+                                        activeTab === 'socialWork'
+                                            ? 'text-white'
+                                            : 'text-gray-600 hover:text-brand'
+                                    }`}
+                                >
+                                    {t('switchToSocialWork')}
                                 </button>
                             </div>
                         </div>
@@ -74,7 +85,9 @@ export default function Physio() {
                                 <div className="relative flex-shrink-0">
                                     <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
                                         <img
-                                            src={activeTab === 'physio' ? "/team/sunqi.png" : "/team/ai.png"}
+                                            src={activeTab === 'physio' ? "/team/sunqi.png" : 
+                                                  activeTab === 'psychology' ? "/team/ai.png" : 
+                                                  "/team/LiHe.png"}
                                             alt={`${t(`${activeTab}.name`)} - ${t(`${activeTab}.title`)}`}
                                             className="w-full h-full object-cover object-top"
                                         />
@@ -105,7 +118,6 @@ export default function Physio() {
 
                             {/* Content Area - Unified Layout */}
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                                {/* Main Description - Takes 2/3 width */}
                                 <div className="lg:col-span-2 space-y-4">
                                     {activeTab === 'physio' ? (
                                         <>
@@ -113,11 +125,17 @@ export default function Physio() {
                                             <p className="text-gray-700 leading-relaxed">{t('physio.t5')}</p>
                                             <p className="text-gray-700 leading-relaxed">{t('physio.t6')}</p>
                                         </>
-                                    ) : (
+                                    ) : activeTab === 'psychology' ? (
                                         <>
                                             <p className="text-gray-700 leading-relaxed">{t('psychology.t4')}</p>
                                             <p className="text-gray-700 leading-relaxed">{t('psychology.t5')}</p>
                                             <p className="text-gray-700 leading-relaxed">{t('psychology.t6')}</p>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <p className="text-gray-700 leading-relaxed">{t('socialWork.t4')}</p>
+                                            <p className="text-gray-700 leading-relaxed">{t('socialWork.t5')}</p>
+                                            <p className="text-gray-700 leading-relaxed">{t('socialWork.t6')}</p>
                                         </>
                                     )}
                                 </div>
@@ -143,7 +161,7 @@ export default function Physio() {
                                                 <span className="text-gray-700 font-medium">{t('physio.t3')}</span>
                                             </div>
                                         </div>
-                                    ) : (
+                                    ) : activeTab === 'psychology' ? (
                                         <div className="space-y-3">
                                             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                                                 <svg className="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,6 +174,21 @@ export default function Physio() {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                                 </svg>
                                                 <span className="text-gray-700 font-medium">{t('psychology.t3')}</span>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div className="space-y-3">
+                                            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                                                <svg className="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                                </svg>
+                                                <span className="text-gray-700 font-medium">{t('socialWork.t2')}</span>
+                                            </div>
+                                            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                                                <svg className="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                                </svg>
+                                                <span className="text-gray-700 font-medium">{t('socialWork.t3')}</span>
                                             </div>
                                         </div>
                                     )}

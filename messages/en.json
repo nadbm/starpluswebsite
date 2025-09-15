@@ -57,6 +57,7 @@
     "description": "Our Professional Treatment Team",
     "switchToPhysio": "Physiotherapy",
     "switchToPsychology": "Psychology",
+    "switchToSocialWork": "Social Work",
     "qualificationsTitle": "Qualifications",
     "servicesTitle": "Services",
     "credentialsTitle": "Credentials",
@@ -79,6 +80,16 @@
       "t4": "Compassionate and skilled psychological counselor specializing in mental health assessment, individual counseling, and family therapy. Experienced in treating anxiety, depression, relationship issues, and family conflicts.",
       "t5": "Proficient in various therapeutic techniques including NLP, hypnotherapy, Satir therapy, and aromatherapy. Creates personalized treatment plans to help clients achieve optimal mental wellness.",
       "t6": "Guided by the philosophy of 'recognizing life's truth and embracing the world,' STARPLUS supports Montreal's Chinese community mental health with excellent care and professional expertise."
+    },
+    "socialWork": {
+      "name": "Li He",
+      "title": "Social Worker",
+      "t1": "Licensed Social Worker",
+      "t2": "Family & Couple Therapist",
+      "t3": "Professional Certification",
+      "t4": "Experienced social worker specializing in family support, individual counseling, and community resources. Dedicated to helping individuals and families navigate life challenges and access necessary services.",
+      "t5": "Skilled in providing emotional support, crisis intervention, and connecting clients with appropriate community resources. Committed to empowering individuals and families to achieve their goals and improve their quality of life.",
+      "t6": "With professional certification and extensive experience, Li He provides compassionate care and practical solutions to help clients overcome obstacles and build stronger, healthier relationships."
     }
   },
   "bookNowSection": {

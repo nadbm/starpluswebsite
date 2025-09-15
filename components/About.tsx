@@ -11,7 +11,8 @@ export default function About() {
     const images = [
         { src: '/home/p1.jpg', title: 'Blood Draw Analysis' },
         { src: '/home/p2.jpg', title: 'Urinalysis Screening Test' },
-        { src: '/home/p3.jpg', title: 'Online Consultation' }
+        { src: '/home/p3.jpg', title: 'Online Consultation' },
+        { src: '/home/p4.jpg', title: 'Allergy Screening Test' }
     ];
     
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
