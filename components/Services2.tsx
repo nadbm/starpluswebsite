@@ -120,11 +120,11 @@ export default function Services2() {
             href: `/${locale}/booking`
         },
         {
-            title: t('recovery.title'),
-            description: t('recovery.description'),
-            image: "/home/h12.png",
-            tags: [t('recovery.tag1'), t('recovery.tag2')],
-            status: t('comingSoon'),
+            title: t('lungScreening.title'),
+            description: t('lungScreening.description'),
+            image: "/home/h19.jpg",
+            tags: [t('lungScreening.tag1'), t('lungScreening.tag2')],
+            status: t('available'),
             href: `/${locale}/booking`
         },
         {

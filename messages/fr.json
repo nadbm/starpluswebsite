@@ -201,12 +201,12 @@
       "tag2": "Rajeunissement Facial",
       "tag3": "Soins Cosmétiques"
     },
-    "recovery": {
-      "title": "Séance de Récupération Sommeil",
-      "description": "Sessions guidées par des experts pour améliorer la résilience mentale, l'humeur et la restauration physique par des stratégies de récupération ciblées.",
-      "tag1": "Bien-être Mental",
-      "tag2": "Récupération Performance",
-      "tag3": "Santé Globale"
+    "lungScreening": {
+      "title": "Test de Dépistage Pulmonaire",
+      "description": "Dépistage professionnel de la santé pulmonaire pour détecter les signes précoces de conditions respiratoires et de maladies pulmonaires par des tests de diagnostic avancés.",
+      "tag1": "Santé Respiratoire",
+      "tag2": "Détection Précoce",
+      "tag3": "Santé Pulmonaire"
     },
     "mental": {
       "title": "Services de Santé Mentale",
@@ -237,6 +237,11 @@
       "title": "Test de Dépistage d'Urine",
       "description": "Service professionnel de dépistage d'urine pour une évaluation complète de la santé. Pour des informations détaillées et des réservations, veuillez visiter notre page dédiée au dépistage d'urine.",
       "button": "Aller à la Page de Dépistage d'Urine"
+    },
+    "lungScreeningRedirect": {
+      "title": "Test de Dépistage Pulmonaire",
+      "description": "Dépistage professionnel de la santé pulmonaire pour détecter les signes précoces de conditions respiratoires et de maladies pulmonaires. Pour des informations détaillées et des réservations, veuillez visiter notre page dédiée au dépistage pulmonaire.",
+      "button": "Aller à la Page de Dépistage Pulmonaire"
     },
     "followUpInfo": {
       "title": "Informations sur la Consultation de Suivi",

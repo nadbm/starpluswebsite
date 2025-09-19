@@ -160,6 +160,7 @@ export default function BookingFlow() {
         'Traditional  Chinese Medicine Consultation': 'tcm',
         'Botox Services': 'botox',
         'Recovery Sleep Session': 'recovery',
+        'Lung Screening Test': 'lungScreening',
         'Mental Health': 'mental',
         'Vaccine': 'vaccine',
         'Urinalysis Analysis-Strip Test': 'urinalysis'
