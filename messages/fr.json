@@ -208,6 +208,13 @@
       "tag2": "Détection Précoce",
       "tag3": "Santé Pulmonaire"
     },
+    "recovery": {
+      "title": "Séance de Récupération Sommeil",
+      "description": "Sessions guidées par des experts pour améliorer la résilience mentale, l'humeur et la restauration physique par des stratégies de récupération ciblées.",
+      "tag1": "Bien-être Mental",
+      "tag2": "Récupération Performance",
+      "tag3": "Santé Globale"
+    },
     "mental": {
       "title": "Services de Santé Mentale",
       "description": "Soutien psychologique pour l'anxiété, le stress, les problèmes familiaux et l'intervention de crise avec des approches thérapeutiques personnalisées.",

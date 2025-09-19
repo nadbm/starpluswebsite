@@ -208,6 +208,13 @@
       "tag2": "Early Detection",
       "tag3": "Lung Health"
     },
+    "recovery": {
+      "title": "Recovery Sleep Session",
+      "description": "Expert-guided sessions to enhance mental resilience, mood, and physical restoration through targeted recovery strategies.",
+      "tag1": "Mental Wellness",
+      "tag2": "Performance Recovery",
+      "tag3": "Holistic Health"
+    },
     "mental": {
       "title": "Mental Health Services",
       "description": "Professional psychological support for anxiety, stress, family issues, and crisis intervention with personalized therapeutic approaches.",
