@@ -153,7 +153,7 @@
       "tag3": "Bien-être"
     },
     "blood": {
-      "title": "Analyse de Sang",
+      "title": "Analyse Sanguine",
       "description": "Bientôt disponible : Services de prélèvement sanguin pratiques assurant une collecte d'échantillons rapide et précise pour les tests de laboratoire.",
       "tag1": "Tests de Laboratoire",
       "tag2": "Diagnostics",
@@ -174,7 +174,7 @@
       "tag3": "Conseils Santé"
     },
     "allergy": {
-      "title": "Dépistage d'Allergies",
+      "title": "Analyse d'Allergies",
       "description": "Services professionnels de dépistage et de test d'allergies pour identifier les allergènes, sensibilités alimentaires et déclencheurs environnementaux affectant votre santé.",
       "tag1": "Test d'Allergies",
       "tag2": "Sensibilités Alimentaires",
@@ -202,8 +202,8 @@
       "tag3": "Soins Cosmétiques"
     },
     "lungScreening": {
-      "title": "Test de Dépistage Pulmonaire",
-      "description": "Dépistage professionnel de la santé pulmonaire pour détecter les signes précoces de conditions respiratoires et de maladies pulmonaires par des tests de diagnostic avancés.",
+      "title": "Test de Respiration Pulmonaire",
+      "description": "Évaluation professionnelle de la respiration pulmonaire pour évaluer la fonction respiratoire et détecter les signes précoces de conditions pulmonaires par des tests de respiration complets.",
       "tag1": "Santé Respiratoire",
       "tag2": "Détection Précoce",
       "tag3": "Santé Pulmonaire"
@@ -235,6 +235,13 @@
       "tag1": "Dépistage de Santé",
       "tag2": "Test Rapide",
       "tag3": "Soins Préventifs"
+    },
+    "fertility": {
+      "title": "Tests de Fertilité",
+      "description": "Services complets de tests de fertilité pour évaluer la santé reproductive et fournir des conseils pour la planification familiale et le bien-être reproductif.",
+      "tag1": "Santé Reproductive",
+      "tag2": "Planification Familiale",
+      "tag3": "Évaluation de Fertilité"
     }
   },
   "booking": {
@@ -246,9 +253,9 @@
       "button": "Aller à la Page de Dépistage d'Urine"
     },
     "lungScreeningRedirect": {
-      "title": "Test de Dépistage Pulmonaire",
-      "description": "Dépistage professionnel de la santé pulmonaire pour détecter les signes précoces de conditions respiratoires et de maladies pulmonaires. Pour des informations détaillées et des réservations, veuillez visiter notre page dédiée au dépistage pulmonaire.",
-      "button": "Aller à la Page de Dépistage Pulmonaire"
+      "title": "Test de Respiration Pulmonaire",
+      "description": "Évaluation professionnelle de la respiration pulmonaire pour évaluer la fonction respiratoire et détecter les signes précoces de conditions pulmonaires par des tests de respiration complets. Pour des informations détaillées et des réservations, veuillez visiter notre page dédiée au test de respiration pulmonaire.",
+      "button": "Aller à la Page de Test de Respiration Pulmonaire"
     },
     "followUpInfo": {
       "title": "Informations sur la Consultation de Suivi",

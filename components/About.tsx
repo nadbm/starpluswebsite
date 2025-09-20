@@ -9,10 +9,10 @@ export default function About() {
     const locale = useLocale();
     
     const images = [
-        { src: '/home/p1.jpg', title: 'Blood Draw Analysis' },
+        { src: '/home/p1.jpg', title: 'Blood Analysis' },
         { src: '/home/p2.jpg', title: 'Urinalysis Screening Test' },
         { src: '/home/p3.jpg', title: 'Online Consultation' },
-        { src: '/home/p4.jpg', title: 'Allergy Screening Test' }
+        { src: '/home/p4.jpg', title: 'Allergy Analysis' }
     ];
     
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -79,7 +79,7 @@ export default function About() {
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-xl">
                                     <div className="p-4 pb-6 text-center">
-                                        <h3 className="text-white text-lg font-semibold mb-1">
+                                        <h3 className="text-white text-2xl font-semibold mb-1">
                                             {images[currentImageIndex].title}
                                         </h3>
                                     </div>

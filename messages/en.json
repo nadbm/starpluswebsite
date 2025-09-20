@@ -153,7 +153,7 @@
       "tag3": "Wellness"
     },
     "blood": {
-      "title": "Blood Draw Analysis",
+      "title": "Blood Analysis",
       "description": "Coming soon: Convenient blood draw services ensuring fast and accurate sample collection for lab testing.",
       "tag1": "Lab Testing",
       "tag2": "Diagnostics",
@@ -174,7 +174,7 @@
       "tag3": "Health Advice"
     },
     "allergy": {
-      "title": "Allergy Screening",
+      "title": "Allergy Analysis",
       "description": "Professional allergy testing and screening services to identify allergens, food sensitivities, and environmental triggers affecting your health.",
       "tag1": "Allergy Testing",
       "tag2": "Food Sensitivities",
@@ -202,8 +202,8 @@
       "tag3": "Cosmetic Care"
     },
     "lungScreening": {
-      "title": "Lung Screening Test",
-      "description": "Professional lung health screening to detect early signs of respiratory conditions and lung diseases through advanced diagnostic testing.",
+      "title": "Lung Breathing Test",
+      "description": "Professional lung breathing assessment to evaluate respiratory function and detect early signs of lung conditions through comprehensive breathing tests.",
       "tag1": "Respiratory Health",
       "tag2": "Early Detection",
       "tag3": "Lung Health"
@@ -235,6 +235,13 @@
       "tag1": "Health Screening",
       "tag2": "Rapid Testing",
       "tag3": "Preventive Care"
+    },
+    "fertility": {
+      "title": "Fertility Tests",
+      "description": "Comprehensive fertility testing services to assess reproductive health and provide insights for family planning and reproductive wellness.",
+      "tag1": "Reproductive Health",
+      "tag2": "Family Planning",
+      "tag3": "Fertility Assessment"
     }
   },
   "booking": {
@@ -246,9 +253,9 @@
       "button": "Go to Urinalysis Screening Page"
     },
     "lungScreeningRedirect": {
-      "title": "Lung Screening Test",
-      "description": "Professional lung health screening to detect early signs of respiratory conditions and lung diseases. For detailed information and booking, please visit our dedicated Lung Screening page.",
-      "button": "Go to Lung Screening Page"
+      "title": "Lung Breathing Test",
+      "description": "Professional lung breathing assessment to evaluate respiratory function and detect early signs of lung conditions through comprehensive breathing tests. For detailed information and booking, please visit our dedicated Lung Breathing Test page.",
+      "button": "Go to Lung Breathing Test Page"
     },
     "followUpInfo": {
       "title": "Follow-up Consultation Information",

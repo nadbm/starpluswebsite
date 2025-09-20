@@ -151,19 +151,20 @@ export default function BookingFlow() {
         'Nursing Services': 'nursing',
         'Massage Therapy': 'massage',
         'Naturopathy': 'naturopathy',
-        'Blood Draw': 'blood',
+        'Blood Analysis': 'blood',
         'Social Worker': 'social',
         'Pharmacy Consultation': 'pharmacy',
-        'Allergy Screening': 'allergy',
+        'Allergy Analysis': 'allergy',
         'Nutritionist Services': 'nutritionist',
         'Traditional Chinese Medicine Consultation': 'tcm',
         'Traditional  Chinese Medicine Consultation': 'tcm',
         'Botox Services': 'botox',
         'Recovery Sleep Session': 'recovery',
-        'Lung Screening Test': 'lungScreening',
+        'Lung Breathing Test': 'lungScreening',
         'Mental Health': 'mental',
         'Vaccine': 'vaccine',
-        'Urinalysis Analysis-Strip Test': 'urinalysis'
+        'Urinalysis Analysis-Strip Test': 'urinalysis',
+        'Fertility Tests': 'fertility'
     };
 
     useEffect(() => {
@@ -450,7 +451,7 @@ export default function BookingFlow() {
                                         } else {
                                             setSelectedService(service);
                                             setShowVaccineOptions(service.name === 'Vaccine');
-                                            setShowPrescriptionUpload(service.name === 'Blood Draw');
+                                            setShowPrescriptionUpload(service.name === 'Blood Analysis');
                                             setShowFollowUpInfo(service.name === 'Online Consultation Follow-up');
                                             setShowUrinalysisRedirect(false);
                                             setSelectedVaccineType(null);
