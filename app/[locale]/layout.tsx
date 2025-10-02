@@ -150,7 +150,7 @@ export const metadata: Metadata = {
     generator: 'Starplus',
     referrer: 'origin-when-cross-origin',
     icons: {
-        icon: '/logo/logo.png',
+        icon: '/favicon.ico',
         apple: '/logo/logo.png',
     },
 }
