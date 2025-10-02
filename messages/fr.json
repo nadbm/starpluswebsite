@@ -39,16 +39,27 @@
         ],
         "bio": "Qi Meng Sun est une physiothérapeute dévouée avec une vaste expérience dans le traitement de diverses conditions, notamment les blessures sportives, la réadaptation post-chirurgicale et d'autres affections orthopédiques. Utilisant des techniques fondées sur des preuves, elle crée des plans de traitement personnalisés qui aident les patients à retrouver leur mobilité et à améliorer leur qualité de vie."
       },
-      "chen": {
-        "name": "Chen Hao",
-        "title": "Massothérapeute & Professionnel en Naturopathie",
-        "description": "Massothérapeute qualifié avec expertise en méthodes de guérison naturelles",
+      "psychology": {
+        "name": "Dr. Ai",
+        "title": "Conseillère Senior",
+        "description": "Conseillère psychologique compatissante et compétente spécialisée en évaluation de santé mentale, conseil individuel et thérapie familiale",
         "expertise": [
-          "Massage Thérapeutique",
-          "Traitements Naturopathiques",
-          "Bien-être Holistique"
+          "Évaluation de Santé Mentale",
+          "Conseil Individuel",
+          "Thérapie Familiale"
         ],
-        "bio": "Chen Hao combine le pouvoir guérisseur de la massothérapie avec les principes naturopathiques pour fournir des soins complets. Son approche se concentre sur la promotion des processus naturels de guérison du corps, abordant à la fois l'inconfort physique et le bien-être général. Avec sa double expertise, Chen offre une expérience thérapeutique unique qui équilibre les techniques modernes avec la sagesse traditionnelle."
+        "bio": "Conseillère psychologique compatissante et compétente spécialisée en évaluation de santé mentale, conseil individuel et thérapie familiale. Expérience dans le traitement de l'anxiété, dépression et conflits relationnels. Maîtrise diverses techniques thérapeutiques incluant PNL, hypnothérapie, thérapie Satir et aromathérapie. Crée des plans de traitement personnalisés pour un bien-être mental optimal."
+      },
+      "socialWork": {
+        "name": "Li He",
+        "title": "Travailleuse Sociale",
+        "description": "Travailleuse sociale expérimentée spécialisée dans le soutien familial, le conseil individuel et les ressources communautaires",
+        "expertise": [
+          "Soutien Familial",
+          "Conseil Individuel",
+          "Ressources Communautaires"
+        ],
+        "bio": "Travailleuse sociale expérimentée spécialisée dans le soutien familial, le conseil individuel et les ressources communautaires. Dédiée à aider les individus et familles à naviguer les défis de la vie et accéder aux services nécessaires. Compétente dans la fourniture de soutien émotionnel, l'intervention de crise et la connexion des clients avec les ressources communautaires appropriées. Engagée à autonomiser les individus et familles pour atteindre leurs objectifs et améliorer leur qualité de vie."
       }
     }
   },

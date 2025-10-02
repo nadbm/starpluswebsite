@@ -168,12 +168,6 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
         "name": "Qi Meng Sun",
         "jobTitle": "Physiotherapist",
         "description": "Experienced physiotherapist specializing in rehabilitation and pain management"
-      },
-      {
-        "@type": "Person", 
-        "name": "Chen Hao",
-        "jobTitle": "Massage Therapist & Naturopathic Professional",
-        "description": "Skilled massage therapist with expertise in natural healing methods"
       }
     ],
     "founder": {

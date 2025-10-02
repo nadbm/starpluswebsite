@@ -21,16 +21,28 @@ export default function Expertise() {
             bio: t('professionals.qi.bio')
         },
         {
-            image: "/team/ch1.png",
-            name: t('professionals.chen.name'),
-            title: t('professionals.chen.title'),
-            description: t('professionals.chen.description'),
+            image: "/team/ai.png",
+            name: t('professionals.psychology.name'),
+            title: t('professionals.psychology.title'),
+            description: t('professionals.psychology.description'),
             expertise: [
-                t('professionals.chen.expertise.0'),
-                t('professionals.chen.expertise.1'),
-                t('professionals.chen.expertise.2')
+                t('professionals.psychology.expertise.0'),
+                t('professionals.psychology.expertise.1'),
+                t('professionals.psychology.expertise.2')
             ],
-            bio: t('professionals.chen.bio')
+            bio: t('professionals.psychology.bio')
+        },
+        {
+            image: "/team/LiHe.png",
+            name: t('professionals.socialWork.name'),
+            title: t('professionals.socialWork.title'),
+            description: t('professionals.socialWork.description'),
+            expertise: [
+                t('professionals.socialWork.expertise.0'),
+                t('professionals.socialWork.expertise.1'),
+                t('professionals.socialWork.expertise.2')
+            ],
+            bio: t('professionals.socialWork.bio')
         }
     ];
 

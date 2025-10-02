@@ -39,16 +39,27 @@
         ],
         "bio": "Qi Meng Sun is a dedicated physiotherapist with extensive experience in treating various conditions including sports injuries, post-surgical rehabilitation, and other orthopedic conditions. Using evidence-based techniques, she creates customized treatment plans that help patients regain mobility and improve their quality of life."
       },
-      "chen": {
-        "name": "Chen Hao",
-        "title": "Massage Therapist & Naturopathic Professional",
-        "description": "Skilled massage therapist with expertise in natural healing methods",
+      "psychology": {
+        "name": "Dr. Ai",
+        "title": "Senior Counselor",
+        "description": "Compassionate and skilled psychological counselor specializing in mental health assessment, individual counseling, and family therapy",
         "expertise": [
-          "Therapeutic Massage",
-          "Naturopathic Treatments",
-          "Holistic Wellness"
+          "Mental Health Assessment",
+          "Individual Counseling",
+          "Family Therapy"
         ],
-        "bio": "Chen Hao combines the healing power of massage therapy with naturopathic principles to provide comprehensive care. His approach focuses on promoting the body's natural healing processes, addressing both physical discomfort and overall wellness. With his dual expertise, Chen offers a unique therapeutic experience that balances modern techniques with traditional wisdom."
+        "bio": "Compassionate and skilled psychological counselor specializing in mental health assessment, individual counseling, and family therapy. Experienced in treating anxiety, depression, relationship issues, and family conflicts. Proficient in various therapeutic techniques including NLP, hypnotherapy, Satir therapy, and aromatherapy. Creates personalized treatment plans to help clients achieve optimal mental wellness."
+      },
+      "socialWork": {
+        "name": "Li He",
+        "title": "Social Worker",
+        "description": "Experienced social worker specializing in family support, individual counseling, and community resources",
+        "expertise": [
+          "Family Support",
+          "Individual Counseling",
+          "Community Resources"
+        ],
+        "bio": "Experienced social worker specializing in family support, individual counseling, and community resources. Dedicated to helping individuals and families navigate life challenges and access necessary services. Skilled in providing emotional support, crisis intervention, and connecting clients with appropriate community resources. Committed to empowering individuals and families to achieve their goals and improve their quality of life."
       }
     }
   },
