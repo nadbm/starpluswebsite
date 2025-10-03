@@ -124,7 +124,7 @@ export default function Services2() {
             description: t('lungScreening.description'),
             image: "/home/h19.jpg",
             tags: [t('lungScreening.tag1'), t('lungScreening.tag2')],
-            status: t('available'),
+            status: t('comingSoon'),
             href: `/${locale}/booking`
         },
         {
