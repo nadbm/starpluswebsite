@@ -112,15 +112,6 @@ export default function ContactForm() {
                                                 <p className="mt-1">clinic@starpluscentre.com</p>
                                             </div>
                                         </div>
-                                        <div className="flex items-start space-x-4">
-                                            <div className="mt-1">
-                                                <Phone className="w-6 h-6" />
-                                            </div>
-                                            <div>
-                                                <h5 className="font-medium">{t('info.customerSupportPhoneTitle')}</h5>
-                                                <p className="mt-1">(514)-623-9218</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

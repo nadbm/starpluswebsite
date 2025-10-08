@@ -37,10 +37,6 @@ export default function Footer() {
 
   const customerSupportInfo = [
     {
-      icon: Phone,
-      text: t('contact.customerSupportPhone'),
-    },
-    {
       icon: Mail,
       text: t('contact.customerSupportEmail'),
     },

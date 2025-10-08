@@ -337,7 +337,6 @@
       "phoneTitle": "拨打电话",
       "customerSupportTitle": "客户支持",
       "customerSupportEmailTitle": "客户支持邮箱",
-      "customerSupportPhoneTitle": "客户支持电话",
       "hoursTitle": "营业时间",
       "timeline1": "周一、周三至周五、周日",
       "timeline2": "周六"
@@ -420,7 +419,6 @@
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
       "hours": "周一、周三至周五、周日：上午10:00 - 下午4:00\n周六：上午10:00 - 下午1:00",
-      "customerSupportPhone": "(514)-623-9218",
       "customerSupportEmail": "clinic@starpluscentre.com"
     },
     "customerSupportTitle": "客户支持"

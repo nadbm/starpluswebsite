@@ -338,7 +338,6 @@
       "phoneTitle": "Call Us",
       "customerSupportTitle": "Customer Support",
       "customerSupportEmailTitle": "Customer Support Email",
-      "customerSupportPhoneTitle": "Customer Support Phone",
       "hoursTitle": "Opening Hours",
       "timeline1": "Monday, Wednesday to Friday, Sunday",
       "timeline2": "Saturday"
@@ -421,7 +420,6 @@
       "phone": "(514)-447-2175",
       "email": "info@starpluscentre.com",
       "hours": "Monday, Wednesday to Friday, Sunday: 10:00 AM - 4:00 PM\nSaturday: 10:00 AM - 1:00 PM",
-      "customerSupportPhone": "(514)-623-9218",
       "customerSupportEmail": "clinic@starpluscentre.com"
     },
     "customerSupportTitle": "Customer Support"
