@@ -287,6 +287,13 @@
     },
     "selectTime": "选择时间",
     "noTimesAvailable": "此日期暂无可用时间",
+    "waitingList": {
+      "title": "此日期日程已固定",
+      "heading": "预约截止时间已过",
+      "message": "此日期的日程已经最终确定。在线预约已不再对此时间段开放。",
+      "contact": "如果您需要预约此日期的时间，请直接致电我们 (514)-447-2175，我们将为您安排可能的时间段或安排到稍后的日期。",
+      "selectAnother": "选择其他日期"
+    },
     "form": {
       "title": "您的信息",
       "firstName": "名字",

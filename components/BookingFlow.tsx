@@ -26,6 +26,7 @@ interface AvailableDay {
     date: string;
     is_available: boolean;
     reason: string | null;
+    waiting_list: boolean;
 }
 
 interface TimeSlot {
@@ -40,6 +41,7 @@ interface CalendarDay {
     isAvailable: boolean;
     reason: string | null;
     isEmpty?: boolean;
+    waitingList?: boolean;
 }
 
 interface BookingForm {
@@ -247,7 +249,8 @@ export default function BookingFlow() {
                 dayOfWeek: date.getDay(),
                 isAvailable: day.is_available,
                 reason: day.reason,
-                isEmpty: false
+                isEmpty: false,
+                waitingList: day.waiting_list || false
             });
         });
 
@@ -264,6 +267,12 @@ export default function BookingFlow() {
                 `${ENDPOINTS.APPOINTMENTS.TIME_SLOTS}?service_id=${selectedService.id}&date=${date}`
             );
             const data = await response.json();
+
+            if (!response.ok && data.waiting_list) {
+                setTimeSlots([]);
+                return;
+            }
+
             setTimeSlots(data);
         } catch (error) {
             console.error('Error fetching time slots:', error);
@@ -353,6 +362,10 @@ export default function BookingFlow() {
 
         if (day.isEmpty) {
             return baseClasses + "invisible";
+        }
+
+        if (!day.isAvailable && day.waitingList) {
+            return baseClasses + "bg-brand/10 text-brand cursor-pointer border-2 border-brand";
         }
 
         if (!day.isAvailable) {
@@ -534,12 +547,19 @@ export default function BookingFlow() {
                                             onClick={() => {
                                                 if (day.isAvailable && !day.isEmpty) {
                                                     handleDateSelect(day.dateString);
+                                                } else if (day.waitingList && !day.isEmpty) {
+                                                    setSelectedDate(day.dateString);
+                                                    setTimeSlots([]);
+                                                    setSelectedTime(null);
                                                 }
                                             }}
                                         >
                                             {!day.isEmpty && (
                                                 <>
                                                     <span>{day.date}</span>
+                                                    {day.waitingList && (
+                                                        <span className="absolute top-1 right-1 text-xs">⏰</span>
+                                                    )}
                                                     {day.isAvailable && selectedDate === day.dateString && (
                                                         <span
                                                             className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-white rounded-full">
@@ -702,7 +722,52 @@ export default function BookingFlow() {
                         </div>
                     )}
 
-                    {selectedDate && timeSlots.length > 0 && (
+                    {selectedDate && calendarDays.find(d => d.dateString === selectedDate)?.waitingList && (
+                        <div className="bg-white rounded-xl shadow-lg mb-8">
+                            <div className="p-4 md:p-6 bg-brand rounded-t-xl">
+                                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                                    {t('waitingList.title')}
+                                </h3>
+                            </div>
+                            <div className="p-4 md:p-6">
+                                <div className="space-y-4">
+                                    <div className="bg-brand/10 p-4 rounded-lg border-2 border-brand">
+                                        <div className="flex items-start">
+                                            <div className="flex-shrink-0">
+                                                <svg className="h-6 w-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            </div>
+                                            <div className="ml-3">
+                                                <h4 className="text-lg font-semibold text-brand mb-2">
+                                                    {t('waitingList.heading')}
+                                                </h4>
+                                                <p className="text-brand/90 mb-2">
+                                                    {t('waitingList.message')}
+                                                </p>
+                                                <p className="text-brand/90">
+                                                    {t('waitingList.contact')}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="text-center">
+                                        <button
+                                            onClick={() => {
+                                                setSelectedDate(null);
+                                                setSelectedTime(null);
+                                            }}
+                                            className="bg-brand hover:bg-brand/90 text-white px-6 py-3 rounded-xl transition-colors duration-200 font-medium"
+                                        >
+                                            {t('waitingList.selectAnother')}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {selectedDate && timeSlots.length > 0 && !calendarDays.find(d => d.dateString === selectedDate)?.waitingList && (
                         <div className="bg-white rounded-xl shadow-lg mb-8">
                             <div className="p-4 md:p-6 bg-brand rounded-t-xl">
                                 <h3 className="text-xl md:text-2xl font-semibold text-white">

@@ -287,6 +287,13 @@
     },
     "selectTime": "Select Time",
     "noTimesAvailable": "No available times for this date",
+    "waitingList": {
+      "title": "Schedule Fixed for This Date",
+      "heading": "Booking Cutoff Time Passed",
+      "message": "The schedule for this date has been finalized. Online booking is no longer available for this time period.",
+      "contact": "If you need to schedule an appointment for this date, please call us directly at (514)-447-2175 and we will arrange a possible time slot or schedule you for a later date.",
+      "selectAnother": "Select Another Date"
+    },
     "form": {
       "title": "Your Information",
       "firstName": "First Name",

@@ -287,6 +287,13 @@
     },
     "selectTime": "Sélectionner une heure",
     "noTimesAvailable": "Aucune disponibilité pour cette date",
+    "waitingList": {
+      "title": "Horaire Fixé pour Cette Date",
+      "heading": "Délai de Réservation Dépassé",
+      "message": "L'horaire pour cette date a été finalisé. La réservation en ligne n'est plus disponible pour cette période.",
+      "contact": "Si vous devez prendre rendez-vous pour cette date, veuillez nous appeler directement au (514)-447-2175 et nous organiserons un créneau horaire possible ou vous programmerons pour une date ultérieure.",
+      "selectAnother": "Sélectionner une Autre Date"
+    },
     "form": {
       "title": "Vos Informations",
       "firstName": "Prénom",
