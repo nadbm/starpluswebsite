@@ -89,6 +89,45 @@ const SuccessMessage = ({t}: { t: any }) => {
     );
 };
 
+const ChineseNameWarning = ({t, onGoBack, onContinue}: { t: any, onGoBack: () => void, onContinue: () => void }) => {
+    return (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+            <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-md w-full">
+                <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-3">
+                        {t('form.chineseNameWarning.title')}
+                    </h3>
+                    <p className="text-gray-600 mb-4 text-sm md:text-base">
+                        {t('form.chineseNameWarning.message')}
+                    </p>
+                    <p className="text-gray-700 font-medium text-sm md:text-base">
+                        {t('form.chineseNameWarning.question')}
+                    </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                        onClick={onGoBack}
+                        className="flex-1 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors duration-200 font-medium text-sm md:text-base"
+                    >
+                        {t('form.chineseNameWarning.goBack')}
+                    </button>
+                    <button
+                        onClick={onContinue}
+                        className="flex-1 px-6 py-3 bg-brand hover:bg-brand/90 text-white rounded-xl transition-colors duration-200 font-medium text-sm md:text-base"
+                    >
+                        {t('form.chineseNameWarning.continue')}
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 export default function BookingFlow() {
     const t = useTranslations('booking');
     const e = useTranslations('services2');
@@ -121,6 +160,7 @@ export default function BookingFlow() {
     const [showFollowUpInfo, setShowFollowUpInfo] = useState<boolean>(false);
     const [showUrinalysisRedirect, setShowUrinalysisRedirect] = useState<boolean>(false);
     const [prescriptionFile, setPrescriptionFile] = useState<File | null>(null);
+    const [showChineseWarning, setShowChineseWarning] = useState<boolean>(false);
 
     const infoCards = [
         {
@@ -289,16 +329,12 @@ export default function BookingFlow() {
         });
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const hasChinese = (text: string) => {
+        return /[\u4e00-\u9fa5]/.test(text);
+    };
 
+    const submitBooking = async () => {
         if (!selectedService || !selectedDate || !selectedTime) {
-            setError(t('errors.formIncomplete'));
-            return;
-        }
-
-        if (showVaccineOptions && !selectedVaccineType) {
-            setError("Please select a vaccine type");
             return;
         }
 
@@ -357,6 +393,32 @@ export default function BookingFlow() {
         }
     };
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!selectedService || !selectedDate || !selectedTime) {
+            setError(t('errors.formIncomplete'));
+            return;
+        }
+
+        if (showVaccineOptions && !selectedVaccineType) {
+            setError("Please select a vaccine type");
+            return;
+        }
+
+        if (hasChinese(bookingForm.firstName) || hasChinese(bookingForm.lastName)) {
+            setShowChineseWarning(true);
+            return;
+        }
+
+        await submitBooking();
+    };
+
+    const handleContinueWithChinese = async () => {
+        setShowChineseWarning(false);
+        await submitBooking();
+    };
+
     const getDayClasses = (day: CalendarDay): string => {
         const baseClasses = "relative w-full p-4 aspect-square flex items-center justify-center text-lg font-medium rounded-lg transition-all duration-200 ";
 
@@ -399,6 +461,13 @@ export default function BookingFlow() {
 
     return (
         <div className="min-h-[800px]">
+            {showChineseWarning && (
+                <ChineseNameWarning 
+                    t={t} 
+                    onGoBack={() => setShowChineseWarning(false)}
+                    onContinue={handleContinueWithChinese}
+                />
+            )}
             {success ? <SuccessMessage t={t}/> : (
                 <div className="w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
@@ -809,10 +878,14 @@ export default function BookingFlow() {
                                         <input
                                             type="text"
                                             required
+                                            placeholder={t('form.firstNamePlaceholder')}
                                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
                                             value={bookingForm.firstName}
                                             onChange={(e) => setBookingForm({...bookingForm, firstName: e.target.value})}
                                         />
+                                        <p className="mt-1.5 text-xs text-gray-500">
+                                            {t('form.firstNameHint')}
+                                        </p>
                                     </div>
 
                                     <div>
@@ -822,10 +895,14 @@ export default function BookingFlow() {
                                         <input
                                             type="text"
                                             required
+                                            placeholder={t('form.lastNamePlaceholder')}
                                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
                                             value={bookingForm.lastName}
                                             onChange={(e) => setBookingForm({...bookingForm, lastName: e.target.value})}
                                         />
+                                        <p className="mt-1.5 text-xs text-gray-500">
+                                            {t('form.lastNameHint')}
+                                        </p>
                                     </div>
 
                                     <div>
@@ -835,6 +912,7 @@ export default function BookingFlow() {
                                         <input
                                             type="email"
                                             required
+                                            placeholder={t('form.emailPlaceholder')}
                                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
                                             value={bookingForm.email}
                                             onChange={(e) => setBookingForm({...bookingForm, email: e.target.value})}
@@ -848,6 +926,7 @@ export default function BookingFlow() {
                                         <input
                                             type="tel"
                                             required
+                                            placeholder={t('form.phonePlaceholder')}
                                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
                                             value={bookingForm.phone}
                                             onChange={(e) => setBookingForm({...bookingForm, phone: e.target.value})}
@@ -860,6 +939,7 @@ export default function BookingFlow() {
                                         </label>
                                         <textarea
                                             rows={4}
+                                            placeholder={t('form.notesPlaceholder')}
                                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
                                             value={bookingForm.notes}
                                             onChange={(e) => setBookingForm({...bookingForm, notes: e.target.value})}

@@ -297,12 +297,26 @@
     "form": {
       "title": "Your Information",
       "firstName": "First Name",
+      "firstNamePlaceholder": "John",
+      "firstNameHint": "Please use English letters (e.g., John or Zhang)",
       "lastName": "Last Name",
+      "lastNamePlaceholder": "Smith",
+      "lastNameHint": "Please use English letters (e.g., Smith or Li)",
       "email": "Email Address",
+      "emailPlaceholder": "example@email.com",
       "phone": "Phone Number",
+      "phonePlaceholder": "(514) 123-4567",
       "notes": "Additional Notes",
+      "notesPlaceholder": "Please tell us about any special requirements or questions...",
       "submit": "Confirm Appointment",
-      "submitting": "Submitting..."
+      "submitting": "Submitting...",
+      "chineseNameWarning": {
+        "title": "Friendly Reminder",
+        "message": "We noticed you used Chinese characters in your name. To ensure smooth processing of your appointment, we recommend using English letters (Pinyin or English name).",
+        "question": "Would you like to continue?",
+        "goBack": "Go Back to Edit",
+        "continue": "Continue Anyway"
+      }
     },
     "status": {
       "available": "Available",

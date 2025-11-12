@@ -297,12 +297,26 @@
     "form": {
       "title": "您的信息",
       "firstName": "名字",
+      "firstNamePlaceholder": "Zhang",
+      "firstNameHint": "请使用英文字母填写（例如：Zhang 或 Michael）",
       "lastName": "姓氏",
+      "lastNamePlaceholder": "San",
+      "lastNameHint": "请使用英文字母填写（例如：San 或 Li）",
       "email": "电子邮箱",
+      "emailPlaceholder": "example@email.com",
       "phone": "电话号码",
+      "phonePlaceholder": "(514) 123-4567",
       "notes": "附加备注",
+      "notesPlaceholder": "请告诉我们您的特殊需求或问题...",
       "submit": "确认预约",
-      "submitting": "提交中..."
+      "submitting": "提交中...",
+      "chineseNameWarning": {
+        "title": "温馨提示",
+        "message": "我们注意到您使用了中文字符填写姓名。为确保预约顺利处理，建议使用英文字母（拼音或英文名）。",
+        "question": "是否继续提交？",
+        "goBack": "返回修改",
+        "continue": "继续提交"
+      }
     },
     "status": {
       "available": "可用",
