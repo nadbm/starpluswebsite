@@ -52,6 +52,73 @@ interface BookingForm {
     notes: string;
 }
 
+interface InsuranceWaiverModalProps {
+    t: any;
+    onClose: () => void;
+    onAgree: () => void;
+}
+
+const InsuranceWaiverModal = ({t, onClose, onAgree}: InsuranceWaiverModalProps) => {
+    return (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 overflow-y-auto">
+            <div className="bg-white rounded-xl shadow-xl max-w-3xl w-full my-8">
+                <div className="p-6 md:p-8 bg-brand rounded-t-xl">
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">
+                        {t('form.insuranceWaiver.modalTitle')}
+                    </h3>
+                </div>
+                <div className="p-6 md:p-8 max-h-[60vh] overflow-y-auto">
+                    <div className="space-y-6 text-gray-700">
+                        <div>
+                            <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                                {t('form.insuranceWaiver.content.section1Title')}
+                            </h4>
+                            <p className="whitespace-pre-line text-sm md:text-base leading-relaxed">
+                                {t('form.insuranceWaiver.content.section1Content')}
+                            </p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                                {t('form.insuranceWaiver.content.section2Title')}
+                            </h4>
+                            <p className="whitespace-pre-line text-sm md:text-base leading-relaxed">
+                                {t('form.insuranceWaiver.content.section2Content')}
+                            </p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                                {t('form.insuranceWaiver.content.section3Title')}
+                            </h4>
+                            <p className="whitespace-pre-line text-sm md:text-base leading-relaxed">
+                                {t('form.insuranceWaiver.content.section3Content')}
+                            </p>
+                        </div>
+                        <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-4">
+                            <p className="text-amber-900 font-medium text-sm md:text-base">
+                                {t('form.insuranceWaiver.content.notice')}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="p-6 md:p-8 bg-gray-50 rounded-b-xl flex flex-col sm:flex-row gap-3">
+                    <button
+                        onClick={onClose}
+                        className="flex-1 px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-xl transition-colors duration-200 font-medium text-sm md:text-base"
+                    >
+                        {t('form.insuranceWaiver.close')}
+                    </button>
+                    <button
+                        onClick={onAgree}
+                        className="flex-1 px-6 py-3 bg-brand hover:bg-brand/90 text-white rounded-xl transition-colors duration-200 font-medium text-sm md:text-base"
+                    >
+                        {t('form.insuranceWaiver.agree')}
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const SuccessMessage = ({t}: { t: any }) => {
     const router = useRouter();
     const locale = useLocale();
@@ -161,6 +228,8 @@ export default function BookingFlow() {
     const [showUrinalysisRedirect, setShowUrinalysisRedirect] = useState<boolean>(false);
     const [prescriptionFile, setPrescriptionFile] = useState<File | null>(null);
     const [showChineseWarning, setShowChineseWarning] = useState<boolean>(false);
+    const [agreedToWaiver, setAgreedToWaiver] = useState<boolean>(false);
+    const [showWaiverModal, setShowWaiverModal] = useState<boolean>(false);
 
     const infoCards = [
         {
@@ -406,6 +475,11 @@ export default function BookingFlow() {
             return;
         }
 
+        if (!agreedToWaiver) {
+            setError(t('form.insuranceWaiver.required'));
+            return;
+        }
+
         if (hasChinese(bookingForm.firstName) || hasChinese(bookingForm.lastName)) {
             setShowChineseWarning(true);
             return;
@@ -461,6 +535,19 @@ export default function BookingFlow() {
 
     return (
         <div className="min-h-[800px]">
+            {showWaiverModal && (
+                <InsuranceWaiverModal
+                    t={t}
+                    onClose={() => setShowWaiverModal(false)}
+                    onAgree={() => {
+                        setAgreedToWaiver(true);
+                        setShowWaiverModal(false);
+                        if (error === t('form.insuranceWaiver.required')) {
+                            setError(null);
+                        }
+                    }}
+                />
+            )}
             {showChineseWarning && (
                 <ChineseNameWarning 
                     t={t} 
@@ -953,6 +1040,41 @@ export default function BookingFlow() {
                                     )}
 
                                     <div className="md:col-span-2">
+                                        <div className={`mb-4 p-4 rounded-xl border-2 transition-colors ${
+                                            error && error === t('form.insuranceWaiver.required')
+                                                ? 'bg-red-50 border-red-300'
+                                                : 'bg-gray-50 border-gray-200'
+                                        }`}>
+                                            <label className="flex items-start sm:items-center justify-center cursor-pointer group">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={agreedToWaiver}
+                                                    onChange={(e) => {
+                                                        setAgreedToWaiver(e.target.checked);
+                                                        if (e.target.checked && error === t('form.insuranceWaiver.required')) {
+                                                            setError(null);
+                                                        }
+                                                    }}
+                                                    className="mt-0.5 sm:mt-0 w-4 h-4 text-brand border-gray-300 rounded focus:ring-2 focus:ring-brand/20 cursor-pointer flex-shrink-0"
+                                                />
+                                                <span className="ml-3 text-sm md:text-base text-gray-700 text-left">
+                                                    {t('form.insuranceWaiver.checkbox')}{' '}
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setShowWaiverModal(true)}
+                                                        className="text-brand hover:text-brand/80 underline font-medium transition-colors"
+                                                    >
+                                                        {t('form.insuranceWaiver.link')}
+                                                    </button>
+                                                </span>
+                                            </label>
+                                            {error && error === t('form.insuranceWaiver.required') && (
+                                                <div className="mt-3 text-red-600 text-sm text-center">
+                                                    {error}
+                                                </div>
+                                            )}
+                                        </div>
+
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}

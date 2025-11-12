@@ -297,12 +297,43 @@
     "form": {
       "title": "Vos Informations",
       "firstName": "Prénom",
+      "firstNamePlaceholder": "Jean",
+      "firstNameHint": "Veuillez utiliser des lettres anglaises (ex: Jean ou Zhang)",
       "lastName": "Nom de Famille",
+      "lastNamePlaceholder": "Dupont",
+      "lastNameHint": "Veuillez utiliser des lettres anglaises (ex: Dupont ou Li)",
       "email": "Adresse Électronique",
+      "emailPlaceholder": "exemple@email.com",
       "phone": "Numéro de Téléphone",
+      "phonePlaceholder": "(514) 123-4567",
       "notes": "Notes Supplémentaires",
+      "notesPlaceholder": "Veuillez nous informer de vos besoins spéciaux ou questions...",
       "submit": "Confirmer le Rendez-vous",
-      "submitting": "Envoi en cours..."
+      "submitting": "Envoi en cours...",
+      "chineseNameWarning": {
+        "title": "Rappel Amical",
+        "message": "Nous avons remarqué que vous avez utilisé des caractères chinois dans votre nom. Pour assurer un traitement fluide de votre rendez-vous, nous recommandons d'utiliser des lettres anglaises (Pinyin ou nom anglais).",
+        "question": "Souhaitez-vous continuer?",
+        "goBack": "Retour pour Modifier",
+        "continue": "Continuer Quand Même"
+      },
+      "insuranceWaiver": {
+        "checkbox": "J'ai lu et j'accepte",
+        "link": "l'Accord de Renonciation au Remboursement d'Assurance",
+        "required": "Veuillez confirmer que vous avez lu et accepté l'Accord de Renonciation au Remboursement d'Assurance",
+        "modalTitle": "Accord de Renonciation au Remboursement d'Assurance",
+        "close": "Fermer",
+        "agree": "J'Accepte",
+        "content": {
+          "section1Title": "I. Déclaration et Consentement",
+          "section1Content": "Je, en tant que patient(e), ai clairement compris et accepte ce qui suit :\n\n1. Je comprends que le Centre de Santé Starplus est un établissement médical privé exploité de manière indépendante, et que tous les frais de consultation, de traitement et de service doivent être payés intégralement par le patient au moment de l'achèvement du service.\n\n2. Le Centre de Santé Starplus ne facture pas directement ni ne règle les frais avec aucune compagnie d'assurance. La clinique peut uniquement fournir des reçus ou des certificats de traitement dans un cadre raisonnable pour aider les patients à demander un remboursement auprès des compagnies d'assurance par eux-mêmes.\n\n3. La reconnaissance, l'approbation ou le paiement du remboursement par les compagnies d'assurance dépend entièrement des politiques de la compagnie d'assurance, des termes du contrat et du plan d'assurance individuel du patient. Le Centre de Santé Starplus n'assume aucune forme de garantie ou de responsabilité.\n\n4. En cas de pertes financières dues à des refus de réclamation d'assurance, des changements dans les ratios de remboursement, des retards de paiement, des exigences de documentation ou d'autres raisons, le patient doit supporter ces pertes de manière indépendante, et la clinique n'assume aucune responsabilité.\n\n5. Je confirme que j'ai compris les termes ci-dessus et que j'accepte volontairement cet accord.",
+          "section2Title": "II. Paiement et Responsabilité",
+          "section2Content": "• Tous les frais de service doivent être payés le jour du traitement.\n• Si le patient ne parvient pas à effectuer le paiement en temps opportun, la clinique se réserve le droit de refuser les services ultérieurs.\n• Les patients doivent vérifier de manière indépendante la portée remboursable, les limites et le processus de remboursement de leur plan d'assurance.",
+          "section3Title": "III. Efficacité de l'Accord",
+          "section3Content": "Cet accord entre en vigueur à compter de la date d'acceptation et reste valide pendant la période de service du patient au Centre de Santé Starplus et les transactions financières connexes.",
+          "notice": "Avis Important : En acceptant cet accord, vous reconnaissez avoir lu, compris et accepté tous les termes et conditions décrits ci-dessus. Cette renonciation est juridiquement contraignante et affecte vos droits concernant le remboursement d'assurance."
+        }
+      }
     },
     "status": {
       "available": "Disponible",
@@ -313,6 +344,7 @@
       "serviceRequired": "Veuillez sélectionner un service",
       "dateRequired": "Veuillez sélectionner une date",
       "timeRequired": "Veuillez sélectionner une heure",
+      "formIncomplete": "Veuillez remplir tous les champs requis",
       "loadingError": "Erreur lors du chargement des données. Veuillez réessayer.",
       "bookingError": "Erreur lors de la prise de rendez-vous. Veuillez réessayer."
     },

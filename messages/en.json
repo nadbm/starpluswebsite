@@ -316,6 +316,23 @@
         "question": "Would you like to continue?",
         "goBack": "Go Back to Edit",
         "continue": "Continue Anyway"
+      },
+      "insuranceWaiver": {
+        "checkbox": "I have read and agree to the",
+        "link": "Insurance Reimbursement Waiver Agreement",
+        "required": "Please confirm that you have read and agree to the Insurance Reimbursement Waiver Agreement",
+        "modalTitle": "Insurance Reimbursement Waiver Agreement",
+        "close": "Close",
+        "agree": "I Agree",
+        "content": {
+          "section1Title": "I. Declaration and Consent",
+          "section1Content": "I, as a patient, have clearly understood and agree to the following:\n\n1. I understand that Starplus Health Centre is an independently operated private medical facility, and all consultation, treatment, and service fees must be paid in full by the patient at the time of service completion.\n\n2. Starplus Health Centre does not directly bill or settle fees with any insurance company. The clinic may only provide receipts or treatment certificates within reasonable scope to assist patients in applying for reimbursement from insurance companies on their own.\n\n3. Whether insurance companies recognize, approve, or pay for reimbursement depends entirely on the insurance company's policies, contract terms, and the patient's individual insurance plan. Starplus Health Centre assumes no form of guarantee or responsibility.\n\n4. In case of any financial losses due to insurance claim denials, changes in reimbursement ratios, delayed payments, documentation requirements, or other reasons, the patient must bear such losses independently, and the clinic assumes no responsibility.\n\n5. I confirm that I have understood the above terms and voluntarily agree to this agreement.",
+          "section2Title": "II. Payment and Responsibility",
+          "section2Content": "• All service fees must be paid on the day of treatment.\n• If the patient fails to make timely payment, the clinic reserves the right to refuse subsequent services.\n• Patients should verify the reimbursable scope, limits, and reimbursement process of their insurance plan independently.",
+          "section3Title": "III. Agreement Effectiveness",
+          "section3Content": "This agreement becomes effective from the date of consent and remains valid during the patient's service period at Starplus Health Centre and related financial transactions.",
+          "notice": "Important Notice: By agreeing to this agreement, you acknowledge that you have read, understood, and agree to all terms and conditions outlined above. This waiver is legally binding and affects your rights regarding insurance reimbursement."
+        }
       }
     },
     "status": {
