@@ -104,12 +104,12 @@ export default function Services2() {
             href: `/${locale}/booking`
         },
         {
-            title: t('tcm.title'),
-            description: t('tcm.description'),
-            image: "/home/h17.png",
-            tags: [t('tcm.tag1'), t('tcm.tag2')],
+            title: t('acupuncture.title'),
+            description: t('acupuncture.description'),
+            image: "/home/h21.webp",
+            tags: [t('acupuncture.tag1'), t('acupuncture.tag2')],
             status: t('available'),
-            href: `/${locale}/booking`
+            href: `/${locale}/acupuncture`
         },
         {
             title: t('botox.title'),

@@ -50,6 +50,7 @@ interface BookingForm {
     email: string;
     phone: string;
     notes: string;
+    referralSource: string;
 }
 
 interface InsuranceWaiverModalProps {
@@ -215,7 +216,8 @@ export default function BookingFlow() {
         lastName: '',
         email: '',
         phone: '',
-        notes: ''
+        notes: '',
+        referralSource: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -430,7 +432,8 @@ export default function BookingFlow() {
                 client_last_name: bookingForm.lastName,
                 client_email: bookingForm.email,
                 client_phone: bookingForm.phone,
-                notes: notesContent
+                notes: notesContent,
+                referral_source: bookingForm.referralSource
             };
 
             const response = await fetch(ENDPOINTS.APPOINTMENTS.BOOK, {
@@ -451,7 +454,8 @@ export default function BookingFlow() {
                 lastName: '',
                 email: '',
                 phone: '',
-                notes: ''
+                notes: '',
+                referralSource: ''
             });
 
         } catch (error) {
@@ -1030,6 +1034,19 @@ export default function BookingFlow() {
                                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
                                             value={bookingForm.notes}
                                             onChange={(e) => setBookingForm({...bookingForm, notes: e.target.value})}
+                                        />
+                                    </div>
+
+                                    <div className="md:col-span-2">
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            {t('form.referralSource')}
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder={t('form.referralSourcePlaceholder')}
+                                            className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand/20 focus:border-brand transition-colors text-sm md:text-base"
+                                            value={bookingForm.referralSource}
+                                            onChange={(e) => setBookingForm({...bookingForm, referralSource: e.target.value})}
                                         />
                                     </div>
 

@@ -205,6 +205,12 @@
       "tag2": "Health Assessment",
       "tag3": "Wellness Consultation"
     },
+    "acupuncture": {
+      "title": "Acupuncture Treatment",
+      "description": "Professional acupuncture services using traditional Chinese medicine techniques to relieve pain, improve body functions, and promote overall health.",
+      "tag1": "Pain Relief",
+      "tag2": "Traditional Therapy"
+    },
     "botox": {
       "title": "Botox Services",
       "description": "Professional cosmetic treatments administered by certified specialists to reduce wrinkles and fine lines for natural-looking rejuvenation.",
@@ -308,6 +314,8 @@
       "phonePlaceholder": "(514) 123-4567",
       "notes": "Additional Notes",
       "notesPlaceholder": "Please tell us about any special requirements or questions...",
+      "referralSource": "How did you know about us? / Advisor Information",
+      "referralSourcePlaceholder": "e.g., Friend referral, advisor name, online search, etc...",
       "submit": "Confirm Appointment",
       "submitting": "Submitting...",
       "chineseNameWarning": {
@@ -811,6 +819,214 @@
       "description": "Take charge of your health management today. Professional urine screening and drug testing help you stay informed about your body's condition and catch health issues and drug-related risks early.",
       "button": "Schedule Your Screening",
       "urgent": "Book now and take the first step toward better health!"
+    }
+  },
+  "acupuncture": {
+    "hero": {
+      "badge": "Traditional Chinese Medicine",
+      "title": "Acupuncture Treatment",
+      "description": "Traditional techniques to relieve pain, improve body functions, and promote overall health",
+      "cta": "Book Now",
+      "feature1": "Expert Acupuncturist",
+      "feature2": "Personalized Care"
+    },
+    "benefits": {
+      "title": "Treatment Benefits",
+      "subtitle": "Safe and effective traditional therapy to improve various health conditions",
+      "benefit1": {
+        "title": "Pain Relief",
+        "description": "Effectively relieves chronic pain, headaches, neck and shoulder pain, and lower back discomfort"
+      },
+      "benefit2": {
+        "title": "Better Circulation",
+        "description": "Promotes blood flow, accelerates metabolism, and supports natural body recovery"
+      },
+      "benefit3": {
+        "title": "Stress Reduction",
+        "description": "Regulates the nervous system, relieves anxiety, and improves sleep quality"
+      },
+      "benefit4": {
+        "title": "Stronger Immunity",
+        "description": "Strengthens the immune system and improves overall body resistance"
+      },
+      "benefit5": {
+        "title": "Better Digestion",
+        "description": "Improves digestive function and relieves issues like indigestion and constipation"
+      },
+      "benefit6": {
+        "title": "Holistic Wellness",
+        "description": "Balances body energy, harmonizes qi and blood for overall health"
+      }
+    },
+    "process": {
+      "title": "How It Works",
+      "subtitle": "Professional treatment following safety standards for optimal results",
+      "step1": {
+        "title": "Initial Consultation",
+        "description": "Comprehensive health assessment including symptoms, goals, and TCM constitution evaluation"
+      },
+      "step2": {
+        "title": "Custom Treatment Plan",
+        "description": "Personalized acupuncture plan tailored to your specific health needs"
+      },
+      "step3": {
+        "title": "Acupuncture Session",
+        "description": "Safe treatment using sterile needles at specific points for optimal comfort"
+      },
+      "step4": {
+        "title": "Follow-up Care",
+        "description": "Progress evaluation, plan adjustments, and ongoing health guidance"
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "badge": "Professional Service",
+      "price": "$100",
+      "description": "Complete consultation and treatment session",
+      "includesTitle": "What's Included",
+      "includes": {
+        "0": "Health assessment and TCM diagnosis",
+        "1": "Personalized treatment plan",
+        "2": "Professional acupuncture session (30-45 min)",
+        "3": "Post-treatment guidance and advice"
+      },
+      "button": "Book Now"
+    },
+    "cta": {
+      "title": "Begin Your Healing Journey",
+      "description": "Experience traditional Chinese medicine to restore health and improve your quality of life",
+      "button": "Book Now",
+      "callButton": "Call Us"
+    }
+  },
+  "acupunctureForm": {
+    "title": "Acupuncture Appointment Form",
+    "subtitle": "Please complete the following information to book your acupuncture appointment",
+    "consent": {
+      "title": "Acupuncture Precautions & Informed Consent",
+      "precautions": {
+        "1": "Do not receive acupuncture on an empty stomach.",
+        "2": "Please empty your bladder before the session.",
+        "3": "Wear loose and comfortable clothing.",
+        "4": "Inform the acupuncturist of allergies to metal, alcohol, or mugwort.",
+        "5": "Women should inform the acupuncturist if menstruating, trying to conceive, pregnant, breastfeeding, or postpartum.",
+        "6": "Inform the acupuncturist of serious conditions (e.g., hypertension, diabetes, heart, blood, or liver/kidney diseases).",
+        "7": "Inform the acupuncturist if taking anticoagulants or psychiatric medications.",
+        "8": "Those with limited mobility should be accompanied.",
+        "9": "Sensations such as soreness, numbness, pressure, or radiation are normal. No bathing within 2 hours after treatment. Bruising, lumps, or pain may appear at the needle site. Redness, itching, or scabbing may be signs of a mild allergic reaction."
+      },
+      "declaration": {
+        "title": "Declaration",
+        "content": "I have read and understood the above acupuncture precautions. I have honestly disclosed my medical condition and consent to receive acupuncture treatment and accept its potential risks."
+      },
+      "checkbox": "I have read and agree to the above acupuncture precautions and informed consent",
+      "button": "Continue to Form"
+    },
+    "sections": {
+      "appointment": "Appointment Scheduling",
+      "patient": "Patient Information",
+      "medicalHistory": "Medical History",
+      "conditions": "Health Conditions",
+      "medications": "Medications & Surgery History"
+    },
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "dateOfBirth": "Date of Birth",
+      "day": "Day",
+      "month": "Month",
+      "year": "Year",
+      "address": "Address",
+      "addressNo": "No.",
+      "street": "Street",
+      "apt": "Apt.",
+      "city": "City",
+      "postalCode": "Postal Code",
+      "phoneHome": "Home Phone",
+      "phoneWork": "Work Phone",
+      "ext": "Ext.",
+      "phone": "Phone",
+      "parentTutor": "Parent/Guardian",
+      "insuranceNo": "Insurance No.",
+      "csstNo": "CSST No.",
+      "saaqNo": "SAAQ No.",
+      "reasonForVisit": "Reason for Visit",
+      "visitDate": "Visit Date",
+      "underDoctorCare": "Are you currently under a doctor's care?",
+      "doctorLastName": "Doctor's Last Name",
+      "doctorFirstName": "Doctor's First Name",
+      "specialty": "Specialty",
+      "diagnosis": "Diagnosis",
+      "treatment": "Treatment",
+      "reaction": "Reaction to Treatment",
+      "otherProfessionals": "Have you consulted other health professionals?",
+      "treatmentReceived": "Treatment Received",
+      "bloodPressure": "Blood Pressure",
+      "high": "High",
+      "low": "Low",
+      "dependencies": "Dependencies",
+      "alcohol": "Alcohol",
+      "drugs": "Drugs",
+      "tobacco": "Tobacco",
+      "caffeine": "Caffeine",
+      "hospitalizations": "Hospitalizations/Surgeries",
+      "hospitalizationsPlaceholder": "List your hospitalizations or surgeries with years...",
+      "anticoagulants": "Do you take anticoagulants?",
+      "corticosteroids": "Do you take corticosteroids?",
+      "medications": "Current Medications",
+      "medicationsPlaceholder": "List all medications you are currently taking...",
+      "appointmentDate": "Appointment Date",
+      "appointmentTime": "Appointment Time",
+      "selectDate": "Select Date",
+      "selectTime": "Select Time",
+      "loading": "Loading..."
+    },
+    "conditions": {
+      "heartProblems": "Heart Problems (infarction, angina, valve issues, murmur)",
+      "pacemaker": "Pacemaker",
+      "prolongedBleeding": "Prolonged Bleeding",
+      "anemia": "Anemia",
+      "lungProblems": "Lung Problems or Tuberculosis",
+      "asthma": "Asthma",
+      "hayFever": "Hay Fever",
+      "thyroidIssues": "Thyroid Issues",
+      "epilepsy": "Epilepsy",
+      "nervousDisorders": "Nervous Disorders",
+      "frequentHeadaches": "Frequent Headaches",
+      "dizziness": "Dizziness, Fainting",
+      "earProblems": "Ear Problems",
+      "eyeProblems": "Eye Problems",
+      "skinDisease": "Skin Disease",
+      "arthritis": "Arthritis",
+      "std": "STDs",
+      "digestiveIssues": "Digestive Issues",
+      "stomachUlcer": "Stomach Ulcer",
+      "liverProblems": "Liver Problems (hepatitis, cirrhosis, cholesterol)",
+      "kidneyProblems": "Kidney Problems",
+      "diabetes": "Diabetes",
+      "foodAllergies": "Food Allergies",
+      "medicationAllergies": "Medication Allergies",
+      "hivPositive": "HIV Positive",
+      "aids": "AIDS",
+      "radiotherapy": "Radiotherapy/Chemotherapy",
+      "pregnant": "Pregnant",
+      "prosthesesJoint": "Joint Prostheses",
+      "prosthesesBreast": "Breast Prostheses"
+    },
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "submitError": "Submission failed, please try again later"
+    },
+    "submit": "Submit Appointment",
+    "submitting": "Submitting...",
+    "success": {
+      "title": "Appointment Successful!",
+      "message": "We have received your acupuncture appointment request. We will contact you shortly to confirm your appointment time.",
+      "backHome": "Back to Home"
     }
   }
 }

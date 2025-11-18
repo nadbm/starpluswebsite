@@ -205,6 +205,12 @@
       "tag2": "健康评估",
       "tag3": "健康咨询"
     },
+    "acupuncture": {
+      "title": "针灸治疗",
+      "description": "专业针灸治疗服务，运用传统中医针灸技术，缓解疼痛，改善身体机能，促进整体健康。",
+      "tag1": "疼痛缓解",
+      "tag2": "传统疗法"
+    },
     "botox": {
       "title": "美容治疗",
       "description": "由认证专家执行的专业美容治疗，减少皱纹和细纹，提供自然的年轻化效果，增强面部美观。",
@@ -308,6 +314,8 @@
       "phonePlaceholder": "(514) 123-4567",
       "notes": "附加备注",
       "notesPlaceholder": "请告诉我们您的特殊需求或问题...",
+      "referralSource": "您是如何了解到我们的？/ 顾问信息",
+      "referralSourcePlaceholder": "例如：朋友推荐、销售顾问姓名、网络搜索等...",
       "submit": "确认预约",
       "submitting": "提交中...",
       "chineseNameWarning": {
@@ -811,6 +819,217 @@
       "description": "健康管理从现在开始。专业的尿液筛查和药物检测帮助您全面了解身体状况，让健康问题和药物相关风险无处藏身。",
       "button": "安排您的筛查",
       "urgent": "立即预约，迈出更健康生活的第一步！"
+    }
+  },
+  "acupuncture": {
+    "hero": {
+      "badge": "传统中医疗法",
+      "title": "专业针灸治疗服务",
+      "description": "运用传统中医针灸技术，缓解疼痛，改善身体机能，促进整体健康平衡",
+      "cta": "立即预约",
+      "feature1": "专业针灸师",
+      "feature2": "个性化治疗"
+    },
+    "benefits": {
+      "title": "针灸治疗的益处",
+      "subtitle": "针灸是一种安全有效的传统中医疗法，可以帮助改善多种健康问题",
+      "benefit1": {
+        "title": "疼痛缓解",
+        "description": "有效缓解慢性疼痛、头痛、颈肩痛、腰背痛等各种疼痛症状"
+      },
+      "benefit2": {
+        "title": "改善血液循环",
+        "description": "促进血液循环，加速新陈代谢，帮助身体自然恢复"
+      },
+      "benefit3": {
+        "title": "减轻压力",
+        "description": "调节神经系统，缓解焦虑和压力，改善睡眠质量"
+      },
+      "benefit4": {
+        "title": "增强免疫力",
+        "description": "调节身体机能，增强免疫系统，提高抵抗力"
+      },
+      "benefit5": {
+        "title": "改善消化功能",
+        "description": "调理脾胃，改善消化不良、便秘等消化系统问题"
+      },
+      "benefit6": {
+        "title": "整体健康调理",
+        "description": "平衡身体阴阳，调和气血，促进整体健康"
+      }
+    },
+    "process": {
+      "title": "治疗流程",
+      "subtitle": "我们的针灸治疗遵循专业规范，确保安全有效",
+      "step1": {
+        "title": "初步咨询",
+        "description": "详细了解您的健康状况、症状和治疗目标，进行中医体质评估"
+      },
+      "step2": {
+        "title": "制定治疗方案",
+        "description": "根据您的具体情况，制定个性化的针灸治疗方案"
+      },
+      "step3": {
+        "title": "针灸治疗",
+        "description": "使用一次性无菌针具，在特定穴位进行针刺，治疗过程安全舒适"
+      },
+      "step4": {
+        "title": "后续跟进",
+        "description": "评估治疗效果，根据需要调整治疗方案，提供健康建议"
+      }
+    },
+    "pricing": {
+      "title": "治疗价格",
+      "badge": "专业针灸服务",
+      "price": "$100",
+      "description": "每次治疗包含完整的咨询和针灸疗程",
+      "includesTitle": "服务包含",
+      "includes": {
+        "0": "详细的健康状况评估和中医诊断",
+        "1": "个性化针灸治疗方案制定",
+        "2": "专业针灸治疗（约30-45分钟）",
+        "3": "治疗后健康建议和生活方式指导"
+      },
+      "button": "立即预约"
+    },
+    "cta": {
+      "title": "开始您的针灸治疗之旅",
+      "description": "让传统中医针灸帮助您恢复健康，改善生活质量",
+      "button": "立即预约",
+      "callButton": "致电咨询"
+    }
+  },
+  "acupunctureForm": {
+    "title": "针灸预约表单",
+    "subtitle": "请填写以下信息以完成您的针灸预约",
+    "consent": {
+      "title": "针灸治疗注意事项及知情同意书",
+      "precautions": {
+        "1": "针灸前不能空腹。",
+        "2": "针灸前尽量排空尿液。",
+        "3": "针灸治疗时需衣着宽松，便于脱穿。",
+        "4": "如对金属、酒精、艾草过敏时，应提前告知针灸师。",
+        "5": "女性在经期、备孕、怀孕、哺乳、产后等时期的情况，应提前告知针灸师。",
+        "6": "如有高血压、糖尿病、冠心病、血液病、肝肾损伤等，应提前告知针灸师。",
+        "7": "如正在服用抗凝剂、精神类药物等，应提前说明。",
+        "8": "中风、年老、虚弱或伤残者应有人陪同。",
+        "9": "针刺过程中可能会感到酸、麻、胀、痛或放射感，这是正常现象。针灸2小时内请勿洗澡。针刺部位可能会出现淤青、硬块或疼痛。针眼皮肤红、痒或结痂可能为轻微过敏反应。"
+      },
+      "declaration": {
+        "title": "声明",
+        "content": "我已阅读并理解以上针灸治疗注意事项。我已如实告知我的健康状况，并同意接受针灸治疗及承担其可能的风险。"
+      },
+      "checkbox": "我已阅读并同意以上针灸治疗注意事项及知情同意书",
+      "button": "继续填写表单"
+    },
+    "sections": {
+      "patient": "患者信息"
+    },
+    "sections": {
+      "appointment": "预约时间",
+      "patient": "患者信息",
+      "medicalHistory": "病史",
+      "conditions": "健康状况",
+      "medications": "药物与手术史"
+    },
+    "fields": {
+      "firstName": "名",
+      "lastName": "姓",
+      "gender": "性别",
+      "male": "男",
+      "female": "女",
+      "dateOfBirth": "出生日期",
+      "day": "日",
+      "month": "月",
+      "year": "年",
+      "address": "地址",
+      "addressNo": "门牌号",
+      "street": "街道",
+      "apt": "公寓号",
+      "city": "城市",
+      "postalCode": "邮编",
+      "phoneHome": "家庭电话",
+      "phoneWork": "工作电话",
+      "ext": "分机",
+      "phone": "电话",
+      "parentTutor": "家长/监护人",
+      "insuranceNo": "医保号",
+      "csstNo": "CSST号",
+      "saaqNo": "SAAQ号",
+      "reasonForVisit": "就诊原因",
+      "visitDate": "就诊日期",
+      "underDoctorCare": "您目前是否在医生的治疗下？",
+      "doctorLastName": "医生姓",
+      "doctorFirstName": "医生名",
+      "specialty": "专科",
+      "diagnosis": "诊断",
+      "treatment": "治疗方案",
+      "reaction": "治疗反应",
+      "otherProfessionals": "您是否咨询过其他医疗专业人员？",
+      "treatmentReceived": "接受的治疗",
+      "bloodPressure": "血压",
+      "high": "高",
+      "low": "低",
+      "dependencies": "依赖性",
+      "alcohol": "酒精",
+      "drugs": "药物",
+      "tobacco": "烟草",
+      "caffeine": "咖啡因",
+      "hospitalizations": "住院/手术史",
+      "hospitalizationsPlaceholder": "请列出您的住院或手术经历，包括年份...",
+      "anticoagulants": "您是否服用抗凝剂？",
+      "corticosteroids": "您是否服用皮质类固醇？",
+      "medications": "当前服用的药物",
+      "medicationsPlaceholder": "请列出您目前服用的所有药物...",
+      "appointmentDate": "预约日期",
+      "appointmentTime": "预约时间",
+      "selectDate": "请选择日期",
+      "selectTime": "请选择时间",
+      "loading": "加载中..."
+    },
+    "conditions": {
+      "heartProblems": "心脏问题（心梗、心绞痛、瓣膜问题、杂音）",
+      "pacemaker": "佩戴心脏起搏器",
+      "prolongedBleeding": "出血时间延长",
+      "anemia": "贫血",
+      "lungProblems": "肺部问题或结核病",
+      "asthma": "哮喘",
+      "hayFever": "花粉症",
+      "thyroidIssues": "甲状腺问题",
+      "epilepsy": "癫痫",
+      "nervousDisorders": "神经系统疾病",
+      "frequentHeadaches": "频繁头痛",
+      "dizziness": "头晕、昏厥",
+      "earProblems": "耳部问题",
+      "eyeProblems": "眼部问题",
+      "skinDisease": "皮肤病",
+      "arthritis": "关节炎",
+      "std": "性传播疾病",
+      "digestiveIssues": "消化问题",
+      "stomachUlcer": "胃溃疡",
+      "liverProblems": "肝脏问题（肝炎、肝硬化、胆固醇）",
+      "kidneyProblems": "肾脏问题",
+      "diabetes": "糖尿病",
+      "foodAllergies": "食物过敏",
+      "medicationAllergies": "药物过敏",
+      "hivPositive": "HIV阳性",
+      "aids": "艾滋病",
+      "radiotherapy": "接受过放疗/化疗",
+      "pregnant": "怀孕",
+      "prosthesesJoint": "关节假体",
+      "prosthesesBreast": "乳房假体"
+    },
+    "validation": {
+      "required": "此项为必填项",
+      "email": "请输入有效的电子邮箱地址",
+      "submitError": "提交失败，请稍后重试"
+    },
+    "submit": "提交预约",
+    "submitting": "提交中...",
+    "success": {
+      "title": "预约成功！",
+      "message": "我们已收到您的针灸预约申请，我们会尽快与您联系确认预约时间。",
+      "backHome": "返回首页"
     }
   }
 }

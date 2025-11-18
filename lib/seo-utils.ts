@@ -106,6 +106,24 @@ export function getSEOConfig(locale: string, pageType: string): SEOConfig {
           'preventive healthcare Montreal'
         ],
         locale: 'en_CA'
+      },
+      acupuncture: {
+        title: 'Professional Acupuncture Treatment | Traditional Chinese Medicine at Starplus Health Center Montreal',
+        description: 'Expert acupuncture services using traditional Chinese medicine techniques. Pain relief, improved circulation, stress reduction, and overall health balance. $100 per session.',
+        keywords: [
+          'acupuncture Montreal',
+          'acupuncture treatment Montreal',
+          'traditional Chinese medicine Montreal',
+          'TCM acupuncture Montreal',
+          'pain relief acupuncture',
+          'acupuncture therapy Montreal',
+          'Chinese acupuncture Montreal',
+          'acupuncturist Montreal',
+          'Starplus Health Center',
+          'holistic health Montreal',
+          'alternative medicine Montreal'
+        ],
+        locale: 'en_CA'
       }
     },
     fr: {
@@ -178,6 +196,24 @@ export function getSEOConfig(locale: string, pageType: string): SEOConfig {
           'analyse urine complète',
           'détection précoce maladie',
           'soins préventifs Montréal'
+        ],
+        locale: 'fr_CA'
+      },
+      acupuncture: {
+        title: 'Traitement d\'Acupuncture Professionnel | Médecine Traditionnelle Chinoise au Centre Starplus Montréal',
+        description: 'Services d\'acupuncture experts utilisant les techniques de médecine traditionnelle chinoise. Soulagement de la douleur, amélioration de la circulation, réduction du stress et équilibre de santé global. 100$ par séance.',
+        keywords: [
+          'acupuncture Montréal',
+          'traitement acupuncture Montréal',
+          'médecine traditionnelle chinoise Montréal',
+          'acupuncture MTC Montréal',
+          'soulagement douleur acupuncture',
+          'thérapie acupuncture Montréal',
+          'acupuncture chinoise Montréal',
+          'acupuncteur Montréal',
+          'Centre Starplus',
+          'santé holistique Montréal',
+          'médecine alternative Montréal'
         ],
         locale: 'fr_CA'
       }
@@ -255,6 +291,26 @@ export function getSEOConfig(locale: string, pageType: string): SEOConfig {
           '早期疾病发现',
           '蒙特利尔预防医疗',
           '华人医疗服务蒙特利尔'
+        ],
+        locale: 'zh_CN'
+      },
+      acupuncture: {
+        title: '专业针灸治疗 | Starplus健康中心蒙特利尔传统中医',
+        description: '专业针灸服务，运用传统中医技术。缓解疼痛、改善血液循环、减轻压力、促进整体健康平衡。每次100加元。',
+        keywords: [
+          '蒙特利尔针灸',
+          '蒙特利尔针灸治疗',
+          '蒙特利尔中医针灸',
+          '蒙特利尔传统中医',
+          '针灸疼痛缓解',
+          '蒙特利尔针灸疗法',
+          '蒙特利尔中式针灸',
+          '蒙特利尔针灸师',
+          'Starplus健康中心',
+          '蒙特利尔整体健康',
+          '蒙特利尔替代医学',
+          '华人针灸蒙特利尔',
+          '中医治疗蒙特利尔'
         ],
         locale: 'zh_CN'
       }

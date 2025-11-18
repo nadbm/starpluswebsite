@@ -205,6 +205,12 @@
       "tag2": "Évaluation de la Santé",
       "tag3": "Consultation Bien-être"
     },
+    "acupuncture": {
+      "title": "Traitement d'Acupuncture",
+      "description": "Services professionnels d'acupuncture utilisant les techniques traditionnelles de la médecine chinoise pour soulager la douleur, améliorer les fonctions corporelles et promouvoir la santé globale.",
+      "tag1": "Soulagement de la Douleur",
+      "tag2": "Thérapie Traditionnelle"
+    },
     "botox": {
       "title": "Services de Botox",
       "description": "Traitements cosmétiques professionnels administrés par des spécialistes certifiés pour réduire les rides et les ridules avec des résultats naturels.",
@@ -308,6 +314,8 @@
       "phonePlaceholder": "(514) 123-4567",
       "notes": "Notes Supplémentaires",
       "notesPlaceholder": "Veuillez nous informer de vos besoins spéciaux ou questions...",
+      "referralSource": "Comment avez-vous entendu parler de nous? / Informations sur le Conseiller",
+      "referralSourcePlaceholder": "ex: Recommandation d'un ami, nom du conseiller, recherche en ligne, etc...",
       "submit": "Confirmer le Rendez-vous",
       "submitting": "Envoi en cours...",
       "chineseNameWarning": {
@@ -811,6 +819,214 @@
       "description": "Prenez en charge votre gestion de santé dès aujourd'hui. Le dépistage urinaire professionnel et les tests de drogues vous aident à rester informé sur l'état de votre corps et à détecter les problèmes de santé et risques liés aux drogues tôt.",
       "button": "Planifiez Votre Dépistage",
       "urgent": "Réservez maintenant et faites le premier pas vers une meilleure santé!"
+    }
+  },
+  "acupuncture": {
+    "hero": {
+      "badge": "Médecine Traditionnelle Chinoise",
+      "title": "Traitement d'Acupuncture",
+      "description": "Techniques traditionnelles pour soulager la douleur, améliorer les fonctions et promouvoir la santé",
+      "cta": "Réserver",
+      "feature1": "Expert Acupuncteur",
+      "feature2": "Soins Personnalisés"
+    },
+    "benefits": {
+      "title": "Avantages du Traitement",
+      "subtitle": "Thérapie traditionnelle sûre et efficace pour améliorer diverses conditions de santé",
+      "benefit1": {
+        "title": "Soulagement de la Douleur",
+        "description": "Soulage efficacement les douleurs chroniques, maux de tête, douleurs cervicales et lombaires"
+      },
+      "benefit2": {
+        "title": "Meilleure Circulation",
+        "description": "Favorise la circulation sanguine, accélère le métabolisme et aide la récupération naturelle"
+      },
+      "benefit3": {
+        "title": "Réduction du Stress",
+        "description": "Régule le système nerveux, soulage l'anxiété et améliore la qualité du sommeil"
+      },
+      "benefit4": {
+        "title": "Immunité Renforcée",
+        "description": "Renforce le système immunitaire et améliore la résistance globale du corps"
+      },
+      "benefit5": {
+        "title": "Meilleure Digestion",
+        "description": "Améliore la fonction digestive et soulage l'indigestion et la constipation"
+      },
+      "benefit6": {
+        "title": "Bien-être Holistique",
+        "description": "Équilibre l'énergie corporelle, harmonise le qi et le sang pour la santé globale"
+      }
+    },
+    "process": {
+      "title": "Comment Ça Marche",
+      "subtitle": "Traitement professionnel suivant les normes de sécurité pour des résultats optimaux",
+      "step1": {
+        "title": "Consultation Initiale",
+        "description": "Évaluation complète de la santé incluant symptômes, objectifs et constitution MTC"
+      },
+      "step2": {
+        "title": "Plan Personnalisé",
+        "description": "Plan d'acupuncture adapté à vos besoins de santé spécifiques"
+      },
+      "step3": {
+        "title": "Séance d'Acupuncture",
+        "description": "Traitement sûr avec aiguilles stériles à des points spécifiques pour un confort optimal"
+      },
+      "step4": {
+        "title": "Suivi",
+        "description": "Évaluation des progrès, ajustements du plan et conseils de santé continus"
+      }
+    },
+    "pricing": {
+      "title": "Tarification",
+      "badge": "Service Professionnel",
+      "price": "100$",
+      "description": "Consultation et séance de traitement complètes",
+      "includesTitle": "Ce Qui Est Inclus",
+      "includes": {
+        "0": "Évaluation de santé et diagnostic MTC",
+        "1": "Plan de traitement personnalisé",
+        "2": "Séance d'acupuncture professionnelle (30-45 min)",
+        "3": "Conseils et guidance post-traitement"
+      },
+      "button": "Réserver Maintenant"
+    },
+    "cta": {
+      "title": "Commencez Votre Parcours de Guérison",
+      "description": "Découvrez la médecine traditionnelle chinoise pour restaurer votre santé et améliorer votre qualité de vie",
+      "button": "Réserver",
+      "callButton": "Appelez-nous"
+    }
+  },
+  "acupunctureForm": {
+    "title": "Formulaire de Rendez-vous d'Acupuncture",
+    "subtitle": "Veuillez remplir les informations suivantes pour réserver votre rendez-vous d'acupuncture",
+    "consent": {
+      "title": "Précautions et Consentement éclairé pour l'Acupuncture",
+      "precautions": {
+        "1": "Ne pas recevoir l'acupuncture à jeun.",
+        "2": "Merci de vider votre vessie avant la séance.",
+        "3": "Portez des vêtements amples et confortables.",
+        "4": "Informez l'acupuncteur si vous êtes allergique au métal, à l'alcool ou à l'armoise.",
+        "5": "Les femmes doivent informer l'acupuncteur si elles sont menstruées, en conception, enceintes, allaitantes ou en post-partum.",
+        "6": "Informez l'acupuncteur en cas de pathologies graves (hypertension, diabète, maladie cardiaque, sanguine, hépatique ou rénale).",
+        "7": "Informez l'acupuncteur si vous prenez des anticoagulants ou des médicaments psychiatriques.",
+        "8": "Les patients à mobilité réduite doivent être accompagnés.",
+        "9": "Ces sensations (engourdissement, douleur, irradiation) sont normales. Ne prenez pas de bain dans les 2 heures suivant la séance. Des bleus, des nodules ou des douleurs peuvent apparaître. Rougeur, démangeaison ou croûtes peuvent indiquer une réaction allergique."
+      },
+      "declaration": {
+        "title": "Déclaration",
+        "content": "J'ai lu et compris les précautions ci-dessus. J'ai communiqué mon état de santé de façon honnête et consens à recevoir le traitement d'acupuncture ainsi qu'à en accepter les risques éventuels."
+      },
+      "checkbox": "J'ai lu et j'accepte les précautions et le consentement éclairé pour l'acupuncture ci-dessus",
+      "button": "Continuer vers le Formulaire"
+    },
+    "sections": {
+      "appointment": "Planification du Rendez-vous",
+      "patient": "Informations du Patient",
+      "medicalHistory": "Histoire Médicale",
+      "conditions": "État de Santé",
+      "medications": "Médicaments et Chirurgies"
+    },
+    "fields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "gender": "Sexe",
+      "male": "Homme",
+      "female": "Femme",
+      "dateOfBirth": "Date de Naissance",
+      "day": "Jour",
+      "month": "Mois",
+      "year": "Année",
+      "address": "Adresse",
+      "addressNo": "No",
+      "street": "Rue",
+      "apt": "App.",
+      "city": "Ville",
+      "postalCode": "Code Postal",
+      "phoneHome": "Tél. Domicile",
+      "phoneWork": "Tél. Travail",
+      "ext": "Poste",
+      "phone": "Téléphone",
+      "parentTutor": "Parent/Tuteur",
+      "insuranceNo": "No. Ass. maladie",
+      "csstNo": "CSST No.",
+      "saaqNo": "SAAQ No.",
+      "reasonForVisit": "Raison de la Visite",
+      "visitDate": "Date de Visite",
+      "underDoctorCare": "Êtes-vous actuellement sous les soins d'un médecin?",
+      "doctorLastName": "Nom du Médecin",
+      "doctorFirstName": "Prénom du Médecin",
+      "specialty": "Spécialité",
+      "diagnosis": "Diagnostic",
+      "treatment": "Traitement",
+      "reaction": "Réaction au Traitement",
+      "otherProfessionals": "Avez-vous consulté d'autres professionnels de la santé?",
+      "treatmentReceived": "Traitement Reçu",
+      "bloodPressure": "Tension Artérielle",
+      "high": "Haute",
+      "low": "Basse",
+      "dependencies": "Dépendances",
+      "alcohol": "Alcool",
+      "drugs": "Drogue",
+      "tobacco": "Tabac",
+      "caffeine": "Caféine",
+      "hospitalizations": "Hospitalisations/Chirurgies",
+      "hospitalizationsPlaceholder": "Listez vos hospitalisations ou chirurgies avec les années...",
+      "anticoagulants": "Prenez-vous des anticoagulants?",
+      "corticosteroids": "Prenez-vous des corticoïdes?",
+      "medications": "Médicaments Actuels",
+      "medicationsPlaceholder": "Listez tous les médicaments que vous prenez actuellement...",
+      "appointmentDate": "Date du Rendez-vous",
+      "appointmentTime": "Heure du Rendez-vous",
+      "selectDate": "Sélectionner la Date",
+      "selectTime": "Sélectionner l'Heure",
+      "loading": "Chargement..."
+    },
+    "conditions": {
+      "heartProblems": "Troubles cardiaques (infarctus, angine, problèmes valvulaires, souffle)",
+      "pacemaker": "Stimulateur cardiaque (pacemaker)",
+      "prolongedBleeding": "Saignements prolongés",
+      "anemia": "Anémie",
+      "lungProblems": "Problèmes pulmonaires ou tuberculose",
+      "asthma": "Asthme",
+      "hayFever": "Rhume des foins",
+      "thyroidIssues": "Troubles thyroïdiens",
+      "epilepsy": "Épilepsie",
+      "nervousDisorders": "Troubles nerveux",
+      "frequentHeadaches": "Maux de tête fréquents",
+      "dizziness": "Étourdissements, évanouissements",
+      "earProblems": "Maux d'oreilles",
+      "eyeProblems": "Problèmes oculaires",
+      "skinDisease": "Maladie de peau",
+      "arthritis": "Arthrite",
+      "std": "Maladies vénériennes (MTS)",
+      "digestiveIssues": "Troubles digestifs",
+      "stomachUlcer": "Ulcère de l'estomac",
+      "liverProblems": "Problèmes du foie (hépatite, cirrhose, cholestérol)",
+      "kidneyProblems": "Troubles du rein",
+      "diabetes": "Diabète",
+      "foodAllergies": "Allergies alimentaires",
+      "medicationAllergies": "Allergies médicamenteuses",
+      "hivPositive": "Séro-positif VIH",
+      "aids": "SIDA",
+      "radiotherapy": "Radiothérapie/Chimiothérapie",
+      "pregnant": "Enceinte",
+      "prosthesesJoint": "Prothèses articulaires",
+      "prosthesesBreast": "Prothèses mammaires"
+    },
+    "validation": {
+      "required": "Ce champ est obligatoire",
+      "email": "Veuillez entrer une adresse courriel valide",
+      "submitError": "Échec de la soumission, veuillez réessayer plus tard"
+    },
+    "submit": "Soumettre le Rendez-vous",
+    "submitting": "Soumission en cours...",
+    "success": {
+      "title": "Rendez-vous Réussi!",
+      "message": "Nous avons reçu votre demande de rendez-vous d'acupuncture. Nous vous contacterons sous peu pour confirmer l'heure de votre rendez-vous.",
+      "backHome": "Retour à l'Accueil"
     }
   }
 }
