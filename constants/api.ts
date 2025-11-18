@@ -25,6 +25,8 @@ export const ENDPOINTS = {
         TIME_SLOTS: `${API_BASE_URL}/api/urine-screening/availability/time_slots/`,
         SUBMIT: `${API_BASE_URL}/api/urine-screening/api/submit/`,
     },
+    ACUPUNCTURE: {
+        AVAILABLE_DAYS: `${API_BASE_URL}/api/acupuncture/availability/available_days/`,
         TIME_SLOTS: `${API_BASE_URL}/api/acupuncture/availability/time_slots/`,
         SUBMIT: `${API_BASE_URL}/api/acupuncture/api/submit/`,
     }
