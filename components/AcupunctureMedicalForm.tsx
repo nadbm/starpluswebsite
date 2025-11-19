@@ -41,6 +41,7 @@ const AcupunctureMedicalForm = () => {
         appointment_date: '',
         appointment_time: '',
         first_name: '', last_name: '', gender: '', dob_day: '', dob_month: '', dob_year: '',
+        email: '',
         address_no: '', address_street: '', address_apt: '', address_city: '', postal_code: '',
         phone_home: '', phone_work: '', phone_work_ext: '', parent_tutor: '',
         insurance_no: '', csst_no: '', saaq_no: '', reason_visit: '',
@@ -114,10 +115,16 @@ const AcupunctureMedicalForm = () => {
         if (!formData.first_name) newErrors.first_name = t('validation.required');
         if (!formData.last_name) newErrors.last_name = t('validation.required');
         if (!formData.gender) newErrors.gender = t('validation.required');
+        if (!formData.email) newErrors.email = t('validation.required');
         if (!formData.reason_visit) newErrors.reason_visit = t('validation.required');
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (formData.email && !emailRegex.test(formData.email)) {
+            newErrors.email = t('validation.email');
+        }
+        
         setErrors(newErrors);
         
-        // 如果有错误，滚动到第一个错误字段
         if (Object.keys(newErrors).length > 0) {
             setTimeout(() => {
                 const firstErrorField = document.querySelector('.border-red-500');
@@ -147,12 +154,11 @@ const AcupunctureMedicalForm = () => {
             if (!response.ok) {
                 const errorData = await response.json();
                 
-                // 将后端返回的字段错误映射到前端errors状态
                 const backendErrors: Record<string, string> = {};
                 Object.keys(errorData).forEach(key => {
                     const errorMessages = errorData[key];
                     if (Array.isArray(errorMessages)) {
-                        backendErrors[key] = errorMessages[0]; // 取第一个错误信息
+                        backendErrors[key] = errorMessages[0];
                     } else {
                         backendErrors[key] = errorMessages;
                     }
@@ -161,7 +167,6 @@ const AcupunctureMedicalForm = () => {
                 setErrors(backendErrors);
                 setIsSubmitting(false);
                 
-                // 滚动到第一个错误字段
                 setTimeout(() => {
                     const firstErrorField = document.querySelector('.border-red-500');
                     if (firstErrorField) {
@@ -169,7 +174,7 @@ const AcupunctureMedicalForm = () => {
                     }
                 }, 100);
                 
-                return; // 不抛出错误，让用户看到具体字段的错误
+                return;
             }
             
             await response.json();
@@ -345,6 +350,16 @@ const AcupunctureMedicalForm = () => {
                                     <input type="text" placeholder={t('fields.postalCode')} value={formData.postal_code} onChange={(e) => setFormData(prev => ({ ...prev, postal_code: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg" />
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <InputField 
+                                label={t('fields.email')} 
+                                type="email" 
+                                required 
+                                value={formData.email} 
+                                onChange={(e: any) => setFormData(prev => ({ ...prev, email: e.target.value }))} 
+                                error={errors.email}
+                            />
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <InputField label={t('fields.phoneHome')} type="tel" value={formData.phone_home} onChange={(e: any) => setFormData(prev => ({ ...prev, phone_home: e.target.value }))} />

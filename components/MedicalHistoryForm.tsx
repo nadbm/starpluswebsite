@@ -41,7 +41,6 @@ interface FamilyHistory {
 }
 
 interface FormData {
-    // Patient Information
     full_name: string;
     date_of_birth: string;
     gender: string;
@@ -51,7 +50,6 @@ interface FormData {
     emergency_contact_name: string;
     emergency_contact_number: string;
 
-    // Medical History
     medical_history: {
         diabetes: MedicalCondition;
         hypertension: MedicalCondition;
@@ -64,7 +62,6 @@ interface FormData {
         other: MedicalCondition;
     };
 
-    // Dynamic Arrays
     surgical_history: Surgery[];
     allergies: Allergy[];
     current_medications: Medication[];
@@ -113,7 +110,6 @@ const MedicalHistoryForm = () => {
     const validateForm = (): boolean => {
         const newErrors: Record<string, string> = {};
 
-        // Required fields validation
         if (!formData.full_name) newErrors.full_name = t('validation.required');
         if (!formData.date_of_birth) newErrors.date_of_birth = t('validation.required');
         if (!formData.gender) newErrors.gender = t('validation.required');
@@ -123,7 +119,6 @@ const MedicalHistoryForm = () => {
         if (!formData.emergency_contact_name) newErrors.emergency_contact_name = t('validation.required');
         if (!formData.emergency_contact_number) newErrors.emergency_contact_number = t('validation.required');
 
-        // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (formData.email_address && !emailRegex.test(formData.email_address)) {
             newErrors.email_address = t('validation.email');

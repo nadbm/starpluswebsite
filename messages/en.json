@@ -935,6 +935,7 @@
       "gender": "Gender",
       "male": "Male",
       "female": "Female",
+      "email": "Email Address",
       "dateOfBirth": "Date of Birth",
       "day": "Day",
       "month": "Month",

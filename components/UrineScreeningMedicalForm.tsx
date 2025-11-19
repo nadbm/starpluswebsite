@@ -194,7 +194,6 @@ const UrineScreeningMedicalForm = () => {
             const response = await fetch(`${ENDPOINTS.URINE_SCREENING.TIME_SLOTS}?date=${date}`);
             if (response.ok) {
                 const data = await response.json();
-                // console.log('Time slots response for date', date, ':', data);
 
                 setTimeSlots(data || []);
             } else {

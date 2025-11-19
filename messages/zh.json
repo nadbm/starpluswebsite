@@ -938,6 +938,7 @@
       "gender": "性别",
       "male": "男",
       "female": "女",
+      "email": "电子邮箱",
       "dateOfBirth": "出生日期",
       "day": "日",
       "month": "月",
