@@ -297,7 +297,7 @@
       "title": "Schedule Fixed for This Date",
       "heading": "Booking Cutoff Time Passed",
       "message": "The schedule for this date has been finalized. Online booking is no longer available for this time period.",
-      "contact": "If you need to schedule an appointment for this date, please call us directly at (514)-447-2175 and we will arrange a possible time slot or schedule you for a later date.",
+      "contact": "If you need to schedule an appointment for this date, please call us directly at (514)-447-4786 or (514)-447-2175 and we will arrange a possible time slot or schedule you for a later date.",
       "selectAnother": "Select Another Date"
     },
     "form": {
@@ -463,7 +463,7 @@
     },
     "contact": {
       "address": "500, 998 Boul. Saint-Laurent, Montreal, QC, H2Z 9Y9",
-      "phone": "(514)-447-2175",
+      "phone": "(514)-447-4786\n(514)-447-2175",
       "email": "info@starpluscentre.com",
       "hours": "Monday, Wednesday to Friday, Sunday: 10:00 AM - 4:00 PM\nSaturday: 10:00 AM - 1:00 PM",
       "customerSupportEmail": "clinic@starpluscentre.com"

@@ -326,7 +326,7 @@ export function generateStructuredData(locale: string) {
     "@type": "MedicalBusiness",
     "name": "Starplus Health Center",
     "url": "https://starpluscentre.com",
-    "telephone": "(514) 447-2175",
+    "telephone": ["(514) 447-4786", "(514) 447-2175"],
     "email": "info@starpluscentre.com",
     "address": {
       "@type": "PostalAddress",

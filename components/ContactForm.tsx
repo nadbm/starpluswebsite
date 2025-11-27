@@ -93,6 +93,7 @@ export default function ContactForm() {
                                         </div>
                                         <div>
                                             <h4 className="font-medium">{t('info.phoneTitle')}</h4>
+                                            <p className="mt-1">(514)-447-4786</p>
                                             <p className="mt-1">(514)-447-2175</p>
                                         </div>
                                     </div>

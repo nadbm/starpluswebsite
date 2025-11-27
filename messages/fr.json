@@ -297,7 +297,7 @@
       "title": "Horaire Fixé pour Cette Date",
       "heading": "Délai de Réservation Dépassé",
       "message": "L'horaire pour cette date a été finalisé. La réservation en ligne n'est plus disponible pour cette période.",
-      "contact": "Si vous devez prendre rendez-vous pour cette date, veuillez nous appeler directement au (514)-447-2175 et nous organiserons un créneau horaire possible ou vous programmerons pour une date ultérieure.",
+      "contact": "Si vous devez prendre rendez-vous pour cette date, veuillez nous appeler directement au (514)-447-4786 ou (514)-447-2175 et nous organiserons un créneau horaire possible ou vous programmerons pour une date ultérieure.",
       "selectAnother": "Sélectionner une Autre Date"
     },
     "form": {
@@ -463,7 +463,7 @@
     },
     "contact": {
       "address": "500, 998 Boul. Saint-Laurent, Montréal, QC, H2Z 9Y9",
-      "phone": "(514)-447-2175",
+      "phone": "(514)-447-4786\n(514)-447-2175",
       "email": "info@starpluscentre.com",
       "hours": "Lundi, Mercredi à Vendredi, Dimanche : 10h00 - 16h00\nSamedi : 10h00 - 13h00",
       "customerSupportEmail": "clinic@starpluscentre.com"

@@ -41,7 +41,7 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
     "description": localizedContent.description,
     "slogan": localizedContent.slogan,
     "url": "https://starpluscentre.com",
-    "telephone": "(514) 447-2175",
+    "telephone": ["(514) 447-4786", "(514) 447-2175"],
     "email": "info@starpluscentre.com",
     "logo": "https://starpluscentre.com/logo/logo.png",
     "address": {

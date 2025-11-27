@@ -18,7 +18,7 @@ export default function UrineScreeningCTA() {
                     
                     <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
                         <Link
-                            href={`/${locale}/urine-screening-form`}
+                            href={`/${locale}/booking?service=urinalysis`}
                             className="bg-white text-brand px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block"
                         >
                             {t('button')}

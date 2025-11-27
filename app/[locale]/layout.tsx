@@ -192,6 +192,7 @@ export default async function LocaleLayout({
             <meta name="business:contact_data:region" content="QC" />
             <meta name="business:contact_data:postal_code" content="H2Z 9Y9" />
             <meta name="business:contact_data:country_name" content="Canada" />
+            <meta name="business:contact_data:phone_number" content="(514) 447-4786" />
             <meta name="business:contact_data:phone_number" content="(514) 447-2175" />
             <meta name="business:contact_data:email" content="info@starpluscentre.com" />
             <meta name="business:hours" content="Mo,We-Fr,Su 10:00-16:00, Sa 10:00-13:00" />
