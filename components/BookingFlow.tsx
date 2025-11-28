@@ -3,7 +3,7 @@
 import React from 'react';
 import {useTranslations} from "next-intl";
 import {useState, useEffect} from "react";
-import {MapPin, Car, Clock, Phone, Calendar, Users, Clock3, Heart, Scissors, AlertCircle, Pill, Plus, Minus} from 'lucide-react';
+import {MapPin, Car, Clock, Phone, Calendar, Users, Clock3, Heart, Scissors, AlertCircle, Pill, Plus, Minus, Stethoscope, User} from 'lucide-react';
 import {useRouter, useSearchParams} from 'next/navigation';
 import {useLocale} from 'next-intl';
 import {ENDPOINTS} from "@/constants/api";
@@ -103,6 +103,86 @@ interface UrinalysisMedicalForm {
     allergies: Allergy[];
     current_medications: Medication[];
     family_medical_history: FamilyHistory;
+}
+
+interface AcupunctureMedicalForm {
+    gender: 'M' | 'F' | '';
+    dob_day: string;
+    dob_month: string;
+    dob_year: string;
+    address_no: string;
+    address_street: string;
+    address_apt: string;
+    address_city: string;
+    postal_code: string;
+    phone_home: string;
+    phone_work: string;
+    phone_work_ext: string;
+    parent_tutor: string;
+    insurance_no: string;
+    csst_no: string;
+    saaq_no: string;
+    reason_visit: string;
+    under_doctor_care: boolean;
+    doctor_name: string;
+    doctor_firstname: string;
+    doctor_specialty: string;
+    doctor_phone: string;
+    doctor_diagnosis: string;
+    doctor_treatment: string;
+    doctor_reaction: string;
+    other_professionals: boolean;
+    prof1_name: string;
+    prof1_firstname: string;
+    prof1_specialty: string;
+    prof1_phone: string;
+    prof1_treatment: string;
+    prof1_reaction: string;
+    prof2_name: string;
+    prof2_firstname: string;
+    prof2_specialty: string;
+    prof2_phone: string;
+    prof2_treatment: string;
+    prof2_reaction: string;
+    heart_problems: boolean;
+    pacemaker: boolean;
+    blood_pressure: string;
+    prolonged_bleeding: boolean;
+    anemia: boolean;
+    lung_problems: boolean;
+    asthma: boolean;
+    hay_fever: boolean;
+    thyroid_issues: boolean;
+    epilepsy: boolean;
+    nervous_disorders: boolean;
+    frequent_headaches: boolean;
+    dizziness: boolean;
+    ear_problems: boolean;
+    eye_problems: boolean;
+    skin_disease: boolean;
+    arthritis: boolean;
+    std: boolean;
+    digestive_issues: boolean;
+    stomach_ulcer: boolean;
+    liver_problems: boolean;
+    kidney_problems: boolean;
+    diabetes: boolean;
+    food_allergies: boolean;
+    medication_allergies: boolean;
+    hiv_positive: boolean;
+    aids: boolean;
+    radiotherapy: boolean;
+    pregnant: boolean;
+    prostheses_joint: boolean;
+    prostheses_breast: boolean;
+    dependency_alcohol: boolean;
+    dependency_drugs: boolean;
+    dependency_tobacco: boolean;
+    dependency_caffeine: boolean;
+    hospitalizations: string;
+    anticoagulants: boolean;
+    corticosteroids: boolean;
+    medications: string;
 }
 
 interface InsuranceWaiverModalProps {
@@ -267,6 +347,129 @@ const MedicalRecordConsentModal = ({t, locale, onClose, onAgree}: MedicalRecordC
                         <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-4">
                             <p className="text-amber-900 font-medium text-sm md:text-base">
                                 {content.notice}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="p-6 md:p-8 bg-gray-50 rounded-b-xl flex flex-col sm:flex-row gap-3">
+                    <button
+                        onClick={onClose}
+                        className="flex-1 px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-xl transition-colors duration-200 font-medium text-sm md:text-base"
+                    >
+                        {content.close}
+                    </button>
+                    <button
+                        onClick={onAgree}
+                        className="flex-1 px-6 py-3 bg-brand hover:bg-brand/90 text-white rounded-xl transition-colors duration-200 font-medium text-sm md:text-base"
+                    >
+                        {content.agree}
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+interface AcupunctureConsentModalProps {
+    locale: string;
+    onClose: () => void;
+    onAgree: () => void;
+}
+
+const AcupunctureConsentModal = ({locale, onClose, onAgree}: AcupunctureConsentModalProps) => {
+    const consentContent = {
+        en: {
+            title: "Acupuncture Precautions & Informed Consent",
+            precautionsTitle: "Precautions",
+            precautions: [
+                "Do not receive acupuncture on an empty stomach.",
+                "Please empty your bladder before the session.",
+                "Wear loose and comfortable clothing.",
+                "Inform the acupuncturist of allergies to metal, alcohol, or mugwort.",
+                "Women should inform the acupuncturist if menstruating, trying to conceive, pregnant, breastfeeding, or postpartum.",
+                "Inform the acupuncturist of serious conditions (e.g., hypertension, diabetes, heart, blood, or liver/kidney diseases).",
+                "Inform the acupuncturist if taking anticoagulants or psychiatric medications.",
+                "Those with limited mobility should be accompanied.",
+                "Sensations such as soreness, numbness, pressure, or radiation are normal.",
+                "No bathing within 2 hours after treatment.",
+                "Bruising, lumps, or pain may appear at the needle site.",
+                "Redness, itching, or scabbing may be signs of a mild allergic reaction."
+            ],
+            declaration: "I have read and understood the above acupuncture precautions. I have honestly disclosed my medical condition and consent to receive acupuncture treatment and accept its potential risks.",
+            close: "Close",
+            agree: "I Agree"
+        },
+        fr: {
+            title: "Précautions et Consentement éclairé pour l'Acupuncture",
+            precautionsTitle: "Précautions",
+            precautions: [
+                "Ne pas recevoir l'acupuncture à jeun.",
+                "Merci de vider votre vessie avant la séance.",
+                "Portez des vêtements amples et confortables.",
+                "Informez l'acupuncteur si vous êtes allergique au métal, à l'alcool ou à l'armoise.",
+                "Les femmes doivent informer l'acupuncteur si elles sont menstruées, en conception, enceintes, allaitantes ou en post-partum.",
+                "Informez l'acupuncteur en cas de pathologies graves (hypertension, diabète, maladie cardiaque, sanguine, hépatique ou rénale).",
+                "Informez l'acupuncteur si vous prenez des anticoagulants ou des médicaments psychiatriques.",
+                "Les patients à mobilité réduite doivent être accompagnés.",
+                "Ces sensations (engourdissement, douleur, irradiation) sont normales.",
+                "Ne prenez pas de bain dans les 2 heures suivant la séance.",
+                "Des bleus, des nodules ou des douleurs peuvent apparaître.",
+                "Rougeur, démangeaison ou croûtes peuvent indiquer une réaction allergique."
+            ],
+            declaration: "J'ai lu et compris les précautions ci-dessus. J'ai communiqué mon état de santé de façon honnête et consens à recevoir le traitement d'acupuncture ainsi qu'à en accepter les risques éventuels.",
+            close: "Fermer",
+            agree: "J'accepte"
+        },
+        zh: {
+            title: "针灸治疗注意事项及知情同意书",
+            precautionsTitle: "注意事项",
+            precautions: [
+                "针灸前不能空腹。",
+                "针灸前尽量排空尿液。",
+                "针灸治疗时需衣着宽松，便于脱穿。",
+                "如对金属、酒精、艾草过敏时，应提前告知针灸师。",
+                "女性在经期、备孕、怀孕、哺乳、产后等时期的情况，应提前告知针灸师。",
+                "如有高血压、糖尿病、冠心病、血液病、肝肾损伤等，应提前告知针灸师。",
+                "如正在服用抗凝剂、精神类药物等，应提前说明。",
+                "中风、年老、虚弱或伤残者应有人陪同。",
+                "针刺过程中可能会感到酸、麻、胀、痛或放射感，这是正常现象。",
+                "针灸2小时内请勿洗澡。",
+                "针刺部位可能会出现淤青、硬块或疼痛。",
+                "针眼皮肤红、痒或结痂可能为轻微过敏反应。"
+            ],
+            declaration: "本人已阅读并理解以上针灸治疗注意事项。本人已如实告知身体状况，同意接受针灸治疗并接受其潜在风险。",
+            close: "关闭",
+            agree: "我同意"
+        }
+    };
+
+    const content = consentContent[locale as keyof typeof consentContent] || consentContent.en;
+
+    return (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 overflow-y-auto">
+            <div className="bg-white rounded-xl shadow-xl max-w-3xl w-full my-8">
+                <div className="p-6 md:p-8 bg-brand rounded-t-xl">
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">
+                        {content.title}
+                    </h3>
+                </div>
+                <div className="p-6 md:p-8 max-h-[60vh] overflow-y-auto">
+                    <div className="space-y-4">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                            {content.precautionsTitle}
+                        </h4>
+                        <ol className="space-y-3">
+                            {content.precautions.map((precaution, index) => (
+                                <li key={index} className="flex items-start">
+                                    <span className="font-semibold text-brand mr-2">{index + 1}.</span>
+                                    <span className="text-sm md:text-base text-gray-700 leading-relaxed">{precaution}</span>
+                                </li>
+                            ))}
+                        </ol>
+                        <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-4 mt-6">
+                            <p className="text-amber-900 font-medium text-sm md:text-base">
+                                <strong>{locale === 'zh' ? '声明：' : locale === 'fr' ? 'Déclaration : ' : 'Declaration: '}</strong>
+                                {content.declaration}
                             </p>
                         </div>
                     </div>
@@ -463,11 +666,11 @@ export default function BookingFlow() {
     const [showChineseWarning, setShowChineseWarning] = useState<boolean>(false);
     const [agreedToWaiver, setAgreedToWaiver] = useState<boolean>(false);
     const [showWaiverModal, setShowWaiverModal] = useState<boolean>(false);
-    
-    // Urinalysis medical form states
     const [showUrinalysisMedicalForm, setShowUrinalysisMedicalForm] = useState<boolean>(false);
     const [agreedToMedicalConsent, setAgreedToMedicalConsent] = useState<boolean>(false);
     const [showMedicalConsentModal, setShowMedicalConsentModal] = useState<boolean>(false);
+    const [agreedToAcupunctureConsent, setAgreedToAcupunctureConsent] = useState<boolean>(false);
+    const [showAcupunctureConsentModal, setShowAcupunctureConsentModal] = useState<boolean>(false);
     const [urinalysisMedicalData, setUrinalysisMedicalData] = useState<UrinalysisMedicalForm>({
         date_of_birth: '',
         gender: '',
@@ -493,6 +696,87 @@ export default function BookingFlow() {
             mother: '',
             siblings: ''
         }
+    });
+
+    const [showAcupunctureMedicalForm, setShowAcupunctureMedicalForm] = useState<boolean>(false);
+    const [acupunctureMedicalData, setAcupunctureMedicalData] = useState<AcupunctureMedicalForm>({
+        gender: '',
+        dob_day: '',
+        dob_month: '',
+        dob_year: '',
+        address_no: '',
+        address_street: '',
+        address_apt: '',
+        address_city: '',
+        postal_code: '',
+        phone_home: '',
+        phone_work: '',
+        phone_work_ext: '',
+        parent_tutor: '',
+        insurance_no: '',
+        csst_no: '',
+        saaq_no: '',
+        reason_visit: '',
+        under_doctor_care: false,
+        doctor_name: '',
+        doctor_firstname: '',
+        doctor_specialty: '',
+        doctor_phone: '',
+        doctor_diagnosis: '',
+        doctor_treatment: '',
+        doctor_reaction: '',
+        other_professionals: false,
+        prof1_name: '',
+        prof1_firstname: '',
+        prof1_specialty: '',
+        prof1_phone: '',
+        prof1_treatment: '',
+        prof1_reaction: '',
+        prof2_name: '',
+        prof2_firstname: '',
+        prof2_specialty: '',
+        prof2_phone: '',
+        prof2_treatment: '',
+        prof2_reaction: '',
+        heart_problems: false,
+        pacemaker: false,
+        blood_pressure: '',
+        prolonged_bleeding: false,
+        anemia: false,
+        lung_problems: false,
+        asthma: false,
+        hay_fever: false,
+        thyroid_issues: false,
+        epilepsy: false,
+        nervous_disorders: false,
+        frequent_headaches: false,
+        dizziness: false,
+        ear_problems: false,
+        eye_problems: false,
+        skin_disease: false,
+        arthritis: false,
+        std: false,
+        digestive_issues: false,
+        stomach_ulcer: false,
+        liver_problems: false,
+        kidney_problems: false,
+        diabetes: false,
+        food_allergies: false,
+        medication_allergies: false,
+        hiv_positive: false,
+        aids: false,
+        radiotherapy: false,
+        pregnant: false,
+        prostheses_joint: false,
+        prostheses_breast: false,
+        dependency_alcohol: false,
+        dependency_drugs: false,
+        dependency_tobacco: false,
+        dependency_caffeine: false,
+        hospitalizations: '',
+        anticoagulants: false,
+        corticosteroids: false,
+        medications: ''
     });
 
     const infoCards = [
@@ -539,7 +823,9 @@ export default function BookingFlow() {
         'Mental Health': 'mental',
         'Vaccine': 'vaccine',
         'Urinalysis Analysis-Strip Test': 'urinalysis',
-        'Fertility Tests': 'fertility'
+        'Fertility Tests': 'fertility',
+        'Acupuncture': 'acupuncture',
+        'Acupuncture Treatment': 'acupuncture'
     };
 
     const searchParams = useSearchParams();
@@ -547,12 +833,19 @@ export default function BookingFlow() {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch(ENDPOINTS.APPOINTMENTS.ALL_SERVICES);
-                const data: ServicesResponse = await response.json();
-                const availableServices = data.results.filter(service => service.status === 1);
+                let allServices: Service[] = [];
+                let nextUrl: string | null = ENDPOINTS.APPOINTMENTS.ALL_SERVICES;
+                
+                while (nextUrl) {
+                    const response = await fetch(nextUrl);
+                    const data: ServicesResponse = await response.json();
+                    allServices = [...allServices, ...data.results];
+                    nextUrl = data.next;
+                }
+                
+                const availableServices = allServices.filter(service => service.status === 1);
                 setServices(availableServices);
                 
-                // 如果 URL 参数包含 service=urinalysis，自动选择尿液筛查服务
                 const serviceParam = searchParams.get('service');
                 if (serviceParam === 'urinalysis') {
                     const urinalysisService = availableServices.find(
@@ -709,6 +1002,11 @@ export default function BookingFlow() {
             notesContent = `${medicalNote}\n\n${notesContent}`;
         }
 
+        if (showAcupunctureMedicalForm) {
+            const medicalNote = '[ACUPUNCTURE TREATMENT APPOINTMENT]\nPatient has consented to medical information recording and storage.\nComplete medical history form has been submitted with this appointment.';
+            notesContent = `${medicalNote}\n\n${notesContent}`;
+        }
+
         try {
             const requestData: any = {
                 service: selectedService.id,
@@ -737,6 +1035,10 @@ export default function BookingFlow() {
                     family_medical_history: urinalysisMedicalData.family_medical_history,
                     medical_consent_agreed: agreedToMedicalConsent
                 };
+            }
+
+            if (showAcupunctureMedicalForm) {
+                requestData.acupuncture_data = acupunctureMedicalData;
             }
 
             const response = await fetch(ENDPOINTS.APPOINTMENTS.BOOK, {
@@ -790,6 +1092,25 @@ export default function BookingFlow() {
         if (showUrinalysisMedicalForm && !agreedToMedicalConsent) {
             setError(locale === 'zh' ? '请同意医疗信息记录与保存同意书' : locale === 'fr' ? 'Veuillez accepter le consentement pour l\'enregistrement des informations médicales' : 'Please agree to the Medical Information Record Consent');
             return;
+        }
+
+        if (showAcupunctureMedicalForm) {
+            if (!acupunctureMedicalData.gender) {
+                setError(locale === 'zh' ? '请选择性别' : locale === 'fr' ? 'Veuillez sélectionner le sexe' : 'Please select gender');
+                return;
+            }
+            if (!acupunctureMedicalData.reason_visit) {
+                setError(locale === 'zh' ? '请填写就诊原因' : locale === 'fr' ? 'Veuillez remplir la raison de la visite' : 'Please fill in reason for visit');
+                return;
+            }
+            if (!agreedToMedicalConsent) {
+                setError(locale === 'zh' ? '请同意医疗信息记录与保存同意书' : locale === 'fr' ? 'Veuillez accepter le consentement pour l\'enregistrement des informations médicales' : 'Please agree to the Medical Information Record Consent');
+                return;
+            }
+            if (!agreedToAcupunctureConsent) {
+                setError(locale === 'zh' ? '请同意针灸治疗注意事项及知情同意书' : locale === 'fr' ? 'Veuillez accepter le consentement pour l\'acupuncture' : 'Please agree to the Acupuncture Precautions & Informed Consent');
+                return;
+            }
         }
 
         if (hasChinese(bookingForm.firstName) || hasChinese(bookingForm.lastName)) {
@@ -871,6 +1192,19 @@ export default function BookingFlow() {
                     }}
                 />
             )}
+            {showAcupunctureConsentModal && (
+                <AcupunctureConsentModal
+                    locale={locale}
+                    onClose={() => setShowAcupunctureConsentModal(false)}
+                    onAgree={() => {
+                        setAgreedToAcupunctureConsent(true);
+                        setShowAcupunctureConsentModal(false);
+                        if (error && (error.includes('针灸') || error.includes('acupuncture') || error.includes('Acupuncture'))) {
+                            setError(null);
+                        }
+                    }}
+                />
+            )}
             {showChineseWarning && (
                 <ChineseNameWarning 
                     t={t} 
@@ -937,6 +1271,7 @@ export default function BookingFlow() {
                                         setShowPrescriptionUpload(service.name === 'Blood Analysis');
                                         setShowFollowUpInfo(service.name === 'Online Consultation Follow-up');
                                         setShowUrinalysisMedicalForm(service.name === 'Urinalysis Analysis-Strip Test');
+                                        setShowAcupunctureMedicalForm(service.name === 'Acupuncture' || service.name === 'Acupuncture Treatment');
                                         setShowUrinalysisRedirect(false);
                                         setSelectedVaccineType(null);
                                         setPrescriptionFile(null);
@@ -1339,10 +1674,8 @@ export default function BookingFlow() {
                                         </div>
                                     )}
 
-                                    {/* Urinalysis Medical Form Section */}
                                     {showUrinalysisMedicalForm && (
                                         <>
-                                            {/* Medical Information Card */}
                                             <div className="md:col-span-2 mt-6">
                                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                                                     <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
@@ -1352,7 +1685,6 @@ export default function BookingFlow() {
                                                         </h3>
                                                     </div>
                                                     <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                        {/* Date of Birth */}
                                                         <div>
                                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                                     {locale === 'zh' ? '出生日期' : locale === 'fr' ? 'Date de naissance' : 'Date of Birth'} *
@@ -1366,7 +1698,6 @@ export default function BookingFlow() {
                                                 />
                                             </div>
 
-                                            {/* Gender */}
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                                     {locale === 'zh' ? '性别' : locale === 'fr' ? 'Genre' : 'Gender'} *
@@ -1385,7 +1716,6 @@ export default function BookingFlow() {
                                                 </select>
                                             </div>
 
-                                            {/* Address */}
                                             <div className="md:col-span-2">
                                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                                     {locale === 'zh' ? '地址' : locale === 'fr' ? 'Adresse' : 'Address'} *
@@ -1399,7 +1729,6 @@ export default function BookingFlow() {
                                                 />
                                             </div>
 
-                                            {/* Emergency Contact Name */}
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                                     {locale === 'zh' ? '紧急联系人姓名' : locale === 'fr' ? 'Nom du contact d\'urgence' : 'Emergency Contact Name'} *
@@ -1413,7 +1742,6 @@ export default function BookingFlow() {
                                                 />
                                             </div>
 
-                                            {/* Emergency Contact Phone */}
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                                     {locale === 'zh' ? '紧急联系人电话' : locale === 'fr' ? 'Téléphone du contact d\'urgence' : 'Emergency Contact Phone'} *
@@ -1430,7 +1758,6 @@ export default function BookingFlow() {
                                                 </div>
                                             </div>
 
-                                            {/* Medical History Card */}
                                             <div className="md:col-span-2 mt-6">
                                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                                                     <div className="bg-gradient-to-r from-red-500 to-red-600 px-6 py-4">
@@ -1440,7 +1767,6 @@ export default function BookingFlow() {
                                                         </h3>
                                                     </div>
                                                     <div className="p-6">
-                                                        {/* Medical Conditions */}
                                                         <div className="space-y-4">
                                                 {Object.entries(urinalysisMedicalData.medical_history).map(([key, condition]) => (
                                                     <div key={key} className="border border-gray-200 rounded-lg p-4">
@@ -1508,7 +1834,6 @@ export default function BookingFlow() {
                                                 </div>
                                             </div>
 
-                                            {/* Surgical History Card */}
                                             <div className="md:col-span-2 mt-6">
                                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                                                     <div className="bg-gradient-to-r from-brand to-blue-600 px-6 py-4 flex items-center justify-between">
@@ -1612,7 +1937,6 @@ export default function BookingFlow() {
                                                 </div>
                                             </div>
 
-                                            {/* Allergies Card */}
                                             <div className="md:col-span-2 mt-6">
                                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                                                     <div className="bg-gradient-to-r from-brand to-blue-600 px-6 py-4 flex items-center justify-between">
@@ -1701,7 +2025,6 @@ export default function BookingFlow() {
                                                 </div>
                                             </div>
 
-                                            {/* Current Medications Card */}
                                             <div className="md:col-span-2 mt-6">
                                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                                                     <div className="bg-gradient-to-r from-brand to-blue-600 px-6 py-4 flex items-center justify-between">
@@ -1805,7 +2128,6 @@ export default function BookingFlow() {
                                                 </div>
                                             </div>
 
-                                            {/* Family Medical History Card */}
                                             <div className="md:col-span-2 mt-6">
                                                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                                                     <div className="bg-gradient-to-r from-brand to-blue-600 px-6 py-4">
@@ -1848,9 +2170,396 @@ export default function BookingFlow() {
                                         </>
                                     )}
 
-                                    {/* Consent Checkboxes Section */}
+                                    {showAcupunctureMedicalForm && (
+                                        <>
+                                            <div className="md:col-span-2 mt-6">
+                                                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                                                    <div className="bg-gradient-to-r from-brand to-brand/90 px-6 py-4">
+                                                        <h3 className="text-xl font-semibold text-white flex items-center">
+                                                            <User className="w-6 h-6 mr-2"/>
+                                                            {locale === 'zh' ? '患者信息' : locale === 'fr' ? 'Informations du patient' : 'Patient Information'}
+                                                        </h3>
+                                                    </div>
+                                                    <div className="p-6 space-y-4">
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                {locale === 'zh' ? '性别' : locale === 'fr' ? 'Sexe' : 'Gender'} <span className="text-red-500">*</span>
+                                                            </label>
+                                                            <div className="flex gap-6">
+                                                                <label className="flex items-center cursor-pointer">
+                                                                    <input type="radio" value="M" checked={acupunctureMedicalData.gender === 'M'} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, gender: e.target.value as 'M' | 'F' }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '男' : locale === 'fr' ? 'Homme' : 'Male'}</span>
+                                                                </label>
+                                                                <label className="flex items-center cursor-pointer">
+                                                                    <input type="radio" value="F" checked={acupunctureMedicalData.gender === 'F'} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, gender: e.target.value as 'M' | 'F' }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '女' : locale === 'fr' ? 'Femme' : 'Female'}</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                {locale === 'zh' ? '出生日期' : locale === 'fr' ? 'Date de naissance' : 'Date of Birth'}
+                                                            </label>
+                                                            <div className="grid grid-cols-3 gap-2">
+                                                                <input type="text" placeholder={locale === 'zh' ? '年' : locale === 'fr' ? 'Année' : 'Year'} maxLength={4} value={acupunctureMedicalData.dob_year} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dob_year: e.target.value.replace(/[^\d]/g, '') }))} className="px-4 py-2.5 border border-gray-300 rounded-lg text-center" />
+                                                                <input type="text" placeholder={locale === 'zh' ? '月' : locale === 'fr' ? 'Mois' : 'Month'} maxLength={2} value={acupunctureMedicalData.dob_month} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dob_month: e.target.value.replace(/[^\d]/g, '') }))} className="px-4 py-2.5 border border-gray-300 rounded-lg text-center" />
+                                                                <input type="text" placeholder={locale === 'zh' ? '日' : locale === 'fr' ? 'Jour' : 'Day'} maxLength={2} value={acupunctureMedicalData.dob_day} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dob_day: e.target.value.replace(/[^\d]/g, '') }))} className="px-4 py-2.5 border border-gray-300 rounded-lg text-center" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                {locale === 'zh' ? '地址' : locale === 'fr' ? 'Adresse' : 'Address'}
+                                                            </label>
+                                                            <div className="space-y-2">
+                                                                <div className="grid grid-cols-4 gap-2">
+                                                                    <input type="text" placeholder={locale === 'zh' ? '门牌号' : locale === 'fr' ? 'No' : 'No'} value={acupunctureMedicalData.address_no} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, address_no: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                                    <input type="text" placeholder={locale === 'zh' ? '街道' : locale === 'fr' ? 'Rue' : 'Street'} value={acupunctureMedicalData.address_street} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, address_street: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg col-span-2" />
+                                                                    <input type="text" placeholder={locale === 'zh' ? '单元' : locale === 'fr' ? 'App' : 'Apt'} value={acupunctureMedicalData.address_apt} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, address_apt: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                                </div>
+                                                                <div className="grid grid-cols-2 gap-2">
+                                                                    <input type="text" placeholder={locale === 'zh' ? '城市' : locale === 'fr' ? 'Ville' : 'City'} value={acupunctureMedicalData.address_city} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, address_city: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                                    <input type="text" placeholder={locale === 'zh' ? '邮编' : locale === 'fr' ? 'Code postal' : 'Postal Code'} value={acupunctureMedicalData.postal_code} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, postal_code: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                            <div>
+                                                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                    {locale === 'zh' ? '家庭电话' : locale === 'fr' ? 'Téléphone domicile' : 'Home Phone'}
+                                                                </label>
+                                                                <input type="tel" value={acupunctureMedicalData.phone_home} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, phone_home: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                            </div>
+                                                            <div>
+                                                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                    {locale === 'zh' ? '工作电话' : locale === 'fr' ? 'Téléphone travail' : 'Work Phone'}
+                                                                </label>
+                                                                <div className="flex gap-2">
+                                                                    <input type="tel" value={acupunctureMedicalData.phone_work} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, phone_work: e.target.value }))} className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                                    <input type="text" placeholder={locale === 'zh' ? '分机' : locale === 'fr' ? 'Poste' : 'Ext'} value={acupunctureMedicalData.phone_work_ext} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, phone_work_ext: e.target.value }))} className="w-20 px-4 py-2.5 border border-gray-300 rounded-lg text-center" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                            <div>
+                                                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                    {locale === 'zh' ? '家长/监护人' : locale === 'fr' ? 'Parent/Tuteur' : 'Parent/Guardian'}
+                                                                </label>
+                                                                <input type="text" value={acupunctureMedicalData.parent_tutor} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, parent_tutor: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                            </div>
+                                                            <div>
+                                                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                    {locale === 'zh' ? '医保号' : locale === 'fr' ? 'No d\'assurance' : 'Insurance No'}
+                                                                </label>
+                                                                <input type="text" value={acupunctureMedicalData.insurance_no} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, insurance_no: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                            </div>
+                                                            <div>
+                                                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                    {locale === 'zh' ? 'CSST号' : locale === 'fr' ? 'No CSST' : 'CSST No'}
+                                                                </label>
+                                                                <input type="text" value={acupunctureMedicalData.csst_no} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, csst_no: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                {locale === 'zh' ? 'SAAQ号' : locale === 'fr' ? 'No SAAQ' : 'SAAQ No'}
+                                                            </label>
+                                                            <input type="text" value={acupunctureMedicalData.saaq_no} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, saaq_no: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                {locale === 'zh' ? '就诊原因' : locale === 'fr' ? 'Raison de la visite' : 'Reason for Visit'} <span className="text-red-500">*</span>
+                                                            </label>
+                                                            <textarea rows={3} value={acupunctureMedicalData.reason_visit} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, reason_visit: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="md:col-span-2 mt-6">
+                                                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                                                    <div className="bg-gradient-to-r from-brand to-brand/90 px-6 py-4">
+                                                        <h3 className="text-xl font-semibold text-white flex items-center">
+                                                            <Stethoscope className="w-6 h-6 mr-2"/>
+                                                            {locale === 'zh' ? '病史' : locale === 'fr' ? 'Antécédents médicaux' : 'Medical History'}
+                                                        </h3>
+                                                    </div>
+                                                    <div className="p-6 space-y-6">
+                                                        <div className="border-l-4 border-brand pl-6">
+                                                            <label className="flex items-center text-gray-900 font-semibold mb-4 cursor-pointer">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.under_doctor_care} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, under_doctor_care: e.target.checked }))} className="mr-3 w-5 h-5 text-brand" />
+                                                                {locale === 'zh' ? '您目前是否在医生的治疗下？' : locale === 'fr' ? 'Êtes-vous actuellement sous les soins d\'un médecin?' : 'Are you currently under doctor\'s care?'}
+                                                            </label>
+                                                            {acupunctureMedicalData.under_doctor_care && (
+                                                                <div className="space-y-4 bg-gray-50 p-4 rounded-lg">
+                                                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                                        <input type="text" placeholder={locale === 'zh' ? '医生姓氏' : locale === 'fr' ? 'Nom du médecin' : 'Doctor Last Name'} value={acupunctureMedicalData.doctor_name} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, doctor_name: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        <input type="text" placeholder={locale === 'zh' ? '医生名字' : locale === 'fr' ? 'Prénom du médecin' : 'Doctor First Name'} value={acupunctureMedicalData.doctor_firstname} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, doctor_firstname: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        <input type="text" placeholder={locale === 'zh' ? '专科' : locale === 'fr' ? 'Spécialité' : 'Specialty'} value={acupunctureMedicalData.doctor_specialty} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, doctor_specialty: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                    </div>
+                                                                    <input type="tel" placeholder={locale === 'zh' ? '电话' : locale === 'fr' ? 'Téléphone' : 'Phone'} value={acupunctureMedicalData.doctor_phone} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, doctor_phone: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                    <textarea placeholder={locale === 'zh' ? '诊断' : locale === 'fr' ? 'Diagnostic' : 'Diagnosis'} rows={2} value={acupunctureMedicalData.doctor_diagnosis} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, doctor_diagnosis: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                    <textarea placeholder={locale === 'zh' ? '治疗' : locale === 'fr' ? 'Traitement' : 'Treatment'} rows={2} value={acupunctureMedicalData.doctor_treatment} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, doctor_treatment: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                    <textarea placeholder={locale === 'zh' ? '反应' : locale === 'fr' ? 'Réaction' : 'Reaction'} rows={2} value={acupunctureMedicalData.doctor_reaction} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, doctor_reaction: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                </div>
+                                                            )}
+                                                        </div>
+
+                                                        <div className="border-l-4 border-brand/60 pl-6">
+                                                            <label className="flex items-center text-gray-900 font-semibold mb-4 cursor-pointer">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.other_professionals} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, other_professionals: e.target.checked }))} className="mr-3 w-5 h-5 text-brand" />
+                                                                {locale === 'zh' ? '您是否咨询过其他医疗专业人员？' : locale === 'fr' ? 'Avez-vous consulté d\'autres professionnels de la santé?' : 'Have you consulted other medical professionals?'}
+                                                            </label>
+                                                            {acupunctureMedicalData.other_professionals && (
+                                                                <div className="space-y-6">
+                                                                    <div className="bg-gray-50 p-4 rounded-lg space-y-4">
+                                                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                                            <input type="text" placeholder={locale === 'zh' ? '姓氏' : locale === 'fr' ? 'Nom' : 'Last Name'} value={acupunctureMedicalData.prof1_name} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof1_name: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                            <input type="text" placeholder={locale === 'zh' ? '名字' : locale === 'fr' ? 'Prénom' : 'First Name'} value={acupunctureMedicalData.prof1_firstname} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof1_firstname: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                            <input type="text" placeholder={locale === 'zh' ? '专科' : locale === 'fr' ? 'Spécialité' : 'Specialty'} value={acupunctureMedicalData.prof1_specialty} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof1_specialty: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        </div>
+                                                                        <input type="tel" placeholder={locale === 'zh' ? '电话' : locale === 'fr' ? 'Téléphone' : 'Phone'} value={acupunctureMedicalData.prof1_phone} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof1_phone: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        <textarea placeholder={locale === 'zh' ? '接受的治疗' : locale === 'fr' ? 'Traitement reçu' : 'Treatment Received'} rows={2} value={acupunctureMedicalData.prof1_treatment} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof1_treatment: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        <textarea placeholder={locale === 'zh' ? '反应' : locale === 'fr' ? 'Réaction' : 'Reaction'} rows={2} value={acupunctureMedicalData.prof1_reaction} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof1_reaction: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                    </div>
+                                                                    <div className="bg-gray-50 p-4 rounded-lg space-y-4">
+                                                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                                            <input type="text" placeholder={locale === 'zh' ? '姓氏' : locale === 'fr' ? 'Nom' : 'Last Name'} value={acupunctureMedicalData.prof2_name} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof2_name: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                            <input type="text" placeholder={locale === 'zh' ? '名字' : locale === 'fr' ? 'Prénom' : 'First Name'} value={acupunctureMedicalData.prof2_firstname} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof2_firstname: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                            <input type="text" placeholder={locale === 'zh' ? '专科' : locale === 'fr' ? 'Spécialité' : 'Specialty'} value={acupunctureMedicalData.prof2_specialty} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof2_specialty: e.target.value }))} className="px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        </div>
+                                                                        <input type="tel" placeholder={locale === 'zh' ? '电话' : locale === 'fr' ? 'Téléphone' : 'Phone'} value={acupunctureMedicalData.prof2_phone} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof2_phone: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        <textarea placeholder={locale === 'zh' ? '接受的治疗' : locale === 'fr' ? 'Traitement reçu' : 'Treatment Received'} rows={2} value={acupunctureMedicalData.prof2_treatment} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof2_treatment: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                        <textarea placeholder={locale === 'zh' ? '反应' : locale === 'fr' ? 'Réaction' : 'Reaction'} rows={2} value={acupunctureMedicalData.prof2_reaction} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prof2_reaction: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white" />
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="md:col-span-2 mt-6">
+                                                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                                                    <div className="bg-gradient-to-r from-brand to-brand/90 px-6 py-4">
+                                                        <h3 className="text-xl font-semibold text-white flex items-center">
+                                                            <Heart className="w-6 h-6 mr-2"/>
+                                                            {locale === 'zh' ? '健康状况' : locale === 'fr' ? 'État de santé' : 'Health Conditions'}
+                                                        </h3>
+                                                    </div>
+                                                    <div className="p-6">
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.heart_problems} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, heart_problems: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '心脏问题（心梗、心绞痛、瓣膜问题、杂音）' : locale === 'fr' ? 'Problèmes cardiaques' : 'Heart problems (MI, angina, valve issues, murmur)'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.pacemaker} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, pacemaker: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '佩戴心脏起搏器' : locale === 'fr' ? 'Stimulateur cardiaque' : 'Pacemaker'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.prolonged_bleeding} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prolonged_bleeding: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '出血时间延长' : locale === 'fr' ? 'Saignement prolongé' : 'Prolonged bleeding'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.anemia} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, anemia: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '贫血' : locale === 'fr' ? 'Anémie' : 'Anemia'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.lung_problems} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, lung_problems: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '肺部问题或结核病' : locale === 'fr' ? 'Problèmes pulmonaires ou tuberculose' : 'Lung problems or tuberculosis'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.asthma} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, asthma: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '哮喘' : locale === 'fr' ? 'Asthme' : 'Asthma'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.hay_fever} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, hay_fever: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '花粉症' : locale === 'fr' ? 'Rhume des foins' : 'Hay fever'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.thyroid_issues} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, thyroid_issues: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '甲状腺问题' : locale === 'fr' ? 'Problèmes thyroïdiens' : 'Thyroid issues'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.epilepsy} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, epilepsy: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '癫痫' : locale === 'fr' ? 'Épilepsie' : 'Epilepsy'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.nervous_disorders} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, nervous_disorders: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '神经系统疾病' : locale === 'fr' ? 'Troubles nerveux' : 'Nervous disorders'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.frequent_headaches} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, frequent_headaches: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '频繁头痛' : locale === 'fr' ? 'Maux de tête fréquents' : 'Frequent headaches'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.dizziness} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dizziness: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '头晕、昏厥' : locale === 'fr' ? 'Étourdissements, évanouissements' : 'Dizziness, fainting'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.ear_problems} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, ear_problems: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '耳部问题' : locale === 'fr' ? 'Problèmes d\'oreille' : 'Ear problems'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.eye_problems} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, eye_problems: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '眼部问题' : locale === 'fr' ? 'Problèmes oculaires' : 'Eye problems'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.skin_disease} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, skin_disease: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '皮肤病' : locale === 'fr' ? 'Maladie de peau' : 'Skin disease'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.arthritis} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, arthritis: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '关节炎' : locale === 'fr' ? 'Arthrite' : 'Arthritis'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.std} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, std: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '性传播疾病' : locale === 'fr' ? 'Maladies sexuellement transmissibles' : 'Sexually transmitted diseases'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.digestive_issues} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, digestive_issues: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '消化问题' : locale === 'fr' ? 'Problèmes digestifs' : 'Digestive issues'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.stomach_ulcer} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, stomach_ulcer: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '胃溃疡' : locale === 'fr' ? 'Ulcère d\'estomac' : 'Stomach ulcer'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.liver_problems} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, liver_problems: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '肝脏问题（肝炎、肝硬化、胆固醇）' : locale === 'fr' ? 'Problèmes hépatiques' : 'Liver problems (hepatitis, cirrhosis, cholesterol)'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.kidney_problems} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, kidney_problems: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '肾脏问题' : locale === 'fr' ? 'Problèmes rénaux' : 'Kidney problems'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.diabetes} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, diabetes: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '糖尿病' : locale === 'fr' ? 'Diabète' : 'Diabetes'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.food_allergies} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, food_allergies: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '食物过敏' : locale === 'fr' ? 'Allergies alimentaires' : 'Food allergies'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.medication_allergies} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, medication_allergies: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '药物过敏' : locale === 'fr' ? 'Allergies médicamenteuses' : 'Medication allergies'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.hiv_positive} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, hiv_positive: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? 'HIV阳性' : locale === 'fr' ? 'VIH positif' : 'HIV positive'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.aids} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, aids: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '艾滋病' : locale === 'fr' ? 'SIDA' : 'AIDS'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.radiotherapy} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, radiotherapy: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '接受过放疗/化疗' : locale === 'fr' ? 'Radiothérapie/Chimiothérapie' : 'Radiotherapy/Chemotherapy'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.pregnant} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, pregnant: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '怀孕' : locale === 'fr' ? 'Enceinte' : 'Pregnant'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.prostheses_joint} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prostheses_joint: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '关节假体' : locale === 'fr' ? 'Prothèse articulaire' : 'Joint prosthesis'}</span>
+                                                            </label>
+                                                            <label className="flex items-start p-3 hover:bg-brand/5 rounded-lg cursor-pointer transition-colors group">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.prostheses_breast} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, prostheses_breast: e.target.checked }))} className="mt-0.5 w-4 h-4 text-brand" />
+                                                                <span className="ml-3 text-sm text-gray-700">{locale === 'zh' ? '乳房假体' : locale === 'fr' ? 'Prothèse mammaire' : 'Breast prosthesis'}</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <div className="mt-6 pt-6 border-t border-gray-200">
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-3">
+                                                                {locale === 'zh' ? '血压' : locale === 'fr' ? 'Tension artérielle' : 'Blood Pressure'}
+                                                            </label>
+                                                            <div className="flex gap-6">
+                                                                <label className="flex items-center cursor-pointer">
+                                                                    <input type="radio" value="high" checked={acupunctureMedicalData.blood_pressure === 'high'} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, blood_pressure: e.target.value }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '高' : locale === 'fr' ? 'Élevée' : 'High'}</span>
+                                                                </label>
+                                                                <label className="flex items-center cursor-pointer">
+                                                                    <input type="radio" value="low" checked={acupunctureMedicalData.blood_pressure === 'low'} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, blood_pressure: e.target.value }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '低' : locale === 'fr' ? 'Basse' : 'Low'}</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="mt-6 pt-6 border-t border-gray-200">
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-3">
+                                                                {locale === 'zh' ? '依赖性' : locale === 'fr' ? 'Dépendances' : 'Dependencies'}
+                                                            </label>
+                                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                                                <label className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-brand/5">
+                                                                    <input type="checkbox" checked={acupunctureMedicalData.dependency_alcohol} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dependency_alcohol: e.target.checked }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '酒精' : locale === 'fr' ? 'Alcool' : 'Alcohol'}</span>
+                                                                </label>
+                                                                <label className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-brand/5">
+                                                                    <input type="checkbox" checked={acupunctureMedicalData.dependency_drugs} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dependency_drugs: e.target.checked }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '药物' : locale === 'fr' ? 'Drogues' : 'Drugs'}</span>
+                                                                </label>
+                                                                <label className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-brand/5">
+                                                                    <input type="checkbox" checked={acupunctureMedicalData.dependency_tobacco} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dependency_tobacco: e.target.checked }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '烟草' : locale === 'fr' ? 'Tabac' : 'Tobacco'}</span>
+                                                                </label>
+                                                                <label className="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-brand/5">
+                                                                    <input type="checkbox" checked={acupunctureMedicalData.dependency_caffeine} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, dependency_caffeine: e.target.checked }))} className="w-4 h-4 text-brand" />
+                                                                    <span className="ml-2 text-sm">{locale === 'zh' ? '咖啡因' : locale === 'fr' ? 'Caféine' : 'Caffeine'}</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="md:col-span-2 mt-6">
+                                                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                                                    <div className="bg-gradient-to-r from-brand to-brand/90 px-6 py-4">
+                                                        <h3 className="text-xl font-semibold text-white flex items-center">
+                                                            <Pill className="w-6 h-6 mr-2"/>
+                                                            {locale === 'zh' ? '药物与手术史' : locale === 'fr' ? 'Médicaments et chirurgies' : 'Medications & Surgery History'}
+                                                        </h3>
+                                                    </div>
+                                                    <div className="p-6 space-y-6">
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                {locale === 'zh' ? '住院/手术史' : locale === 'fr' ? 'Hospitalisations/Chirurgies' : 'Hospitalizations/Surgeries'}
+                                                            </label>
+                                                            <textarea rows={4} placeholder={locale === 'zh' ? '请列出所有住院和手术经历...' : locale === 'fr' ? 'Veuillez énumérer toutes les hospitalisations et chirurgies...' : 'Please list all hospitalizations and surgeries...'} value={acupunctureMedicalData.hospitalizations} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, hospitalizations: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                        </div>
+
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                            <label className="flex items-center p-4 border-2 border-gray-300 rounded-lg hover:border-brand/30 cursor-pointer transition-colors">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.anticoagulants} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, anticoagulants: e.target.checked }))} className="mr-3 w-5 h-5 text-brand" />
+                                                                <span className="text-sm font-medium text-gray-700">{locale === 'zh' ? '您是否服用抗凝剂？' : locale === 'fr' ? 'Prenez-vous des anticoagulants?' : 'Do you take anticoagulants?'}</span>
+                                                            </label>
+                                                            <label className="flex items-center p-4 border-2 border-gray-300 rounded-lg hover:border-brand/30 cursor-pointer transition-colors">
+                                                                <input type="checkbox" checked={acupunctureMedicalData.corticosteroids} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, corticosteroids: e.target.checked }))} className="mr-3 w-5 h-5 text-brand" />
+                                                                <span className="text-sm font-medium text-gray-700">{locale === 'zh' ? '您是否服用皮质类固醇？' : locale === 'fr' ? 'Prenez-vous des corticostéroïdes?' : 'Do you take corticosteroids?'}</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                {locale === 'zh' ? '当前服用的药物' : locale === 'fr' ? 'Médicaments actuels' : 'Current Medications'}
+                                                            </label>
+                                                            <textarea rows={4} placeholder={locale === 'zh' ? '请列出所有当前服用的药物（包括剂量和频率）...' : locale === 'fr' ? 'Veuillez énumérer tous les médicaments actuels (y compris la posologie et la fréquence)...' : 'Please list all current medications (including dosage and frequency)...'} value={acupunctureMedicalData.medications} onChange={(e) => setAcupunctureMedicalData(prev => ({ ...prev, medications: e.target.value }))} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    )}
+
                                     <div className="md:col-span-2 space-y-3">
-                                        {showUrinalysisMedicalForm && (
+                                        {(showUrinalysisMedicalForm || showAcupunctureMedicalForm) && (
                                             <div className={`p-4 rounded-xl border-2 transition-colors ${
                                                 error && (error.includes('医疗信息') || error.includes('Medical Information') || error.includes('informations médicales'))
                                                     ? 'bg-red-50 border-red-300'
@@ -1880,6 +2589,43 @@ export default function BookingFlow() {
                                                     </span>
                                                 </label>
                                                 {error && (error.includes('医疗信息') || error.includes('Medical Information') || error.includes('informations médicales')) && (
+                                                    <div className="mt-3 text-red-600 text-sm text-center">
+                                                        {error}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        )}
+
+                                        {showAcupunctureMedicalForm && (
+                                            <div className={`p-4 rounded-xl border-2 transition-colors ${
+                                                error && (error.includes('针灸') || error.includes('acupuncture') || error.includes('Acupuncture'))
+                                                    ? 'bg-red-50 border-red-300'
+                                                    : 'bg-gray-50 border-gray-200'
+                                            }`}>
+                                                <label className="flex items-start sm:items-center justify-center cursor-pointer group">
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={agreedToAcupunctureConsent}
+                                                        onChange={(e) => {
+                                                            setAgreedToAcupunctureConsent(e.target.checked);
+                                                            if (e.target.checked) {
+                                                                setError(null);
+                                                            }
+                                                        }}
+                                                        className="mt-0.5 sm:mt-0 w-4 h-4 text-brand border-gray-300 rounded focus:ring-2 focus:ring-brand/20 cursor-pointer flex-shrink-0"
+                                                    />
+                                                    <span className="ml-3 text-sm md:text-base text-gray-700 text-left">
+                                                        {locale === 'zh' ? '我已阅读并同意 ' : locale === 'fr' ? 'J\'ai lu et j\'accepte le ' : 'I have read and agree to the '}
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => setShowAcupunctureConsentModal(true)}
+                                                            className="text-brand hover:text-brand/80 underline font-medium transition-colors"
+                                                        >
+                                                            {locale === 'zh' ? '针灸治疗注意事项及知情同意书' : locale === 'fr' ? 'Précautions et Consentement éclairé pour l\'Acupuncture' : 'Acupuncture Precautions & Informed Consent'}
+                                                        </button>
+                                                    </span>
+                                                </label>
+                                                {error && (error.includes('针灸') || error.includes('acupuncture') || error.includes('Acupuncture')) && (
                                                     <div className="mt-3 text-red-600 text-sm text-center">
                                                         {error}
                                                     </div>
