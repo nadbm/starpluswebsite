@@ -998,7 +998,13 @@ export default function BookingFlow() {
         }
 
         if (showUrinalysisMedicalForm) {
-            const medicalNote = '[URINALYSIS SCREENING APPOINTMENT]\nPatient has consented to medical information recording and storage.\nComplete medical history form has been submitted with this appointment.';
+            let appointmentType = 'MEDICAL APPOINTMENT';
+            if (selectedService?.name === 'General Practitioner') {
+                appointmentType = 'GENERAL PRACTITIONER APPOINTMENT';
+            } else if (selectedService?.name === 'Online Consultation') {
+                appointmentType = 'ONLINE CONSULTATION APPOINTMENT';
+            }
+            const medicalNote = `[${appointmentType}]\nPatient has consented to medical information recording and storage.\nComplete medical history form has been submitted with this appointment.`;
             notesContent = `${medicalNote}\n\n${notesContent}`;
         }
 
@@ -1270,7 +1276,10 @@ export default function BookingFlow() {
                                         setShowVaccineOptions(service.name === 'Vaccine');
                                         setShowPrescriptionUpload(service.name === 'Blood Analysis');
                                         setShowFollowUpInfo(service.name === 'Online Consultation Follow-up');
-                                        setShowUrinalysisMedicalForm(service.name === 'Urinalysis Analysis-Strip Test');
+                                        setShowUrinalysisMedicalForm(
+                                            service.name === 'General Practitioner' || 
+                                            service.name === 'Online Consultation'
+                                        );
                                         setShowAcupunctureMedicalForm(service.name === 'Acupuncture' || service.name === 'Acupuncture Treatment');
                                         setShowUrinalysisRedirect(false);
                                         setSelectedVaccineType(null);
