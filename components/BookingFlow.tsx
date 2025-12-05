@@ -1047,12 +1047,22 @@ export default function BookingFlow() {
                 requestData.acupuncture_data = acupunctureMedicalData;
             }
 
+            const formData = new FormData();
+            Object.keys(requestData).forEach(key => {
+                if (key === 'medical_data' || key === 'acupuncture_data') {
+                    formData.append(key, JSON.stringify(requestData[key]));
+                } else {
+                    formData.append(key, requestData[key]);
+                }
+            });
+
+            if (showPrescriptionUpload && prescriptionFile) {
+                formData.append('prescription_file', prescriptionFile);
+            }
+
             const response = await fetch(ENDPOINTS.APPOINTMENTS.BOOK, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(requestData),
+                body: formData,
             });
 
             if (!response.ok) {
