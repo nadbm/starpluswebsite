@@ -825,7 +825,9 @@ export default function BookingFlow() {
         'Urinalysis Analysis-Strip Test': 'urinalysis',
         'Fertility Tests': 'fertility',
         'Acupuncture': 'acupuncture',
-        'Acupuncture Treatment': 'acupuncture'
+        'Acupuncture Treatment': 'acupuncture',
+        'HPV Testing': 'hpv',
+        'H. Pylori Testing': 'hpylori'
     };
 
     const searchParams = useSearchParams();
@@ -1066,7 +1068,21 @@ export default function BookingFlow() {
             });
 
             if (!response.ok) {
-                throw new Error(t('errors.bookingError'));
+                const errorData = await response.json().catch(() => null);
+                console.error('Booking API Error:', {
+                    status: response.status,
+                    statusText: response.statusText,
+                    errorData: errorData
+                });
+                
+                if (errorData && typeof errorData === 'object') {
+                    const errorMessage = errorData.detail || 
+                                       errorData.error || 
+                                       JSON.stringify(errorData);
+                    throw new Error(errorMessage);
+                } else {
+                    throw new Error(t('errors.bookingError'));
+                }
             }
 
             setSuccess(true);
@@ -1081,7 +1097,8 @@ export default function BookingFlow() {
 
         } catch (error) {
             console.error('Error making booking:', error);
-            setError(t('errors.bookingError'));
+            const errorMessage = error instanceof Error ? error.message : t('errors.bookingError');
+            setError(errorMessage);
         } finally {
             setIsSubmitting(false);
         }

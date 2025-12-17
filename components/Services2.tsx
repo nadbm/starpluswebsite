@@ -72,10 +72,10 @@ export default function Services2() {
             href: `/${locale}/booking`
         },
         {
-            title: t('naturopathy.title'),
-            description: t('naturopathy.description'),
-            image: "/home/h6.jpg",
-            tags: [t('naturopathy.tag1'), t('naturopathy.tag2')],
+            title: t('allergy.title'),
+            description: t('allergy.description'),
+            image: "/home/h18.jpg",
+            tags: [t('allergy.tag1'), t('allergy.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },
@@ -88,10 +88,18 @@ export default function Services2() {
             href: `/${locale}/booking`
         },
         {
-            title: t('allergy.title'),
-            description: t('allergy.description'),
-            image: "/home/h18.jpg",
-            tags: [t('allergy.tag1'), t('allergy.tag2')],
+            title: t('hpv.title'),
+            description: t('hpv.description'),
+            image: "/home/h27.webp",
+            tags: [t('hpv.tag1'), t('hpv.tag2')],
+            status: t('available'),
+            href: `/${locale}/booking`
+        },
+        {
+            title: t('naturopathy.title'),
+            description: t('naturopathy.description'),
+            image: "/home/h6.jpg",
+            tags: [t('naturopathy.tag1'), t('naturopathy.tag2')],
             status: t('available'),
             href: `/${locale}/booking`
         },
@@ -116,14 +124,6 @@ export default function Services2() {
             description: t('botox.description'),
             image: "/home/h11.png",
             tags: [t('botox.tag1'), t('botox.tag2')],
-            status: t('comingSoon'),
-            href: `/${locale}/booking`
-        },
-        {
-            title: t('lungScreening.title'),
-            description: t('lungScreening.description'),
-            image: "/home/h19.jpg",
-            tags: [t('lungScreening.tag1'), t('lungScreening.tag2')],
             status: t('comingSoon'),
             href: `/${locale}/booking`
         },

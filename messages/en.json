@@ -259,6 +259,20 @@
       "tag1": "Reproductive Health",
       "tag2": "Family Planning",
       "tag3": "Fertility Assessment"
+    },
+    "hpv": {
+      "title": "HPV Testing",
+      "description": "Professional HPV screening for early detection of cervical health issues. Results in 2 business days.",
+      "tag1": "Cervical Health",
+      "tag2": "Early Detection",
+      "tag3": "Preventive Care"
+    },
+    "hpylori": {
+      "title": "H. Pylori Testing",
+      "description": "Non-invasive stool antigen and breath tests for accurate H. pylori diagnosis and monitoring. Results in 2 business days. Price: $400 CAD",
+      "tag1": "Gastric Health",
+      "tag2": "Digestive Health",
+      "tag3": "Lab Testing"
     }
   },
   "booking": {

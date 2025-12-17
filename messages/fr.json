@@ -259,6 +259,20 @@
       "tag1": "Santé Reproductive",
       "tag2": "Planification Familiale",
       "tag3": "Évaluation de Fertilité"
+    },
+    "hpv": {
+      "title": "Test HPV",
+      "description": "Dépistage HPV professionnel pour la détection précoce des problèmes cervicaux. Résultats en 2 jours ouvrables.",
+      "tag1": "Santé Cervicale",
+      "tag2": "Détection Précoce",
+      "tag3": "Soins Préventifs"
+    },
+    "hpylori": {
+      "title": "Test H. Pylori",
+      "description": "Tests non invasifs d'antigène fécal et de respiration pour diagnostic H. pylori précis. Résultats en 2 jours ouvrables. Prix : 400 $ CAD",
+      "tag1": "Santé Gastrique",
+      "tag2": "Santé Digestive",
+      "tag3": "Tests de Laboratoire"
     }
   },
   "booking": {
