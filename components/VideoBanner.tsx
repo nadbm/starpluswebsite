@@ -13,7 +13,7 @@ export default function VideoBanner() {
                     <video
                         className="absolute top-1/2 left-1/2 min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
                         autoPlay loop muted playsInline>
-                        <source src="/video/HC.mp4" type="video/mp4"/>
+                        <source src="/video/intro.mp4" type="video/mp4"/>
                         Your browser does not support video tag
                     </video>
                 </div>
