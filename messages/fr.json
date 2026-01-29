@@ -69,6 +69,7 @@
     "switchToPhysio": "Physiothérapie",
     "switchToPsychology": "Psychologie",
     "switchToSocialWork": "Travail Social",
+    "switchToErgotherapy": "Ergothérapie",
     "qualificationsTitle": "Qualifications",
     "servicesTitle": "Services",
     "credentialsTitle": "Certifications",
@@ -101,6 +102,14 @@
       "t4": "Travailleuse sociale expérimentée spécialisée dans le soutien familial, le conseil individuel et les ressources communautaires. Dédiée à aider les individus et familles à naviguer les défis de la vie et accéder aux services nécessaires.",
       "t5": "Compétente dans la fourniture de soutien émotionnel, l'intervention de crise et la connexion des clients avec les ressources communautaires appropriées. Engagée à autonomiser les individus et familles pour atteindre leurs objectifs et améliorer leur qualité de vie.",
       "t6": "Avec certification professionnelle et expérience étendue, Li He fournit des soins compatissants et des solutions pratiques pour aider les clients à surmonter les obstacles et construire des relations plus fortes et plus saines."
+    },
+    "ergotherapy": {
+      "name": "Gu Chen",
+      "title": "Ergothérapeute",
+      "t1": "Spécialiste en Ergothérapie",
+      "t2": "Expert en Équilibre de Vie",
+      "t3": "Ergothérapeute Certifié",
+      "t4": "J'ai été attiré par l'ergothérapie parce qu'elle se concentre sur l'équilibre global dans la vie—aider les gens à faire les choses qui comptent pour eux. Je crois vraiment que la capacité de participer à des activités significatives joue un rôle énorme dans le bien-être général, et l'ergothérapie me donne la chance de soutenir cela d'une manière très pratique et humaine, physiquement et mentalement."
     }
   },
   "bookNowSection": {
@@ -273,6 +282,19 @@
       "tag1": "Santé Gastrique",
       "tag2": "Santé Digestive",
       "tag3": "Tests de Laboratoire"
+    },
+    "mri": {
+      "title": "Imagerie IRM",
+      "description": "Services d'imagerie par résonance magnétique avancée pour l'imagerie diagnostique détaillée et l'évaluation complète de la santé.",
+      "tag1": "Imagerie Diagnostique",
+      "tag2": "Technologie Avancée",
+      "tag3": "Évaluation Complète"
+    },
+    "ergotherapy": {
+      "title": "Ergothérapie",
+      "description": "Vous aider à atteindre l'équilibre de vie grâce à des activités significatives. Soutien professionnel pour le bien-être physique et mental dans la vie quotidienne.",
+      "tag1": "Équilibre de Vie",
+      "tag2": "Activités Quotidiennes"
     }
   },
   "booking": {

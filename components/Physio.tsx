@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Physio() {
     const t = useTranslations('physio');
     const locale = useLocale();
-    const [activeTab, setActiveTab] = useState<'physio' | 'psychology' | 'socialWork'>('physio');
+    const [activeTab, setActiveTab] = useState<'physio' | 'psychology' | 'socialWork' | 'ergotherapy'>('physio');
 
     return (
         <section className="py-16 bg-gray-50">
@@ -27,9 +27,10 @@ export default function Physio() {
                             <div className="flex relative">
                                 <div 
                                     className={`absolute top-1 bottom-1 bg-brand rounded-lg transition-all duration-300 ease-out ${
-                                        activeTab === 'physio' ? 'left-1 w-1/3' : 
-                                        activeTab === 'psychology' ? 'left-1/3 w-1/3' : 
-                                        'left-2/3 w-1/3'
+                                        activeTab === 'physio' ? 'left-1 w-1/4' : 
+                                        activeTab === 'psychology' ? 'left-1/4 w-1/4' : 
+                                        activeTab === 'socialWork' ? 'left-2/4 w-1/4' :
+                                        'left-3/4 w-1/4'
                                     }`}
                                 />
                                 
@@ -63,6 +64,16 @@ export default function Physio() {
                                 >
                                     {t('switchToSocialWork')}
                                 </button>
+                                <button
+                                    onClick={() => setActiveTab('ergotherapy')}
+                                    className={`relative px-4 py-3 rounded-lg font-medium transition-all duration-300 z-10 ${
+                                        activeTab === 'ergotherapy'
+                                            ? 'text-white'
+                                            : 'text-gray-600 hover:text-brand'
+                                    }`}
+                                >
+                                    {t('switchToErgotherapy')}
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -87,7 +98,8 @@ export default function Physio() {
                                         <img
                                             src={activeTab === 'physio' ? "/team/sunqi.png" : 
                                                   activeTab === 'psychology' ? "/team/ai.png" : 
-                                                  "/team/LiHe.png"}
+                                                  activeTab === 'socialWork' ? "/team/LiHe.png" :
+                                                  "/team/guchen-removebg-preview.png"}
                                             alt={`${t(`${activeTab}.name`)} - ${t(`${activeTab}.title`)}`}
                                             className="w-full h-full object-cover object-top"
                                         />
@@ -131,11 +143,15 @@ export default function Physio() {
                                             <p className="text-gray-700 leading-relaxed">{t('psychology.t5')}</p>
                                             <p className="text-gray-700 leading-relaxed">{t('psychology.t6')}</p>
                                         </>
-                                    ) : (
+                                    ) : activeTab === 'socialWork' ? (
                                         <>
                                             <p className="text-gray-700 leading-relaxed">{t('socialWork.t4')}</p>
                                             <p className="text-gray-700 leading-relaxed">{t('socialWork.t5')}</p>
                                             <p className="text-gray-700 leading-relaxed">{t('socialWork.t6')}</p>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <p className="text-gray-700 leading-relaxed">{t('ergotherapy.t4')}</p>
                                         </>
                                     )}
                                 </div>
@@ -176,7 +192,7 @@ export default function Physio() {
                                                 <span className="text-gray-700 font-medium">{t('psychology.t3')}</span>
                                             </div>
                                         </div>
-                                    ) : (
+                                    ) : activeTab === 'socialWork' ? (
                                         <div className="space-y-3">
                                             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                                                 <svg className="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,6 +205,21 @@ export default function Physio() {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                                 </svg>
                                                 <span className="text-gray-700 font-medium">{t('socialWork.t3')}</span>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div className="space-y-3">
+                                            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                                                <svg className="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                                <span className="text-gray-700 font-medium">{t('ergotherapy.t2')}</span>
+                                            </div>
+                                            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                                                <svg className="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                                </svg>
+                                                <span className="text-gray-700 font-medium">{t('ergotherapy.t3')}</span>
                                             </div>
                                         </div>
                                     )}

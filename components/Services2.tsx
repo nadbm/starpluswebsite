@@ -104,11 +104,11 @@ export default function Services2() {
             href: `/${locale}/booking`
         },
         {
-            title: t('nutritionist.title'),
-            description: t('nutritionist.description'),
-            image: "/home/h10.png",
-            tags: [t('nutritionist.tag1'), t('nutritionist.tag2')],
-            status: t('comingSoon'),
+            title: t('ergotherapy.title'),
+            description: t('ergotherapy.description'),
+            image: "/home/h28.png",
+            tags: [t('ergotherapy.tag1'), t('ergotherapy.tag2')],
+            status: t('available'),
             href: `/${locale}/booking`
         },
         {
@@ -120,10 +120,10 @@ export default function Services2() {
             href: `/${locale}/acupuncture`
         },
         {
-            title: t('botox.title'),
-            description: t('botox.description'),
-            image: "/home/h11.png",
-            tags: [t('botox.tag1'), t('botox.tag2')],
+            title: t('nutritionist.title'),
+            description: t('nutritionist.description'),
+            image: "/home/h10.png",
+            tags: [t('nutritionist.tag1'), t('nutritionist.tag2')],
             status: t('comingSoon'),
             href: `/${locale}/booking`
         },

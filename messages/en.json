@@ -69,6 +69,7 @@
     "switchToPhysio": "Physiotherapy",
     "switchToPsychology": "Psychology",
     "switchToSocialWork": "Social Work",
+    "switchToErgotherapy": "Ergotherapy",
     "qualificationsTitle": "Qualifications",
     "servicesTitle": "Services",
     "credentialsTitle": "Credentials",
@@ -101,6 +102,14 @@
       "t4": "Experienced social worker specializing in family support, individual counseling, and community resources. Dedicated to helping individuals and families navigate life challenges and access necessary services.",
       "t5": "Skilled in providing emotional support, crisis intervention, and connecting clients with appropriate community resources. Committed to empowering individuals and families to achieve their goals and improve their quality of life.",
       "t6": "With professional certification and extensive experience, Li He provides compassionate care and practical solutions to help clients overcome obstacles and build stronger, healthier relationships."
+    },
+    "ergotherapy": {
+      "name": "Gu Chen",
+      "title": "Occupational Therapist",
+      "t1": "Occupational Therapy Specialist",
+      "t2": "Life Balance Expert",
+      "t3": "Certified Occupational Therapist",
+      "t4": "I was drawn to occupational therapy because it focuses on overall balance in life—helping people do the things that matter to them. I really believe that being able to participate in meaningful activities plays a huge role in overall wellbeing, and OT gives me the chance to support that in a very practical, human way, physically and mentally."
     }
   },
   "bookNowSection": {
@@ -273,6 +282,19 @@
       "tag1": "Gastric Health",
       "tag2": "Digestive Health",
       "tag3": "Lab Testing"
+    },
+    "mri": {
+      "title": "MRI Imaging",
+      "description": "Advanced magnetic resonance imaging services for detailed diagnostic imaging and comprehensive health assessment.",
+      "tag1": "Diagnostic Imaging",
+      "tag2": "Advanced Technology",
+      "tag3": "Comprehensive Assessment"
+    },
+    "ergotherapy": {
+      "title": "Occupational Therapy",
+      "description": "Helping you achieve life balance through meaningful activities. Professional support for physical and mental wellbeing in daily life.",
+      "tag1": "Life Balance",
+      "tag2": "Daily Activities"
     }
   },
   "booking": {

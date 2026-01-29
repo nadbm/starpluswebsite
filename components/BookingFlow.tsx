@@ -827,7 +827,9 @@ export default function BookingFlow() {
         'Acupuncture': 'acupuncture',
         'Acupuncture Treatment': 'acupuncture',
         'HPV Testing': 'hpv',
-        'H. Pylori Testing': 'hpylori'
+        'H. Pylori Testing': 'hpylori',
+        'MRI': 'mri',
+        'Ergotherapy Service': 'ergotherapy'
     };
 
     const searchParams = useSearchParams();
