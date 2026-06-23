@@ -58,13 +58,14 @@ const StructuredData = ({ locale }: StructuredDataProps) => {
       "longitude": "-73.6137"
     },
     "openingHours": [
-      "Mo 10:00-16:00",
-      "We 10:00-16:00",
-      "Th 10:00-16:00", 
-      "Fr 10:00-16:00",
-      "Sa 10:00-13:00",
-      "Su 10:00-16:00"
+      "Mo 10:00-19:00",
+      "We 10:00-19:00",
+      "Th 10:00-19:00", 
+      "Fr 10:00-19:00",
+      "Sa 10:00-19:00",
+      "Su 10:00-19:00"
     ],
+    "faxNumber": "(514) 447-2175",
     "priceRange": "$$",
     "currenciesAccepted": "CAD",
     "paymentAccepted": "Cash, Credit Card, Debit Card, Insurance",

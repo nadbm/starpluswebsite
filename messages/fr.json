@@ -418,9 +418,11 @@
       "title": "Informations de contact",
       "emailTitle": "Envoyez-nous un email",
       "phoneTitle": "Appelez-nous",
+      "phone2Note": "(Téléphone et télécopieur)",
       "customerSupportTitle": "Support client",
       "customerSupportEmailTitle": "Email du support client",
       "hoursTitle": "Horaires d'ouverture",
+      "hoursTime": "10h00 - 19h00",
       "timeline1": "Lundi, Mercredi à Vendredi, Dimanche",
       "timeline2": "Samedi"
     },
@@ -460,7 +462,7 @@
       },
       "hours": {
         "title": "Horaires prolongés",
-        "description": "Ouvert tard pour s'adapter à votre emploi du temps"
+        "description": "Ouvert de 10h à 19h pour s'adapter à votre emploi du temps"
       },
       "contact": {
         "title": "Contactez-nous"
@@ -499,9 +501,9 @@
     },
     "contact": {
       "address": "500, 998 Boul. Saint-Laurent, Montréal, QC, H2Z 9Y9",
-      "phone": "(514)-447-4786\n(514)-447-2175",
+      "phone": "(514)-447-4786\n(514)-447-2175 (Téléphone et télécopieur)",
       "email": "info@starpluscentre.com",
-      "hours": "Lundi, Mercredi à Vendredi, Dimanche : 10h00 - 16h00\nSamedi : 10h00 - 13h00",
+      "hours": "Lundi, Mercredi à Vendredi, Dimanche : 10h00 - 19h00\nSamedi : 10h00 - 19h00",
       "customerSupportEmail": "clinic@starpluscentre.com"
     },
     "customerSupportTitle": "Support client"
@@ -511,6 +513,15 @@
     "description1": "Des services de santé professionnels adaptés à vos besoins",
     "title2": "Soins médicaux d'experts",
     "description2": "Notre équipe de professionnels est là pour vous aider à atteindre une santé optimale"
+  },
+  "gallery": {
+    "title": "Découvrez notre centre",
+    "description": "Découvrez notre établissement de santé moderne, conçu pour votre confort et votre bien-être.",
+    "imageAlt": "Photo du Centre de Santé Starplus {number}",
+    "viewPhoto": "Voir la photo {number}",
+    "close": "Fermer",
+    "previous": "Photo précédente",
+    "next": "Photo suivante"
   },
   "medicalForm": {
     "title": "Formulaire d'Antécédents Médicaux",

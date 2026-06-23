@@ -418,9 +418,11 @@
       "title": "联系信息",
       "emailTitle": "发送电子邮件",
       "phoneTitle": "拨打电话",
+      "phone2Note": "（电话及传真）",
       "customerSupportTitle": "客户支持",
       "customerSupportEmailTitle": "客户支持邮箱",
       "hoursTitle": "营业时间",
+      "hoursTime": "上午10:00 - 晚上7:00",
       "timeline1": "周一、周三至周五、周日",
       "timeline2": "周六"
     },
@@ -460,7 +462,7 @@
       },
       "hours": {
         "title": "延长营业时间",
-        "description": "营业时间延长以适应您的时间安排"
+        "description": "上午10点至晚上7点营业，方便您的日程安排"
       },
       "contact": {
         "title": "联系我们"
@@ -499,9 +501,9 @@
     },
     "contact": {
       "address": "500, 998 Boul. Saint-Laurent, Montreal, QC, H2Z 9Y9",
-      "phone": "(514)-447-4786\n(514)-447-2175",
+      "phone": "(514)-447-4786\n(514)-447-2175（电话及传真）",
       "email": "info@starpluscentre.com",
-      "hours": "周一、周三至周五、周日：上午10:00 - 下午4:00\n周六：上午10:00 - 下午1:00",
+      "hours": "周一、周三至周五、周日：上午10:00 - 晚上7:00\n周六：上午10:00 - 晚上7:00",
       "customerSupportEmail": "clinic@starpluscentre.com"
     },
     "customerSupportTitle": "客户支持"
@@ -511,6 +513,15 @@
     "description1": "专业的医疗服务，为您量身定制",
     "title2": "专业医疗护理",
     "description2": "我们的专业团队致力于帮助您实现最佳健康状态"
+  },
+  "gallery": {
+    "title": "参观我们的中心",
+    "description": "走进我们现代化的医疗中心，感受舒适温馨的就医环境。",
+    "imageAlt": "Starplus健康中心照片 {number}",
+    "viewPhoto": "查看照片 {number}",
+    "close": "关闭",
+    "previous": "上一张",
+    "next": "下一张"
   },
   "medicalForm": {
     "title": "保密病史表",

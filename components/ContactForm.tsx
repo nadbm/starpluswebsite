@@ -94,7 +94,12 @@ export default function ContactForm() {
                                         <div>
                                             <h4 className="font-medium">{t('info.phoneTitle')}</h4>
                                             <p className="mt-1">(514)-447-4786</p>
-                                            <p className="mt-1">(514)-447-2175</p>
+                                            <p className="mt-1">
+                                                (514)-447-2175
+                                                <span className="text-white/80 text-sm ml-1">
+                                                    {t('info.phone2Note')}
+                                                </span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -124,11 +129,11 @@ export default function ContactForm() {
                                 <div className="space-y-2">
                                     <p className="flex justify-between text-gray-600">
                                         <span>{t('info.timeline1')}</span>
-                                        <span>10:00 AM - 4:00 PM</span>
+                                        <span>{t('info.hoursTime')}</span>
                                     </p>
                                     <p className="flex justify-between text-gray-600">
                                         <span>{t('info.timeline2')}</span>
-                                        <span>10:00 AM - 1:00 PM</span>
+                                        <span>{t('info.hoursTime')}</span>
                                     </p>
                                 </div>
                             </div>

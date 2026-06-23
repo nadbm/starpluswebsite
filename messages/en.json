@@ -418,9 +418,11 @@
       "title": "Contact Information",
       "emailTitle": "Email Us",
       "phoneTitle": "Call Us",
+      "phone2Note": "(Phone & Fax)",
       "customerSupportTitle": "Customer Support",
       "customerSupportEmailTitle": "Customer Support Email",
       "hoursTitle": "Opening Hours",
+      "hoursTime": "10:00 AM - 7:00 PM",
       "timeline1": "Monday, Wednesday to Friday, Sunday",
       "timeline2": "Saturday"
     },
@@ -460,7 +462,7 @@
       },
       "hours": {
         "title": "Extended Hours",
-        "description": "Open extended hours to accommodate your schedule"
+        "description": "Open 10:00 AM – 7:00 PM to accommodate your schedule"
       },
       "contact": {
         "title": "Contact"
@@ -499,9 +501,9 @@
     },
     "contact": {
       "address": "500, 998 Boul. Saint-Laurent, Montreal, QC, H2Z 9Y9",
-      "phone": "(514)-447-4786\n(514)-447-2175",
+      "phone": "(514)-447-4786\n(514)-447-2175 (Phone & Fax)",
       "email": "info@starpluscentre.com",
-      "hours": "Monday, Wednesday to Friday, Sunday: 10:00 AM - 4:00 PM\nSaturday: 10:00 AM - 1:00 PM",
+      "hours": "Monday, Wednesday to Friday, Sunday: 10:00 AM - 7:00 PM\nSaturday: 10:00 AM - 7:00 PM",
       "customerSupportEmail": "clinic@starpluscentre.com"
     },
     "customerSupportTitle": "Customer Support"
@@ -511,6 +513,15 @@
     "description1": "Professional healthcare services tailored to your needs",
     "title2": "Expert Medical Care",
     "description2": "Our team of professionals is here to help you achieve optimal health"
+  },
+  "gallery": {
+    "title": "Explore Our Center",
+    "description": "Take a look inside our modern healthcare facility — designed for your comfort and well-being.",
+    "imageAlt": "Starplus Health Center photo {number}",
+    "viewPhoto": "View photo {number}",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo"
   },
   "medicalForm": {
     "title": "Medical History Form",
